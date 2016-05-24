@@ -12797,17 +12797,20 @@ section .column-three-fourths.half-height {
 /* line 299, ../sass/screen.sass */
 .bottom-sect {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
-/* line 301, ../sass/screen.sass */
+/* line 303, ../sass/screen.sass */
 .bottom-sect .sect-body {
   display: block;
   font-size: 18px;
   font-family: "AcneStudiosCircle";
   color: #ffffff;
-  left: 0;
-  bottom: 0;
+  left: 20px;
+  bottom: 20px;
+  position: absolute;
 }
-/* line 305, ../sass/screen.sass */
+/* line 307, ../sass/screen.sass */
 .bottom-sect .sect-body.black {
   color: #000;
 }

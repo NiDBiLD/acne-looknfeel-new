@@ -1,7 +1,7 @@
 // Customization
 $column-margin: 0
-$padding-vertical: 0.005em
-$padding-horizontal: 0.005em
+$padding-vertical: 20px
+$padding-horizontal: 20px
 
 
 // Site specific vars
@@ -22,10 +22,10 @@ $menu-font-color: #000
 @mixin loop-injection($n)
 	section,
 	footer
-		padding: $n * $padding-vertical $n * $padding-horizontal
+		padding: $padding-vertical $padding-horizontal
 	.padding-responsive
-		padding: $n * $padding-vertical $n * $padding-horizontal
+		padding: $padding-vertical $padding-horizontal
 	.padding-top-responsive
-		padding-top: $n * $padding-vertical
+		padding-top: $padding-vertical
 	.padding-bottom-responsive
-		padding-bottom: $n * $padding-vertical
+		padding-bottom: $padding-vertical
