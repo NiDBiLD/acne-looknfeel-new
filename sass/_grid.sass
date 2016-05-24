@@ -1,0 +1,62 @@
+// Replacement for traditional grid systems
+// Divide a space in 2, 3 or 4 parts and float them left or right
+// Use left-spaced, right-spaced to add space between columns
+.column-half,
+.column-third,
+.column-two-thirds,
+.column-fourth,
+.column-three-fourths
+	&.left,
+	&.left-spaced
+		float: left
+	&.right,
+	&.right-spaced
+		float: right
+	@media (max-width: 1000px)
+		width: 100% !important
+		margin-right: 0 !important
+		margin-left: 0 !important
+.column-half
+	width: 50%
+	&.left-spaced
+		margin-right: $column-margin
+		width: 50% - $column-margin
+	&.right-spaced
+		margin-left: $column-margin
+		width: 50% - $column-margin
+.column-third
+	width: 33.333333333333%
+	&.left-spaced
+		margin-right: $column-margin
+		width: 33.333333333333% - $column-margin
+	&.right-spaced
+		margin-left: $column-margin
+		width: 33.333333333333% - $column-margin
+	&:nth-of-type(3n)
+		margin-right: 0
+.column-two-thirds
+	width: 66.6666666666%
+	&.left-spaced
+		margin-right: $column-margin
+		width: 66.6666666666% - $column-margin
+	&.right-spaced
+		margin-left: $column-margin
+		width: 66.6666666666% - $column-margin
+.column-fourth
+	width: 25%
+	&.left-spaced
+		margin-right: $column-margin
+		width: 25% - $column-margin
+	&.right-spaced
+		margin-left: $column-margin
+		width: 25% - $column-margin
+	&:nth-of-type(4n)
+		margin-right: 0
+.column-three-fourths
+	width: 75%
+	&.left-spaced
+		margin-right: $column-margin
+		width: 75% - $column-margin
+	&.right-spaced
+		margin-left: $column-margin
+		width: 75% - $column-margin
