@@ -69,6 +69,8 @@ body
 .bg-field-image-3
 	background-image: url('../uploads/Sko_10_350.jpg')
 	background-size: cover
+
+
 nav
 	z-index: 98
 	position: fixed
@@ -82,37 +84,31 @@ nav
 	color: $menu-font-color
 	a
 		position: relative
+		color: #000
+		text-decoration: none
 		&:hover
 			background-color: $menu-color-hover
 			cursor: pointer
 			ul
 				display: block
+				
 	.menu-left
 		font-size: $menu-font-size
+		line-height: 1.3em
 		float: left
 		a
-			padding: 5px 14px 7px 14px
-			display: block
-			float: left
+			padding: 7px 15px 0
+			height: 32px
+			display: inline-block
 			&.link
-				padding-top: 9px
-				padding-bottom: 8px
 				&.search
-					padding-left: 27px
+					padding-left: 25px
 					background-size: 10px
-					background-position: 13px 12px
+					background-position: 11px 11px
 					background-repeat: no-repeat
 					background-image: url(../img/icon_loupe2.png)
-			&.logo-container
-				width: 118px
-			.logo
-				background-image: url('../img/acne_logotype.svg')
-				background-repeat: no-repeat
-				background-size: 100% 20px
-				background-position: center center
-				height: 20px
-				display: block
-				width: 90px
+				
+				
 	.menu-right
 		font-size: $menu-font-small-size
 		float: right
@@ -129,45 +125,66 @@ nav
 				background-size: 9px 7px
 				background-position: 12px 13px
 				background-image: url(../img/icon_face_m.png)
-		ul
-			float: right
-			left: auto
-			right: 0
-			margin-top: 11px
 		#menuBag
 			&.active
 				background-color: $menu-color-hover
+	
 	ul
-		line-height: 20px
-		background-color: $menu-color-hover
-		position: absolute
-		display: none
-		margin-left: -15px
-		margin-top: 9px
-		width: 200px
-		padding-top: 5px
-		padding-bottom: 5px
-		z-index: 99
+		list-style: none
 		li
-			font-size: $menu-font-foldout-size
-			padding: 4px 15px 4px 15px
+			float: left
+			.sub
+				display: none
+				position: absolute
+				top: 32px
+				width: 200px
+				padding-top: 1px
+				z-index: 99
 			&:hover
-				background-color: $menu-color-separator
-			&.line
-				height: 1px
-				background-color: $menu-color-separator
-				margin-top: 4px
-				margin-bottom: 3px
-				padding: 0
-				margin-bottom: 5px
-			&.has-sub
-				background-image: url(../img/icon_subsubnav.png)
-				background-position: 95% center
-				background-size: 6px 6px
-				background-repeat: no-repeat
-			span
-				color: $menu-color-grayed
-				display: block
+				.sub
+					display: block
+			
+			
+			&.menu-logo
+				a
+					background-image: url('../img/acne_logotype.svg')
+					background-repeat: no-repeat
+					background-size: 92px 12px
+					background-position: 15px 10px
+					display: block
+					width: 123px
+					height: 32px
+					color: transparent
+				
+			ul 
+				line-height: 1.3em
+				font-size: $menu-font-foldout-size
+				background-color: $menu-color-hover
+				padding-top: 5px
+				padding-bottom: 5px
+				li
+					float: none
+					a 
+						padding: 3px 15px 2px 20px
+						display: block
+						&:hover
+							background-color: #fce
+					&.line
+						height: 1px
+						background-color: $menu-color-separator
+						margin-top: 4px
+						margin-bottom: 3px
+						padding: 0
+						margin-bottom: 5px
+					&.has-sub
+						background-image: url(../img/icon_subsubnav.png)
+						background-position: 95% center
+						background-size: 6px 6px
+						background-repeat: no-repeat
+					span
+						color: $menu-color-grayed
+						display: block
+				
 #foldOut
 	position: fixed
 	width: 400px
@@ -197,7 +214,6 @@ section
 	.video
 		width: 100%
 	&.first
-		margin-top: 32px
 	&.full-height
 		height: 100vh
 		overflow: hidden
@@ -251,7 +267,12 @@ section
 	.column-three-fourths
 		&.half-height
 			height: 50vh
-
+body.menu-visible
+	section
+		&.full-height
+			height: calc(100vh - 32px)
+		&.first
+			margin-top: 32px
 .background-img
 	background-size: cover
 	background-position: center center
