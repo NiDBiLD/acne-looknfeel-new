@@ -70,6 +70,10 @@ body
 	background-image: url('../uploads/Sko_10_350.jpg')
 	background-size: cover
 
+p
+	font-family: $menu-font
+	font-size: 16px
+	line-height: 1.35
 
 nav
 	z-index: 98
@@ -92,9 +96,7 @@ nav
 			cursor: pointer
 			ul
 				display: block
-	
-	
-	
+
 	ul
 		list-style: none
 		font-size: $menu-font-size
@@ -105,13 +107,12 @@ nav
 			position: relative
 			&:hover
 				background-color: $menu-color-hover
-				
+
 			a
 				padding: 7px 15px 0
 				height: 32px
 				display: inline-block
-			
-			
+
 			.sub
 				display: none
 				position: absolute
@@ -124,9 +125,7 @@ nav
 			&:hover
 				.sub
 					display: block
-			
-				
-			
+
 			&.menu-secondary
 				font-size: $menu-font-small-size
 				line-height: 1.3em
@@ -136,9 +135,7 @@ nav
 				.sub
 					left: auto
 					right: 0
-					
-					
-			
+
 			&.menu-logo
 				> a
 					background-image: url('../img/acne_logotype.svg')
@@ -166,7 +163,7 @@ nav
 			#menuBag
 				&.active
 					background-color: $menu-color-hover
-					
+
 			&.menu-stores
 				ul
 					padding-top: 0
@@ -181,7 +178,7 @@ nav
 						border-bottom: 1px solid $menu-color-separator
 						&:focus
 							outline: none
-				
+
 			ul 
 				background-color: $menu-color-hover
 				padding: 5px 0
@@ -290,14 +287,15 @@ body.menu-visible
 			height: calc(100vh - 32px)
 		&.first
 			margin-top: 32px
+
 .background-img
 	background-size: cover
 	background-position: center center
-	
+
 section.gridded
 	.column-half.left
 		border-right: 1px solid #fff
-	
+
 	.gridline-h
 		display: block
 		height: 1px
@@ -310,7 +308,7 @@ section.gridded
 			top: 50%
 		&.gridline-3
 			top: 75%
-	
+
 	input 
 		font-family: 'Whois'
 		font-size: 16px
@@ -330,9 +328,7 @@ section.gridded
 			padding-left: 20px
 			padding-right: 20px
 			margin-left: 40%
-	
-	
-	
+
 .logo-huge
 	margin-top: 40px
 	#master-text
@@ -349,12 +345,30 @@ section.gridded
 	.logo-huge
 		height: 13%
 		margin: 0
-	
+
+.gray-outline
+	input
+		border: 1px solid #aaaaaa
+		font-size: 18px
+		font-family: $menu-font
+		color: $form-filler-gray
+		padding: 14px
+		width: 100%
+		background-image: url('../img/icon_geolocator.png')
+		background-size: 15px auto
+		background-position: 97% center
+		background-repeat: no-repeat
+
+
+.inset-content
+	margin-left: 50px
+	margin-right: 50px
+	margin-top: 50px
 
 .sect-header
 	display: block
-	font-size: 32px
-	line-height: 1.2em
+	font-size: 30px
+	line-height: 1.4em
 	font-family: $menu-font
 	color: $menu-color
 	background-image: url('../img/icon_arrow6_w.png')

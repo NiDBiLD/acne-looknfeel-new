@@ -15,6 +15,8 @@ $menu-font-foldout-size: 14px
 $menu-font: 'AcneStudiosCircle'
 $menu-font-color: #000
 
+$form-filler-gray: #999999
+
 // Injected in the loop generation media queries.
 // $n is loop counter, the higher it is, the wider the browser window is.
 // Use it to create your own calculations based on the size of the browser window.
@@ -29,3 +31,10 @@ $menu-font-color: #000
 		padding-top: $padding-vertical
 	.padding-bottom-responsive
 		padding-bottom: $padding-vertical
+	.padding-left-responsive
+		padding-left: $padding-horizontal / 2
+	.padding-right-responsive
+		padding-right: $padding-horizontal / 2
+
+	.margin-bottom-responsive
+		margin-bottom: $padding-vertical / 2
