@@ -9,12 +9,3 @@ html
 		-ms-interpolation-mode: bicubic
 *, *:before, *:after
 	box-sizing: inherit
-@for $i from 64 through 512
-	@media (min-width: 0px + $i * 5px)
-		body
-			font-size: logarithm($i) * logarithm($i / 0.1) * 0.023em
-		@if $i < 150
-			$i: 150
-		@if $i > 400
-			$i: 400
-		@include loop-injection($i)

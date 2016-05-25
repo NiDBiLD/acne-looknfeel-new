@@ -244,24 +244,24 @@ body.menu-visible
 
 section
 	position: relative
+	overflow: hidden
 	.video
 		width: 100%
 	&.first
 	&.full-height
 		height: 100vh
-		overflow: hidden
-	&.three-fourths-height
-		height: 75vh
-		overflow: hidden
-	&.one-fourths-height
-		height: 25vh
-		overflow: hidden
 	&.half-height
 		height: 50vh
-		overflow: hidden
 	&.third-height
-		height: 33vh
-		overflow: hidden
+		height: 33.333vh
+	&.two-thirds-height
+		height: 66.666vh
+	&.three-fourths-height
+		height: 75vh
+	&.one-fourths-height
+		height: 25vh
+	&.one-eights-height
+		height: 12.5vh
 	&.invert
 		background-color: $background-inverted
 		color: $text-inverted
@@ -271,12 +271,25 @@ section
 	.column-third,
 	.column-two-thirds,
 	.column-fourth,
-	.column-three-fourths
+	.column-three-fourths,
+	.column-eighth
 		position: relative
 		overflow: hidden
 		position: relative
+		&.full-height
+			height: 100vh
 		&.half-height
 			height: 50vh
+		&.third-height
+			height: 33.333vh
+		&.two-thirds-height
+			height: 66.666vh
+		&.three-fourths-height
+			height: 75vh
+		&.one-fourths-height
+			height: 25vh
+		&.one-eights-height
+			height: 12.5vh
 	&.background-img
 		background-size: cover
 	.fullwidth-img
@@ -331,12 +344,11 @@ section.gridded
 			top: 75%
 	.gridblock
 		font-family: 'Whois'
-		height: 135px
 		font-size: 18px
 		border-bottom: 1px solid $text-inverted
-		&.double
-			height: 270px
 	&.black-lines
+		border-top: 1px solid $menu-font-color
+		border-left: 1px solid $menu-font-color
 		.column-half.left,
 		.column-third.left,
 		.column-two-thirds.left,
@@ -345,8 +357,11 @@ section.gridded
 		.gridline-h
 			background-color: $menu-font-color
 		.gridblock
-			height: 135px
 			border-bottom: 1px solid $menu-font-color
+		input
+			border: 1px solid $menu-font-color
+			::placeholder
+				color: $form-filler-gray
 
 	input 
 		font-family: 'Whois'
