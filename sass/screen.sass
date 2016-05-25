@@ -86,7 +86,7 @@ nav
 	font-family: $menu-font
 	color: $menu-font-color
 	&:hover
-		background-color: $menu-color
+		background-color: darken($menu-color, 2%)
 	a
 		position: relative
 		color: #000
@@ -310,8 +310,8 @@ section.gridded
 			top: 75%
 
 	input 
-		font-family: 'Whois'
-		font-size: 16px
+		font-family: 'Menlo'
+		font-size: 14px
 		border: 1px solid #fff
 		margin: 30px 0 0 23px
 		width: 90%
@@ -368,17 +368,18 @@ section.gridded
 .sect-header
 	display: block
 	font-size: 30px
-	line-height: 1.4em
+	line-height: 1.15em
 	font-family: $menu-font
 	color: $menu-color
 	background-image: url('../img/icon_arrow6_w.png')
 	background-size: 25px 25px
 	background-repeat: no-repeat
-	background-position: 0 7px
+	background-position: 0 5px
 	padding-left: 22px
 	&.monospace
-		font-family: 'Whois'
-		font-size: 24px
+		font-family: 'Menlo'
+		font-size: 16px
+		background-size: 20px
 		background-position: 0 3px
 	&.cursor
 		background-image: url('../img/icon_cursor_w.gif')
@@ -386,6 +387,7 @@ section.gridded
 		background-position: left 6px
 		&.monospace
 			background-position: left 1px
+			background-size: 17px
 	&.level-2
 		margin-left: 22px
 	&.black
@@ -395,13 +397,13 @@ section.gridded
 			background-image: url('../img/icon_cursor.gif')
 	&.double
 		font-size: 64px
-		line-height: 1.3em
+		line-height: 1.15em
 		padding-left: 44px
 		background-position: 0 14px
 		background-size: 50px
 
 .hd
-	margin: 14px 13px
+	margin: 16px 13px
 	&.stickyX
 		position: -webkit-sticky
 		top: 32px
@@ -413,57 +415,58 @@ section.gridded
 		
 	&.hd-ani-levels-2-disappear
 		overflow: hidden
-		height: 38px
+		height: 34px
 		.ani-layer
-			-webkit-transform: translate3d(0,38px,0)
+			-webkit-transform: translate3d(0,34px,0)
 			-webkit-animation: hd_ani_levels_2 10s 1 linear forwards
 			
 	&.hd-ani-levels-2-double
 		overflow: hidden
 		height: 76px
+		
 		.ani-layer
-			-webkit-transform: translate3d(0,76px,0)
+			-webkit-transform: translate3d(0,73px,0)
 			-webkit-animation: hd_ani_levels_2_double 10s 1 linear forwards
 		
 body:not(.menu-visible)
 	section.first
 		.hd
-			margin-top: 46px
+			margin-top: 48px
 
 
 
 @-webkit-keyframes hd_ani_levels_2 
 	0% 
-		-webkit-transform: translate3d(0,38px,0)
+		-webkit-transform: translate3d(0,34px,0)
 	5% 
-		-webkit-transform: translate3d(0,38px,0)
+		-webkit-transform: translate3d(0,34px,0)
 	10% 
 		-webkit-transform: translate3d(0,0,0)
 	50% 
 		-webkit-transform: translate3d(0,0,0)
 	55% 
-		-webkit-transform: translate3d(0,-38px,0)
+		-webkit-transform: translate3d(0,-34px,0)
 	95% 
-		-webkit-transform: translate3d(0,-38px,0)
+		-webkit-transform: translate3d(0,-34px,0)
 	100% 
-		-webkit-transform: translate3d(0,-76px,0)
+		-webkit-transform: translate3d(0,-68px,0)
 
 
 @-webkit-keyframes hd_ani_levels_2_double 
 	0% 
-		-webkit-transform: translate3d(0,76px,0)
+		-webkit-transform: translate3d(0,73px,0)
 	5% 
-		-webkit-transform: translate3d(0,76px,0)
+		-webkit-transform: translate3d(0,73px,0)
 	10% 
 		-webkit-transform: translate3d(0,0,0)
 	50% 
 		-webkit-transform: translate3d(0,0,0)
 	55% 
-		-webkit-transform: translate3d(0,-76px,0)
+		-webkit-transform: translate3d(0,-73px,0)
 	95% 
-		-webkit-transform: translate3d(0,-76px,0)
+		-webkit-transform: translate3d(0,-73px,0)
 	100% 
-		-webkit-transform: translate3d(0,-76px,0)
+		-webkit-transform: translate3d(0,-73px,0)
 
 
 
