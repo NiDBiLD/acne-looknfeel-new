@@ -72,8 +72,10 @@ body
 
 p
 	font-family: $menu-font
-	font-size: 16px
+	font-size: 18px
 	line-height: 1.35
+	&.align-arrow
+		margin-left: 23px
 
 nav
 	z-index: 98
@@ -260,6 +262,11 @@ section
 	&.third-height
 		height: 33vh
 		overflow: hidden
+	&.invert
+		background-color: $background-inverted
+		color: $text-inverted
+		.sect-header
+			color: $text-inverted
 	.column-half,
 	.column-third,
 	.column-two-thirds,
@@ -267,7 +274,6 @@ section
 	.column-three-fourths
 		position: relative
 		overflow: hidden
-		height: 100%
 		position: relative
 		&.half-height
 			height: 50vh
@@ -288,14 +294,29 @@ body.menu-visible
 		&.first
 			margin-top: 32px
 
-.background-img
+.background-img,
+.background-color
 	background-size: cover
 	background-position: center center
+	.column-half,
+	.column-third,
+	.column-two-thirds,
+	.column-fourth,
+	.column-three-fourths
+		height: 100%
+	&.column-half,
+	&.column-third,
+	&.column-two-thirds,
+	&.column-fourth,
+	&.column-three-fourths
+		height: 100%
 
 section.gridded
-	.column-half.left
-		border-right: 1px solid #fff
-
+	.column-half.left,
+	.column-third.left,
+	.column-two-thirds.left,
+	.column-fourth.left
+		border-right: 1px solid $text-inverted
 	.gridline-h
 		display: block
 		height: 1px
@@ -308,6 +329,24 @@ section.gridded
 			top: 50%
 		&.gridline-3
 			top: 75%
+	.gridblock
+		font-family: 'Whois'
+		height: 135px
+		font-size: 18px
+		border-bottom: 1px solid $text-inverted
+		&.double
+			height: 270px
+	&.black-lines
+		.column-half.left,
+		.column-third.left,
+		.column-two-thirds.left,
+		.column-fourth.left
+			border-right: 1px solid $menu-font-color
+		.gridline-h
+			background-color: $menu-font-color
+		.gridblock
+			height: 135px
+			border-bottom: 1px solid $menu-font-color
 
 	input 
 		font-family: 'Menlo'
@@ -321,7 +360,7 @@ section.gridded
 		::placeholder
 			color: #fff
 		&[type="submit"]
-			background-color: #fff
+			background-color: $text-inverted
 			display: inline-block
 			color: #00f
 			width: auto
