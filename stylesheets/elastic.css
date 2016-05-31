@@ -1,35 +1,35 @@
-/* line 27, ../sass/_configuration.sass */
+/* line 30, ../sass/_configuration.sass */
 section,
 footer {
   padding: 20px 20px;
 }
 
-/* line 30, ../sass/_configuration.sass */
+/* line 33, ../sass/_configuration.sass */
 .padding-responsive {
   padding: 20px 20px;
 }
 
-/* line 32, ../sass/_configuration.sass */
+/* line 35, ../sass/_configuration.sass */
 .padding-top-responsive {
   padding-top: 20px;
 }
 
-/* line 34, ../sass/_configuration.sass */
+/* line 37, ../sass/_configuration.sass */
 .padding-bottom-responsive {
   padding-bottom: 20px;
 }
 
-/* line 36, ../sass/_configuration.sass */
+/* line 39, ../sass/_configuration.sass */
 .padding-left-responsive {
   padding-left: 10px;
 }
 
-/* line 38, ../sass/_configuration.sass */
+/* line 41, ../sass/_configuration.sass */
 .padding-right-responsive {
   padding-right: 10px;
 }
 
-/* line 41, ../sass/_configuration.sass */
+/* line 43, ../sass/_configuration.sass */
 .margin-bottom-responsive {
   margin-bottom: 10px;
 }

@@ -30,6 +30,40 @@ body
 .align-left
 	text-align: left
 
+.float-left
+	float: left
+.float-right
+	float: right
+
+.block
+	display: block
+
+.stretch-height-full
+	height: 100%
+.stretch-height-half
+	height: 50%
+.stretch-height-fourth
+	height: 25%
+
+.grid
+	&.line-left
+		border-left: 1px solid $grid-color
+	&.line-right
+		border-right: 1px solid $grid-color
+	&.line-bottom
+		border-bottom: 1px solid $grid-color
+	&.line-top
+		border-top: 1px solid $grid-color
+	&.line-bottom-left-corner
+		border-bottom: 1px solid $grid-color
+		border-left: 1px solid $grid-color
+	&.line-bottom-right-corner
+		border-bottom: 1px solid $grid-color
+		border-right: 1px solid $grid-color
+	&.inverted
+		border-color: $grid-color-inverted
+
+
 .bg-field-color-1
 	background-color: #d46984
 .bg-field-color-2
@@ -59,11 +93,15 @@ body
 .bg-field-color-14
 	background-color: #35455d
 
-
-
 p
 	&.align-arrow
 		margin-left: 23px
+
+.icon
+	padding-left: 24px !important
+	background-repeat: no-repeat
+	background-size: 9px 7px
+	background-position: 12px 13px
 
 nav
 	z-index: 98
@@ -144,10 +182,6 @@ nav
 					background-image: url(../img/icon_loupe2.png)
 			&.menu-user
 				> a
-					padding-left: 24px
-					background-repeat: no-repeat
-					background-size: 9px 7px
-					background-position: 12px 13px
 					background-image: url(../img/icon_face_m.png)
 			#menuBag
 				&.active
@@ -401,12 +435,10 @@ section.gridded
 		background-position: 97% center
 		background-repeat: no-repeat
 
-
 .inset-content
 	margin-left: 50px
 	margin-right: 50px
 	margin-top: 50px
-
 
 .hd
 	padding: 16px 13px
@@ -425,9 +457,7 @@ section.gridded
 		z-index: 5
 	&.hd-half
 		margin-left: 50%
-	&.first
-		
-		
+
 	.sect-header
 		display: block
 		font-size: 30px
@@ -438,10 +468,7 @@ section.gridded
 		background-repeat: no-repeat
 		background-position: 0 5px
 		padding-left: 23px
-		
 		text-decoration: none
-		
-		
 		&.monospace
 			font-family: 'Menlo'
 			font-size: 16px
@@ -462,12 +489,10 @@ section.gridded
 			background-position: 1px 10px
 			&.monospace
 				background-position: 0 3px
-				
 		&.level-2
 			margin-left: 22px
 			&.monospace
 				margin-left: 19px
-				
 		&.double
 			font-size: 64px
 			line-height: 1.15em
@@ -478,12 +503,9 @@ section.gridded
 			
 		.additional
 			float: right
-	
 	a.sect-header
 		.additional
 			display: none
-	
-	
 	.sect-header.is-active,
 	a.sect-header:hover
 		background-image: url('../img/icon_arrow6_straight2.png')
@@ -502,10 +524,6 @@ section.gridded
 			background-size: 26px 25px
 			&.monospace
 				background-size: 20px 19px
-		
-				
-			
-			
 	&.color-white
 		.sect-header
 			color: #fff
@@ -541,13 +559,6 @@ section.gridded
 				-webkit-transform: translate3d(0,73px,0)
 				-webkit-animation: hd_ani_states_2_double_stay 10s 1 linear forwards
 
-//body:not(.menu-backgrounded)
-//	section.first
-//		.hd
-//			padding-top: 48px
-
-
-
 @-webkit-keyframes hd_ani_states_2 
 	0% 
 		-webkit-transform: translate3d(0,34px,0)
@@ -563,7 +574,6 @@ section.gridded
 		-webkit-transform: translate3d(0,-34px,0)
 	100% 
 		-webkit-transform: translate3d(0,-68px,0)
-
 
 @-webkit-keyframes hd_ani_states_2_double_stay
 	0% 
@@ -582,7 +592,6 @@ section.gridded
 		-webkit-transform: translate3d(0,-73px,0)
 
 
-
 @-webkit-keyframes hd_ani_states_2_original
 	0% 
 		-webkit-transform: translate3d(0,100%,0)
@@ -599,16 +608,71 @@ section.gridded
 	100% 
 		-webkit-transform: translate3d(0,-200%,0)
 
+.big-padding
+	padding: 60px
+.pdp-details
+	height: 100%
+	right: 0
+	height: 100%
+	width: 50%
+	left: 50%
+	z-index: 90
+	position: fixed
+	.content
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		.top
+			margin-bottom: 45px
+			h1,h2
+				font-size: 22px
+				padding-right: 5px
+		.description
+			margin-bottom: 20px
+			margin-right: 5px
+		.colors
+			margin-bottom: 45px
+			.color
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				display: inline-block
+				margin-right: 10px
+		.sizes
+			margin-bottom: 20px
+			span
+				margin-bottom: 10px
+				margin-right: 5px
+			.grey
+				color: #aaaaaa
+			.size
+				border-top: 1px solid #000000
+				width: calc(16.666% - 5px)
+				margin-right: 5px
+				text-align: center
+				padding-top: 20px
+		button
+			background-color: #000000
+			padding: 15px
+			color: #ffffff
+			border: 0
+			width: calc(100% - 5px)
+			font-size: 12px
+			text-align: left
+			margin-bottom: 45px
+		.info
+			span
+				display: block
+				&.underline
+					text-decoration: underline
 
-		
-		
+
 .sect-title
 	display: block
 	font-size: 24px
 	color: $menu-color
 	&.black
 		color: $menu-font-color
-
 
 .bottom-sect
 	position: absolute
@@ -620,14 +684,12 @@ section.gridded
 		font-size: 12px
 		line-height: 1.3em
 		color: #000
-		left: 15px
-		bottom: 13px
 		position: absolute
 		z-index: 15
+		bottom: 0
+		left: 0
 		&.white
 			color: #fff
-
-
 
 .ani-regular
 	z-index: 2
@@ -649,8 +711,6 @@ section.gridded
 		opacity: 1
 	100% 
 		opacity: 1
-
-
 
 .sticky-test
 	position: -webkit-sticky
