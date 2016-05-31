@@ -9,9 +9,10 @@
 		<script src="javascript/TimelineMax.min.js"></script>
 		<script src="javascript/TweenLite.min.js"></script>
 		<script src="javascript/TweenMax.min.js"></script>
+		<script src="javascript/jquery.sticky-kit.min.js"></script>
 		<script src="javascript/app.js"></script>
 	</head>
-	<body class="menu-visible">
+	<body class="menu-backgrounded">
 		<nav class="clearfix">
 			<ul>
 				<li class="menu-logo">
@@ -218,81 +219,79 @@
 		</div>
 		
 		<!--
-		<section class='full-height first'>
-			<div class='column-half left bg-field-color-1'>
+		<section class='height-full first'>
+			<div class='column-half bg-field-color-1'>
 				<img class='logo-huge' id='master-text' src='./img/logo_huge_acne.svg'/>
 			</div>
-			<div class='column-half right bg-field-image-1'>
+			<div class='column-half bg-field-image-1'>
 				<img class='logo-huge' id='slave-text' src='./img/logo_huge_studios_cyan.svg'/>
 			</div>
 		</section>
 		-->
-		<section class='full-height first'>
-			<div class='ani-regular column-half left background-img' style='background-image: url("./uploads/_201605/home_campaign16_b.jpg");'>
+		<section class='height-full first'>
+			<div class='ani-regular column-half' style='background-image: url("./uploads/_201605/home_campaign16_b.jpg");'>
 			</div>
-			<div class='ani-regular column-half right background-img' style='background-image: url("./uploads/_201605/home_campaign16_a.jpg");'>
+			<div class='ani-regular column-half' style='background-image: url("./uploads/_201605/home_campaign16_a.jpg");'>
 				<div class="logo-huge-container top"><img class='logo-huge' src='./img/logo_huge_acne.svg'/></div>
 				<div class="logo-huge-container bottom"><img class='logo-huge' src='./img/logo_huge_studios.svg'/></div>
 			</div>
-			<div class='ani-alternative column-half left background-img' style='background-image: url("./uploads/_201605/home_campaign16_e.jpg");'>
+			<div class='ani-alternative column-half' style='background-image: url("./uploads/_201605/home_campaign16_e.jpg");'>
 				<div class="logo-huge-container top"><img class='logo-huge' src='./img/logo_huge_acne.svg'/></div>
 				<div class="logo-huge-container bottom"><img class='logo-huge' src='./img/logo_huge_studios.svg'/></div>
 			</div>
-			<div class='ani-alternative column-half right background-img' style='background-image: url("./uploads/_201605/home_campaign16_d.jpg");'>
+			<div class='ani-alternative column-half' style='background-image: url("./uploads/_201605/home_campaign16_d.jpg");'>
 			</div>
 		</section>
-		<section class='full-height background-img' style='background-image: url("./uploads/as_home_men_1.jpg");'>
+		<section class='height-full' style='background-image: url("./uploads/as_home_men_1.jpg");'>
 			<div class='hd color-white sticky'>
-				<a class='sect-header'>Men</a>
-				<a class='sect-header level-2'>Fall/Winter 2016</a>
+				<span class='sect-header'>Men</span>
+				<span class='sect-header level-2'>Fall/Winter 2016</span>
 			</div>
 		</section>
-		<section class='full-height background-img'>
-			<div class='column-fourth left background-color bg-field-color-4'>
+		<section class='height-full'>
+			<div class='column-fourth bg-field-color-4'>
 				<div class='hd color-white sticky'>
 					<a class='sect-header'>Women</a>
 					<a class='sect-header level-2'>Fall/Winter 2016</a>
 				</div>
 			</div>
-			<div class='column-three-fourths right background-img' style='background-image: url("./uploads/home_women_1.jpg");'></div>
+			<div class='column-three-fourths' style='background-image: url("./uploads/home_women_1.jpg");'></div>
 		</section>
-		<section class='half-height'>
-			<div class='column-fourth left background-color bg-field-color-6'>
+		<section class='height-full'>
+			<div class='column-fourth height-half bg-field-color-6'>
 				<div class='hd color-white sticky'>
 					<h2 class='sect-header'>Small<br>leather<br>goods</h2>
 				</div>
 			</div>
-			<div class='column-fourth left background-color bg-field-color-7'></div>
-			<div class='column-fourth left background-color bg-field-color-8'></div>
-			<div class='column-fourth left background-color bg-field-color-5'></div>
+			<div class='column-fourth height-half bg-field-color-7'></div>
+			<div class='column-fourth height-half bg-field-color-8'></div>
+			<div class='column-fourth height-half bg-field-color-5'></div>
+			<div class='column-fourth height-half' style='background-image: url("./uploads/home_slg_1.jpg");'></div>
+			<div class='column-fourth height-half' style='background-image: url("./uploads/home_slg_2.jpg");'></div>
+			<div class='column-fourth height-half' style='background-image: url("./uploads/home_slg_3.jpg");'></div>
+			<div class='column-fourth height-half bg-field-color-5'></div>
 		</section>
-		<section class='half-height'>
-			<div class='column-fourth left background-img' style='background-image: url("./uploads/home_slg_1.jpg");'></div>
-			<div class='column-fourth left background-img' style='background-image: url("./uploads/home_slg_2.jpg");'></div>
-			<div class='column-fourth left background-img' style='background-image: url("./uploads/home_slg_3.jpg");'></div>
-			<div class='column-fourth left bg-field-color-5'></div>
-		</section>
-		<section class='full-height'>
-			<div class='column-fourth left bg-field-color-5'>
+		<section class='height-full'>
+			<div class='column-fourth bg-field-color-5'>
 				<div class='hd sticky'>
-					<a class='sect-header black'>Stores</a>
+					<a href="stores.html" class='sect-header black'>Stores</a>
 				</div>
 			</div>
-			<div class='column-fourth left bg-field-color-5'>
+			<div class='column-fourth bg-field-color-5'>
 				<div class='hd'>
-					<a class='sect-header cursor black'>New York</a>
-					<a class='sect-header cursor black'>Paris</a>
-					<a class='sect-header cursor black'>London</a>
-					<a class='sect-header cursor black'>L.A.</a>
-					<a class='sect-header cursor black'>Berlin</a>
-					<a class='sect-header cursor black'>Tokyo</a>
-					<a class='sect-header cursor black'>Seoul</a>
-					<a class='sect-header cursor black'>Milano</a>
-					<a class='sect-header cursor black'>Stockholm</a>
-					<a class='sect-header cursor black'>All</a>
+					<a href="stores.html" class='sect-header cursor black'>New York</a>
+					<a href="stores.html" class='sect-header cursor black'>Paris</a>
+					<a href="stores.html" class='sect-header cursor black'>London</a>
+					<a href="stores.html" class='sect-header cursor black'>L.A.</a>
+					<a href="stores.html" class='sect-header cursor black'>Berlin</a>
+					<a href="stores.html" class='sect-header cursor black'>Tokyo</a>
+					<a href="stores.html" class='sect-header cursor black'>Seoul</a>
+					<a href="stores.html" class='sect-header cursor black'>Milano</a>
+					<a href="stores.html" class='sect-header cursor black'>Stockholm</a>
+					<a href="stores.html" class='sect-header cursor black'>All</a>
 				</div>
 			</div>
-			<div class='column-half left background-img' style='background-image: url("./uploads/home_stores.jpg");'></div>
+			<div class='column-half' style='background-image: url("./uploads/home_stores.jpg");'></div>
 		</section>
 	</body>
 </html>

@@ -60,18 +60,6 @@ body
 	background-color: #35455d
 
 
-.bg-field-image-1,
-.bg-field-image-2,
-.bg-field-image-3
-	background-position: center center
-	background-size: auto auto
-.bg-field-image-1
-	background-image: url('../video/video_paint_adam_still_m.jpg')
-.bg-field-image-2
-	background-image: url('../uploads/women_knit_2.jpg')
-.bg-field-image-3
-	background-image: url('../uploads/Sko_10_350.jpg')
-	background-size: cover
 
 p
 	&.align-arrow
@@ -212,7 +200,7 @@ nav
 						color: $menu-color-grayed
 						display: block
 
-body.menu-visible
+body.menu-backgrounded
 	nav
 		background-color: $menu-color
 
@@ -242,23 +230,28 @@ body.menu-visible
 
 section
 	position: relative
-	overflow: hidden
-	.video
+	background-size: cover
+	background-position: center center
+	.section-inner 
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
 		width: 100%
 	&.first
-	&.full-height
+	&.height-full
 		height: 100vh
-	&.half-height
+	&.height-half
 		height: 50vh
-	&.third-height
+	&.height-third
 		height: 33.333vh
-	&.two-thirds-height
+	&.height-two-thirds
 		height: 66.666vh
-	&.three-fourths-height
+	&.height-three-fourths
 		height: 75vh
-	&.one-fourths-height
+	&.height-one-fourths
 		height: 25vh
-	&.one-eights-height
+	&.height-one-eights
 		height: 12.5vh
 	&.invert
 		background-color: $background-inverted
@@ -274,60 +267,57 @@ section
 		position: relative
 		overflow: hidden
 		position: relative
-		&.full-height
-			height: 100vh
-		&.half-height
-			height: 50vh
-		&.third-height
-			height: 33.333vh
-		&.two-thirds-height
-			height: 66.666vh
-		&.three-fourths-height
-			height: 75vh
-		&.one-fourths-height
-			height: 25vh
-		&.one-eights-height
-			height: 12.5vh
+		height: 100%
+		background-size: cover
+		background-position: center center
+		&.height-half
+			height: 50%
+		&.height-third
+			height: 33.333%
+		&.height-two-thirds
+			height: 66.666%
+		&.height-three-fourths
+			height: 75%
+		&.height-one-fourths
+			height: 25%
+		&.height-one-eights
+			height: 12.5%
+	.background-img,
 	&.background-img
 		background-size: cover
+		background-position: center center
+	&.background-auto
+		.column-half,
+		.column-third,
+		.column-two-thirds,
+		.column-fourth,
+		.column-three-fourths
+			height: auto
 	.fullwidth-img
 		height: auto
 		img
 			width: 100%
 	.multiply-img
 		background-blend-mode: multiply
+	.video
+		width: 100%
 	
 			
-body.menu-visible
+body.menu-backgrounded
 	section
-		&.full-height
+		&.height-full
 			height: calc(100vh - 32px)
 		&.first
 			margin-top: 32px
 
-.background-img,
-.background-color
-	background-size: cover
-	background-position: center center
-	.column-half,
-	.column-third,
-	.column-two-thirds,
-	.column-fourth,
-	.column-three-fourths
-		height: 100%
-	&.column-half,
-	&.column-third,
-	&.column-two-thirds,
-	&.column-fourth,
-	&.column-three-fourths
-		height: 100%
+
 
 section.gridded
-	.column-half.left,
-	.column-third.left,
-	.column-two-thirds.left,
-	.column-fourth.left
-		border-right: 1px solid $text-inverted
+	.column-half:not(:first-child),
+	.column-third:not(:first-child),
+	.column-two-thirds:not(:first-child),
+	.column-fourth:not(:first-child)
+		border-left: 1px solid $text-inverted
 	.gridline-h
 		display: block
 		height: 1px
@@ -347,10 +337,10 @@ section.gridded
 	&.black-lines
 		border-top: 1px solid $menu-font-color
 		border-left: 1px solid $menu-font-color
-		.column-half.left,
-		.column-third.left,
-		.column-two-thirds.left,
-		.column-fourth.left
+		.column-half:not(:first-child),
+		.column-third:not(:first-child),
+		.column-two-thirds:not(:first-child),
+		.column-fourth:not(:first-child)
 			border-right: 1px solid $menu-font-color
 		.gridline-h
 			background-color: $menu-font-color
@@ -380,6 +370,7 @@ section.gridded
 			padding-left: 20px
 			padding-right: 20px
 			margin-left: 40%
+
 
 .logo-huge
 	margin-top: 40px
@@ -418,15 +409,24 @@ section.gridded
 
 
 .hd
-	margin: 16px 13px
-	&.stickyX
+	padding: 16px 13px
+	&.sticky-css	
 		position: -webkit-sticky
+		position: -moz-sticky
+		position: -o-sticky
+		position: -ms-sticky
+		position: sticky
 		top: 32px
+		z-index: 1
 	&.hd-page
 		position: fixed
 		top: 32px
 		left: 0
 		z-index: 5
+	&.hd-half
+		margin-left: 50%
+	&.first
+		
 		
 	.sect-header
 		display: block
@@ -474,6 +474,7 @@ section.gridded
 			padding-left: 44px
 			background-position: 0 14px
 			background-size: 50px
+			white-space: nowrap 
 			
 		.additional
 			float: right
@@ -515,36 +516,39 @@ section.gridded
 			&:hover
 				background-image: url('../img/icon_arrow6_straight_w.png')
 		
-	&.hd-ani-levels-2
-		overflow: hidden
-		height: 34px
-		.ani-layer
-			-webkit-transform: translate3d(0,34px,0)
-			-webkit-animation: hd_ani_levels_2 10s infinite linear forwards
+	&.hd-ani-states-2
+		.ani-inner
+			overflow: hidden
+			height: 34px
+			.ani-layer
+				-webkit-transform: translate3d(0,34px,0)
+				-webkit-animation: hd_ani_states_2 10s infinite linear forwards
 			
-	&.hd-ani-levels-2-disappear
-		overflow: hidden
-		height: 34px
-		.ani-layer
-			-webkit-transform: translate3d(0,34px,0)
-			-webkit-animation: hd_ani_levels_2 10s 1 linear forwards
+	&.hd-ani-states-2-disappear
+		.ani-inner
+			overflow: hidden
+			height: 34px
+			.ani-layer
+				-webkit-transform: translate3d(0,34px,0)
+				-webkit-animation: hd_ani_states_2 10s 1 linear forwards
 			
-	&.hd-ani-levels-2-double
-		overflow: hidden
-		height: 76px
-		
-		.ani-layer
-			-webkit-transform: translate3d(0,73px,0)
-			-webkit-animation: hd_ani_levels_2_double 10s 1 linear forwards
-		
-body:not(.menu-visible)
-	section.first
-		.hd
-			margin-top: 48px
+	&.hd-ani-states-2-double-stay
+		.ani-inner
+			overflow: hidden
+			height: 76px
+			
+			.ani-layer
+				-webkit-transform: translate3d(0,73px,0)
+				-webkit-animation: hd_ani_states_2_double_stay 10s 1 linear forwards
+
+//body:not(.menu-backgrounded)
+//	section.first
+//		.hd
+//			padding-top: 48px
 
 
 
-@-webkit-keyframes hd_ani_levels_2 
+@-webkit-keyframes hd_ani_states_2 
 	0% 
 		-webkit-transform: translate3d(0,34px,0)
 	5% 
@@ -561,7 +565,7 @@ body:not(.menu-visible)
 		-webkit-transform: translate3d(0,-68px,0)
 
 
-@-webkit-keyframes hd_ani_levels_2_double 
+@-webkit-keyframes hd_ani_states_2_double_stay
 	0% 
 		-webkit-transform: translate3d(0,73px,0)
 	5% 
@@ -579,7 +583,7 @@ body:not(.menu-visible)
 
 
 
-@-webkit-keyframes hd_ani_levels_2_original
+@-webkit-keyframes hd_ani_states_2_original
 	0% 
 		-webkit-transform: translate3d(0,100%,0)
 	5% 
@@ -624,6 +628,7 @@ body:not(.menu-visible)
 			color: #fff
 
 
+
 .ani-regular
 	z-index: 2
 	-webkit-animation: ani_alternative steps(1) 3s infinite
@@ -632,7 +637,7 @@ body:not(.menu-visible)
 	position: absolute !important
 	top: 0
 	left: 0
-	&.right
+	&.column-half:nth-child(2n)
 		left: 50%
 
 @-webkit-keyframes ani_alternative 
@@ -644,5 +649,33 @@ body:not(.menu-visible)
 		opacity: 1
 	100% 
 		opacity: 1
+
+
+
+.sticky-test
+	position: -webkit-sticky
+	position: -moz-sticky
+	position: -o-sticky
+	position: -ms-sticky
+	position: sticky
+	top: 32px
+	z-index: 1
+
+[data-lorem]
+	margin-top: 2em
+	line-height: 1.5
+	text-align: justify
+	background: #eee
+	border-radius: 5px
+	padding: 15px
+
+[data-lorem] .sticky-test
+	background: #3A5E8C
+	padding: 15px 10px
+	color: white
+	border-radius: 5px
+	display: inline-block
+	width: 100%
+	box-sizing: border-box
 
 

@@ -34,27 +34,27 @@ footer {
   margin-bottom: 10px;
 }
 
-/* line 9, ../sass/_grid.sass */
-.column-half.left, .column-half.left-spaced,
-.column-third.left,
+/* line 4, ../sass/_grid.sass */
+.column-half,
+.column-third,
+.column-two-thirds,
+.column-fourth,
+.column-three-fourths {
+  float: left;
+}
+/* line 10, ../sass/_grid.sass */
+.column-half.left-spaced,
 .column-third.left-spaced,
-.column-two-thirds.left,
 .column-two-thirds.left-spaced,
-.column-fourth.left,
 .column-fourth.left-spaced,
-.column-three-fourths.left,
 .column-three-fourths.left-spaced {
   float: left;
 }
 /* line 12, ../sass/_grid.sass */
-.column-half.right, .column-half.right-spaced,
-.column-third.right,
+.column-half.right-spaced,
 .column-third.right-spaced,
-.column-two-thirds.right,
 .column-two-thirds.right-spaced,
-.column-fourth.right,
 .column-fourth.right-spaced,
-.column-three-fourths.right,
 .column-three-fourths.right-spaced {
   float: right;
 }
@@ -71,100 +71,131 @@ footer {
   }
 }
 
-/* line 19, ../sass/_grid.sass */
+/* line 18, ../sass/_grid.sass */
 .column-half {
   width: 50%;
 }
-/* line 21, ../sass/_grid.sass */
+/* line 20, ../sass/_grid.sass */
 .column-half.left-spaced {
   margin-right: 0;
   width: 50%;
 }
-/* line 24, ../sass/_grid.sass */
+/* line 23, ../sass/_grid.sass */
 .column-half.right-spaced {
   margin-left: 0;
   width: 50%;
 }
 
-/* line 27, ../sass/_grid.sass */
+/* line 26, ../sass/_grid.sass */
 .column-third {
   width: 33.33333%;
 }
-/* line 29, ../sass/_grid.sass */
+/* line 28, ../sass/_grid.sass */
 .column-third.left-spaced {
   margin-right: 0;
   width: 33.33333%;
 }
-/* line 32, ../sass/_grid.sass */
+/* line 31, ../sass/_grid.sass */
 .column-third.right-spaced {
   margin-left: 0;
   width: 33.33333%;
 }
-/* line 35, ../sass/_grid.sass */
+/* line 34, ../sass/_grid.sass */
 .column-third:nth-of-type(3n) {
   margin-right: 0;
 }
 
-/* line 37, ../sass/_grid.sass */
+/* line 36, ../sass/_grid.sass */
 .column-two-thirds {
   width: 66.66667%;
 }
-/* line 39, ../sass/_grid.sass */
+/* line 38, ../sass/_grid.sass */
 .column-two-thirds.left-spaced {
   margin-right: 0;
   width: 66.66667%;
 }
-/* line 42, ../sass/_grid.sass */
+/* line 41, ../sass/_grid.sass */
 .column-two-thirds.right-spaced {
   margin-left: 0;
   width: 66.66667%;
 }
 
-/* line 45, ../sass/_grid.sass */
+/* line 44, ../sass/_grid.sass */
 .column-fourth {
   width: 25%;
 }
-/* line 47, ../sass/_grid.sass */
+/* line 46, ../sass/_grid.sass */
 .column-fourth.left-spaced {
   margin-right: 0;
   width: 25%;
 }
-/* line 50, ../sass/_grid.sass */
+/* line 49, ../sass/_grid.sass */
 .column-fourth.right-spaced {
   margin-left: 0;
   width: 25%;
 }
-/* line 53, ../sass/_grid.sass */
+/* line 52, ../sass/_grid.sass */
 .column-fourth:nth-of-type(4n) {
   margin-right: 0;
 }
 
-/* line 55, ../sass/_grid.sass */
+/* line 54, ../sass/_grid.sass */
 .column-three-fourths {
   width: 75%;
 }
-/* line 57, ../sass/_grid.sass */
+/* line 56, ../sass/_grid.sass */
 .column-three-fourths.left-spaced {
   margin-right: 0;
   width: 75%;
 }
-/* line 60, ../sass/_grid.sass */
+/* line 59, ../sass/_grid.sass */
 .column-three-fourths.right-spaced {
   margin-left: 0;
   width: 75%;
 }
 
-/* line 5, ../sass/elastic.sass */
+/* line 1, ../sass/_styleguide.sass */
+.styleguide-text {
+  color: #f00;
+  padding: 60px 15px 15px;
+}
+
+/* line 6, ../sass/_styleguide.sass */
+.styleguide-btn {
+  border: 1px solid #f00;
+  padding: 3px 5px;
+  color: #f00;
+  display: inline-block;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+/* line 13, ../sass/_styleguide.sass */
+.styleguide-btn:hover {
+  color: #fff;
+  background-color: #f00;
+}
+
+/* line 20, ../sass/_styleguide.sass */
+section.styleguide-bg-alternate:nth-child(2n) .column-half:nth-child(1) {
+  background-color: #eee;
+}
+
+/* line 24, ../sass/_styleguide.sass */
+section.styleguide-bg-alternate:nth-child(2n+1) .column-half:nth-child(2) {
+  background-color: #eee;
+}
+
+/* line 6, ../sass/elastic.sass */
 html {
   box-sizing: border-box;
   font-size: 10px;
 }
-/* line 8, ../sass/elastic.sass */
+/* line 9, ../sass/elastic.sass */
 html img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 10, ../sass/elastic.sass */
+/* line 11, ../sass/elastic.sass */
 *, *:before, *:after {
   box-sizing: inherit;
 }

@@ -44,6 +44,15 @@ $( document ).ready(function() {
 	$( window ).resize(function() {
 		resizeLogo();
 	});
+	
+	
+	/* Sticky elements */
+	
+	/*$('.sticky').fixer({
+        gap: '100px'
+    });*/
+    $(".sticky").stick_in_parent({offset_top: 32});
+	
 });
 
 function resizeLogo() {
