@@ -437,43 +437,12 @@ body {
   background-color: #35455d;
 }
 
-<<<<<<< Updated upstream
-/* line 65, ../sass/screen.sass */
-=======
-/* line 96, ../sass/screen.sass */
-.bg-field-image-1,
-.bg-field-image-2,
-.bg-field-image-3 {
-  background-position: center center;
-  background-size: auto auto;
-}
-
-/* line 101, ../sass/screen.sass */
-.bg-field-image-1 {
-  background-image: url("../video/video_paint_adam_still_m.jpg");
-}
-
-/* line 103, ../sass/screen.sass */
-.bg-field-image-2 {
-  background-image: url("../uploads/women_knit_2.jpg");
-}
-
-/* line 105, ../sass/screen.sass */
-.bg-field-image-3 {
-  background-image: url("../uploads/Sko_10_350.jpg");
-  background-size: cover;
-}
-
-/* line 110, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 97, ../sass/screen.sass */
 p.align-arrow {
   margin-left: 23px;
 }
 
-<<<<<<< Updated upstream
-/* line 68, ../sass/screen.sass */
-=======
-/* line 113, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 .icon {
   padding-left: 24px !important;
   background-repeat: no-repeat;
@@ -481,8 +450,7 @@ p.align-arrow {
   background-position: 12px 13px;
 }
 
-/* line 119, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 106, ../sass/screen.sass */
 nav {
   z-index: 98;
   position: fixed;
@@ -493,84 +461,48 @@ nav {
   margin: 0;
   color: #000;
 }
-<<<<<<< Updated upstream
-/* line 77, ../sass/screen.sass */
+/* line 115, ../sass/screen.sass */
 nav:hover {
   background-color: #fafafa;
 }
-/* line 79, ../sass/screen.sass */
-=======
-/* line 128, ../sass/screen.sass */
-nav:hover {
-  background-color: #fafafa;
-}
-/* line 130, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 117, ../sass/screen.sass */
 nav a {
   position: relative;
   color: #000;
   text-decoration: none;
 }
-<<<<<<< Updated upstream
-/* line 83, ../sass/screen.sass */
-=======
-/* line 134, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 121, ../sass/screen.sass */
 nav a:hover {
   background-color: #eeeeee;
   cursor: pointer;
 }
-<<<<<<< Updated upstream
-/* line 86, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 nav a:hover ul {
   display: block;
 }
-/* line 89, ../sass/screen.sass */
-=======
-/* line 137, ../sass/screen.sass */
-nav a:hover ul {
-  display: block;
-}
-/* line 140, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 127, ../sass/screen.sass */
 nav ul {
   list-style: none;
   font-size: 15px;
   line-height: 1.3em;
   padding-right: 10px;
 }
-<<<<<<< Updated upstream
-/* line 94, ../sass/screen.sass */
-=======
-/* line 145, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 132, ../sass/screen.sass */
 nav ul li {
   float: left;
   position: relative;
 }
-<<<<<<< Updated upstream
-/* line 97, ../sass/screen.sass */
+/* line 135, ../sass/screen.sass */
 nav ul li:hover {
   background-color: #eeeeee;
 }
-/* line 100, ../sass/screen.sass */
-=======
-/* line 148, ../sass/screen.sass */
-nav ul li:hover {
-  background-color: #eeeeee;
-}
-/* line 151, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 138, ../sass/screen.sass */
 nav ul li a {
   padding: 7px 15px 0;
   height: 32px;
   display: inline-block;
 }
-<<<<<<< Updated upstream
-/* line 105, ../sass/screen.sass */
-=======
-/* line 156, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 143, ../sass/screen.sass */
 nav ul li .sub {
   display: none;
   position: absolute;
@@ -580,46 +512,26 @@ nav ul li .sub {
   padding-top: 1px;
   z-index: 99;
 }
-<<<<<<< Updated upstream
-/* line 115, ../sass/screen.sass */
+/* line 153, ../sass/screen.sass */
 nav ul li:hover .sub {
   display: block;
 }
-/* line 118, ../sass/screen.sass */
-=======
-/* line 166, ../sass/screen.sass */
-nav ul li:hover .sub {
-  display: block;
-}
-/* line 169, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 156, ../sass/screen.sass */
 nav ul li.menu-secondary {
   font-size: 11px;
   line-height: 1.3em;
   float: right;
 }
-<<<<<<< Updated upstream
-/* line 122, ../sass/screen.sass */
+/* line 160, ../sass/screen.sass */
 nav ul li.menu-secondary a {
   padding: 10px 10px;
 }
-/* line 124, ../sass/screen.sass */
-=======
-/* line 173, ../sass/screen.sass */
-nav ul li.menu-secondary a {
-  padding: 10px 10px;
-}
-/* line 175, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 162, ../sass/screen.sass */
 nav ul li.menu-secondary .sub {
   left: auto;
   right: 0;
 }
-<<<<<<< Updated upstream
-/* line 129, ../sass/screen.sass */
-=======
-/* line 180, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 167, ../sass/screen.sass */
 nav ul li.menu-logo > a {
   background-image: url("../img/acne_logotype.svg");
   background-repeat: no-repeat;
@@ -630,11 +542,7 @@ nav ul li.menu-logo > a {
   height: 32px;
   color: transparent;
 }
-<<<<<<< Updated upstream
-/* line 139, ../sass/screen.sass */
-=======
-/* line 190, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 177, ../sass/screen.sass */
 nav ul li.menu-search > a {
   padding-left: 25px;
   background-size: 10px;
@@ -642,35 +550,19 @@ nav ul li.menu-search > a {
   background-repeat: no-repeat;
   background-image: url(../img/icon_loupe2.png);
 }
-<<<<<<< Updated upstream
-/* line 146, ../sass/screen.sass */
-=======
-/* line 197, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 184, ../sass/screen.sass */
 nav ul li.menu-user > a {
   background-image: url(../img/icon_face_m.png);
 }
-<<<<<<< Updated upstream
-/* line 153, ../sass/screen.sass */
+/* line 187, ../sass/screen.sass */
 nav ul li #menuBag.active {
   background-color: #eeeeee;
 }
-/* line 157, ../sass/screen.sass */
+/* line 191, ../sass/screen.sass */
 nav ul li.menu-stores ul {
   padding-top: 0;
 }
-/* line 160, ../sass/screen.sass */
-=======
-/* line 200, ../sass/screen.sass */
-nav ul li #menuBag.active {
-  background-color: #eeeeee;
-}
-/* line 204, ../sass/screen.sass */
-nav ul li.menu-stores ul {
-  padding-top: 0;
-}
-/* line 207, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 194, ../sass/screen.sass */
 nav ul li.menu-stores .menu-stores-search input {
   border: none;
   font-family: "AcneStudiosCircle";
@@ -680,113 +572,64 @@ nav ul li.menu-stores .menu-stores-search input {
   width: 100%;
   border-bottom: 1px solid #dddddd;
 }
-<<<<<<< Updated upstream
-/* line 168, ../sass/screen.sass */
+/* line 202, ../sass/screen.sass */
 nav ul li.menu-stores .menu-stores-search input:focus {
   outline: none;
 }
-/* line 171, ../sass/screen.sass */
-=======
-/* line 215, ../sass/screen.sass */
-nav ul li.menu-stores .menu-stores-search input:focus {
-  outline: none;
-}
-/* line 218, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 205, ../sass/screen.sass */
 nav ul li ul {
   background-color: #eeeeee;
   padding: 5px 0;
   font-size: 14px;
   line-height: 1.3em;
 }
-<<<<<<< Updated upstream
-/* line 176, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 nav ul li ul li {
   float: none;
 }
-/* line 178, ../sass/screen.sass */
+/* line 212, ../sass/screen.sass */
 nav ul li ul li a, nav ul li ul li.label {
   padding: 3px 15px 2px 20px !important;
 }
-/* line 181, ../sass/screen.sass */
-=======
-/* line 223, ../sass/screen.sass */
-nav ul li ul li {
-  float: none;
-}
-/* line 225, ../sass/screen.sass */
-nav ul li ul li a, nav ul li ul li.label {
-  padding: 3px 15px 2px 20px !important;
-}
-/* line 228, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 215, ../sass/screen.sass */
 nav ul li ul li a {
   display: block !important;
   height: auto !important;
 }
-<<<<<<< Updated upstream
-/* line 184, ../sass/screen.sass */
+/* line 218, ../sass/screen.sass */
 nav ul li ul li a:hover {
   background-color: #dddddd;
 }
-/* line 186, ../sass/screen.sass */
+/* line 220, ../sass/screen.sass */
 nav ul li ul li.label {
   color: #999999;
 }
-/* line 188, ../sass/screen.sass */
-=======
-/* line 231, ../sass/screen.sass */
-nav ul li ul li a:hover {
-  background-color: #dddddd;
-}
-/* line 233, ../sass/screen.sass */
-nav ul li ul li.label {
-  color: #999999;
-}
-/* line 235, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 222, ../sass/screen.sass */
 nav ul li ul li.line {
   height: 1px;
   background-color: #dddddd;
   margin: 5px 0;
   padding: 0;
 }
-<<<<<<< Updated upstream
-/* line 194, ../sass/screen.sass */
-=======
-/* line 241, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 228, ../sass/screen.sass */
 nav ul li ul li.has-sub {
   background-image: url(../img/icon_subsubnav.png);
   background-position: 95% center;
   background-size: 6px 6px;
   background-repeat: no-repeat;
 }
-<<<<<<< Updated upstream
-/* line 199, ../sass/screen.sass */
-=======
-/* line 246, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 233, ../sass/screen.sass */
 nav ul li ul li span {
   color: #999999;
   display: block;
 }
 
-<<<<<<< Updated upstream
-/* line 204, ../sass/screen.sass */
+/* line 238, ../sass/screen.sass */
 body.menu-backgrounded nav {
   background-color: #ffffff;
 }
 
-/* line 207, ../sass/screen.sass */
-=======
-/* line 251, ../sass/screen.sass */
-body.menu-visible nav {
-  background-color: #ffffff;
-}
-
-/* line 254, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 241, ../sass/screen.sass */
 #foldOut {
   position: fixed;
   width: 25%;
@@ -798,56 +641,35 @@ body.menu-visible nav {
   font-size: 13px;
   line-height: 1.3em;
 }
-<<<<<<< Updated upstream
-/* line 217, ../sass/screen.sass */
-=======
-/* line 264, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 251, ../sass/screen.sass */
 #foldOut .separator {
   overflow: hidden;
   white-space: nowrap;
 }
-<<<<<<< Updated upstream
-/* line 220, ../sass/screen.sass */
-=======
-/* line 267, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 254, ../sass/screen.sass */
 #foldOut .number-of-items {
   display: block;
   margin-bottom: 15px;
 }
-<<<<<<< Updated upstream
-/* line 223, ../sass/screen.sass */
-=======
-/* line 270, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 257, ../sass/screen.sass */
 #foldOut .total,
 #foldOut .checkout {
   font-size: 20px;
   line-height: 1.3;
 }
-<<<<<<< Updated upstream
-/* line 227, ../sass/screen.sass */
-=======
-/* line 274, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 261, ../sass/screen.sass */
 #foldOut img {
   border: 1px solid #000;
   max-width: 100%;
 }
 
-<<<<<<< Updated upstream
-/* line 231, ../sass/screen.sass */
-=======
-/* line 278, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 265, ../sass/screen.sass */
 section {
   position: relative;
   background-size: cover;
   background-position: center center;
 }
-<<<<<<< Updated upstream
-/* line 235, ../sass/screen.sass */
+/* line 269, ../sass/screen.sass */
 section .section-inner {
   position: absolute;
   left: 0;
@@ -855,87 +677,44 @@ section .section-inner {
   height: 100%;
   width: 100%;
 }
-/* line 242, ../sass/screen.sass */
+/* line 276, ../sass/screen.sass */
 section.height-full {
   height: 100vh;
 }
-/* line 244, ../sass/screen.sass */
+/* line 278, ../sass/screen.sass */
 section.height-half {
   height: 50vh;
 }
-/* line 246, ../sass/screen.sass */
+/* line 280, ../sass/screen.sass */
 section.height-third {
   height: 33.333vh;
 }
-/* line 248, ../sass/screen.sass */
+/* line 282, ../sass/screen.sass */
 section.height-two-thirds {
   height: 66.666vh;
 }
-/* line 250, ../sass/screen.sass */
+/* line 284, ../sass/screen.sass */
 section.height-three-fourths {
   height: 75vh;
 }
-/* line 252, ../sass/screen.sass */
+/* line 286, ../sass/screen.sass */
 section.height-one-fourths {
   height: 25vh;
 }
-/* line 254, ../sass/screen.sass */
+/* line 288, ../sass/screen.sass */
 section.height-one-eights {
   height: 12.5vh;
 }
-/* line 256, ../sass/screen.sass */
-=======
-/* line 281, ../sass/screen.sass */
-section .video {
-  width: 100%;
-}
-/* line 284, ../sass/screen.sass */
-section.full-height {
-  height: 100vh;
-}
-/* line 286, ../sass/screen.sass */
-section.half-height {
-  height: 50vh;
-}
-/* line 288, ../sass/screen.sass */
-section.third-height {
-  height: 33.333vh;
-}
 /* line 290, ../sass/screen.sass */
-section.two-thirds-height {
-  height: 66.666vh;
-}
-/* line 292, ../sass/screen.sass */
-section.three-fourths-height {
-  height: 75vh;
-}
-/* line 294, ../sass/screen.sass */
-section.one-fourths-height {
-  height: 25vh;
-}
-/* line 296, ../sass/screen.sass */
-section.one-eights-height {
-  height: 12.5vh;
-}
-/* line 298, ../sass/screen.sass */
->>>>>>> Stashed changes
 section.invert {
   background-color: #000000;
   color: #ffffff;
 }
-<<<<<<< Updated upstream
-/* line 259, ../sass/screen.sass */
+/* line 293, ../sass/screen.sass */
 section.invert .sect-header {
   color: #ffffff;
 }
-/* line 261, ../sass/screen.sass */
-=======
-/* line 301, ../sass/screen.sass */
-section.invert .sect-header {
-  color: #ffffff;
-}
-/* line 303, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 295, ../sass/screen.sass */
 section .column-half,
 section .column-third,
 section .column-two-thirds,
@@ -949,7 +728,7 @@ section .column-eighth {
   background-size: cover;
   background-position: center center;
 }
-/* line 273, ../sass/screen.sass */
+/* line 307, ../sass/screen.sass */
 section .column-half.height-half,
 section .column-third.height-half,
 section .column-two-thirds.height-half,
@@ -958,7 +737,7 @@ section .column-three-fourths.height-half,
 section .column-eighth.height-half {
   height: 50%;
 }
-/* line 275, ../sass/screen.sass */
+/* line 309, ../sass/screen.sass */
 section .column-half.height-third,
 section .column-third.height-third,
 section .column-two-thirds.height-third,
@@ -967,8 +746,7 @@ section .column-three-fourths.height-third,
 section .column-eighth.height-third {
   height: 33.333%;
 }
-<<<<<<< Updated upstream
-/* line 277, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 section .column-half.height-two-thirds,
 section .column-third.height-two-thirds,
 section .column-two-thirds.height-two-thirds,
@@ -977,7 +755,7 @@ section .column-three-fourths.height-two-thirds,
 section .column-eighth.height-two-thirds {
   height: 66.666%;
 }
-/* line 279, ../sass/screen.sass */
+/* line 313, ../sass/screen.sass */
 section .column-half.height-three-fourths,
 section .column-third.height-three-fourths,
 section .column-two-thirds.height-three-fourths,
@@ -986,7 +764,7 @@ section .column-three-fourths.height-three-fourths,
 section .column-eighth.height-three-fourths {
   height: 75%;
 }
-/* line 281, ../sass/screen.sass */
+/* line 315, ../sass/screen.sass */
 section .column-half.height-one-fourths,
 section .column-third.height-one-fourths,
 section .column-two-thirds.height-one-fourths,
@@ -995,7 +773,7 @@ section .column-three-fourths.height-one-fourths,
 section .column-eighth.height-one-fourths {
   height: 25%;
 }
-/* line 283, ../sass/screen.sass */
+/* line 317, ../sass/screen.sass */
 section .column-half.height-one-eights,
 section .column-third.height-one-eights,
 section .column-two-thirds.height-one-eights,
@@ -1004,79 +782,12 @@ section .column-three-fourths.height-one-eights,
 section .column-eighth.height-one-eights {
   height: 12.5%;
 }
-/* line 285, ../sass/screen.sass */
+/* line 319, ../sass/screen.sass */
 section .background-img, section.background-img {
-=======
-/* line 312, ../sass/screen.sass */
-section .column-half.full-height,
-section .column-third.full-height,
-section .column-two-thirds.full-height,
-section .column-fourth.full-height,
-section .column-three-fourths.full-height,
-section .column-eighth.full-height {
-  height: 100vh;
-}
-/* line 314, ../sass/screen.sass */
-section .column-half.half-height,
-section .column-third.half-height,
-section .column-two-thirds.half-height,
-section .column-fourth.half-height,
-section .column-three-fourths.half-height,
-section .column-eighth.half-height {
-  height: 50vh;
-}
-/* line 316, ../sass/screen.sass */
-section .column-half.third-height,
-section .column-third.third-height,
-section .column-two-thirds.third-height,
-section .column-fourth.third-height,
-section .column-three-fourths.third-height,
-section .column-eighth.third-height {
-  height: 33.333vh;
-}
-/* line 318, ../sass/screen.sass */
-section .column-half.two-thirds-height,
-section .column-third.two-thirds-height,
-section .column-two-thirds.two-thirds-height,
-section .column-fourth.two-thirds-height,
-section .column-three-fourths.two-thirds-height,
-section .column-eighth.two-thirds-height {
-  height: 66.666vh;
-}
-/* line 320, ../sass/screen.sass */
-section .column-half.three-fourths-height,
-section .column-third.three-fourths-height,
-section .column-two-thirds.three-fourths-height,
-section .column-fourth.three-fourths-height,
-section .column-three-fourths.three-fourths-height,
-section .column-eighth.three-fourths-height {
-  height: 75vh;
-}
-/* line 322, ../sass/screen.sass */
-section .column-half.one-fourths-height,
-section .column-third.one-fourths-height,
-section .column-two-thirds.one-fourths-height,
-section .column-fourth.one-fourths-height,
-section .column-three-fourths.one-fourths-height,
-section .column-eighth.one-fourths-height {
-  height: 25vh;
-}
-/* line 324, ../sass/screen.sass */
-section .column-half.one-eights-height,
-section .column-third.one-eights-height,
-section .column-two-thirds.one-eights-height,
-section .column-fourth.one-eights-height,
-section .column-three-fourths.one-eights-height,
-section .column-eighth.one-eights-height {
-  height: 12.5vh;
-}
-/* line 326, ../sass/screen.sass */
-section.background-img {
->>>>>>> Stashed changes
   background-size: cover;
   background-position: center center;
 }
-/* line 290, ../sass/screen.sass */
+/* line 324, ../sass/screen.sass */
 section.background-auto .column-half,
 section.background-auto .column-third,
 section.background-auto .column-two-thirds,
@@ -1084,102 +795,40 @@ section.background-auto .column-fourth,
 section.background-auto .column-three-fourths {
   height: auto;
 }
-<<<<<<< Updated upstream
-/* line 296, ../sass/screen.sass */
+/* line 330, ../sass/screen.sass */
 section .fullwidth-img {
   height: auto;
 }
-/* line 298, ../sass/screen.sass */
+/* line 332, ../sass/screen.sass */
 section .fullwidth-img img {
   width: 100%;
 }
-/* line 300, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 section .multiply-img {
   background-blend-mode: multiply;
 }
-/* line 302, ../sass/screen.sass */
+/* line 336, ../sass/screen.sass */
 section .video {
   width: 100%;
 }
 
-/* line 308, ../sass/screen.sass */
+/* line 342, ../sass/screen.sass */
 body.menu-backgrounded section.height-full {
   height: calc(100vh - 32px);
 }
-/* line 310, ../sass/screen.sass */
+/* line 344, ../sass/screen.sass */
 body.menu-backgrounded section.first {
   margin-top: 32px;
 }
 
-/* line 316, ../sass/screen.sass */
+/* line 350, ../sass/screen.sass */
 section.gridded .column-half:not(:first-child),
 section.gridded .column-third:not(:first-child),
 section.gridded .column-two-thirds:not(:first-child),
 section.gridded .column-fourth:not(:first-child) {
   border-left: 1px solid #ffffff;
 }
-/* line 321, ../sass/screen.sass */
-=======
-/* line 328, ../sass/screen.sass */
-section .fullwidth-img {
-  height: auto;
-}
-/* line 330, ../sass/screen.sass */
-section .fullwidth-img img {
-  width: 100%;
-}
-/* line 332, ../sass/screen.sass */
-section .multiply-img {
-  background-blend-mode: multiply;
-}
-
-/* line 337, ../sass/screen.sass */
-body.menu-visible section.full-height {
-  height: calc(100vh - 32px);
-}
-/* line 339, ../sass/screen.sass */
-body.menu-visible section.first {
-  margin-top: 32px;
-}
-
-/* line 342, ../sass/screen.sass */
-.background-img,
-.background-color {
-  background-size: cover;
-  background-position: center center;
-}
-/* line 346, ../sass/screen.sass */
-.background-img .column-half,
-.background-img .column-third,
-.background-img .column-two-thirds,
-.background-img .column-fourth,
-.background-img .column-three-fourths,
-.background-color .column-half,
-.background-color .column-third,
-.background-color .column-two-thirds,
-.background-color .column-fourth,
-.background-color .column-three-fourths {
-  height: 100%;
-}
-/* line 352, ../sass/screen.sass */
-.background-img.column-half, .background-img.column-third, .background-img.column-two-thirds, .background-img.column-fourth, .background-img.column-three-fourths,
-.background-color.column-half,
-.background-color.column-third,
-.background-color.column-two-thirds,
-.background-color.column-fourth,
-.background-color.column-three-fourths {
-  height: 100%;
-}
-
-/* line 360, ../sass/screen.sass */
-section.gridded .column-half.left,
-section.gridded .column-third.left,
-section.gridded .column-two-thirds.left,
-section.gridded .column-fourth.left {
-  border-right: 1px solid #ffffff;
-}
-/* line 365, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 355, ../sass/screen.sass */
 section.gridded .gridline-h {
   display: block;
   height: 1px;
@@ -1189,92 +838,49 @@ section.gridded .gridline-h {
   left: 0;
   top: 25%;
 }
-<<<<<<< Updated upstream
-/* line 329, ../sass/screen.sass */
+/* line 363, ../sass/screen.sass */
 section.gridded .gridline-h.gridline-2 {
   top: 50%;
 }
-/* line 331, ../sass/screen.sass */
+/* line 365, ../sass/screen.sass */
 section.gridded .gridline-h.gridline-3 {
   top: 75%;
 }
-/* line 333, ../sass/screen.sass */
-=======
-/* line 373, ../sass/screen.sass */
-section.gridded .gridline-h.gridline-2 {
-  top: 50%;
-}
-/* line 375, ../sass/screen.sass */
-section.gridded .gridline-h.gridline-3 {
-  top: 75%;
-}
-/* line 377, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 367, ../sass/screen.sass */
 section.gridded .gridblock {
   font-family: "Whois";
   font-size: 18px;
   border-bottom: 1px solid #ffffff;
 }
-<<<<<<< Updated upstream
-/* line 337, ../sass/screen.sass */
-=======
-/* line 381, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 371, ../sass/screen.sass */
 section.gridded.black-lines {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
 }
-<<<<<<< Updated upstream
-/* line 340, ../sass/screen.sass */
+/* line 374, ../sass/screen.sass */
 section.gridded.black-lines .column-half:not(:first-child),
 section.gridded.black-lines .column-third:not(:first-child),
 section.gridded.black-lines .column-two-thirds:not(:first-child),
 section.gridded.black-lines .column-fourth:not(:first-child) {
   border-right: 1px solid #000;
 }
-/* line 345, ../sass/screen.sass */
+/* line 379, ../sass/screen.sass */
 section.gridded.black-lines .gridline-h {
   background-color: #000;
 }
-/* line 347, ../sass/screen.sass */
+/* line 381, ../sass/screen.sass */
 section.gridded.black-lines .gridblock {
   border-bottom: 1px solid #000;
 }
-/* line 349, ../sass/screen.sass */
+/* line 383, ../sass/screen.sass */
 section.gridded.black-lines input {
   border: 1px solid #000;
 }
-/* line 351, ../sass/screen.sass */
+/* line 385, ../sass/screen.sass */
 section.gridded.black-lines input ::placeholder {
   color: #999999;
 }
-/* line 354, ../sass/screen.sass */
-=======
-/* line 384, ../sass/screen.sass */
-section.gridded.black-lines .column-half.left,
-section.gridded.black-lines .column-third.left,
-section.gridded.black-lines .column-two-thirds.left,
-section.gridded.black-lines .column-fourth.left {
-  border-right: 1px solid #000;
-}
-/* line 389, ../sass/screen.sass */
-section.gridded.black-lines .gridline-h {
-  background-color: #000;
-}
-/* line 391, ../sass/screen.sass */
-section.gridded.black-lines .gridblock {
-  border-bottom: 1px solid #000;
-}
-/* line 393, ../sass/screen.sass */
-section.gridded.black-lines input {
-  border: 1px solid #000;
-}
-/* line 395, ../sass/screen.sass */
-section.gridded.black-lines input ::placeholder {
-  color: #999999;
-}
-/* line 398, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 388, ../sass/screen.sass */
 section.gridded input {
   font-family: "Menlo";
   font-size: 14px;
@@ -1285,19 +891,11 @@ section.gridded input {
   padding: 8px;
   color: #fff;
 }
-<<<<<<< Updated upstream
-/* line 363, ../sass/screen.sass */
+/* line 397, ../sass/screen.sass */
 section.gridded input ::placeholder {
   color: #fff;
 }
-/* line 365, ../sass/screen.sass */
-=======
-/* line 407, ../sass/screen.sass */
-section.gridded input ::placeholder {
-  color: #fff;
-}
-/* line 409, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 399, ../sass/screen.sass */
 section.gridded input[type="submit"] {
   background-color: #ffffff;
   display: inline-block;
@@ -1308,28 +906,16 @@ section.gridded input[type="submit"] {
   margin-left: 40%;
 }
 
-<<<<<<< Updated upstream
-/* line 375, ../sass/screen.sass */
+/* line 409, ../sass/screen.sass */
 .logo-huge {
   margin-top: 40px;
 }
-/* line 377, ../sass/screen.sass */
-=======
-/* line 418, ../sass/screen.sass */
-.logo-huge {
-  margin-top: 40px;
-}
-/* line 420, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 411, ../sass/screen.sass */
 .logo-huge #master-text {
   max-width: 100%;
 }
 
-<<<<<<< Updated upstream
-/* line 379, ../sass/screen.sass */
-=======
-/* line 422, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 413, ../sass/screen.sass */
 .logo-huge-container {
   position: absolute;
   top: 8%;
@@ -1337,30 +923,18 @@ section.gridded input[type="submit"] {
   width: 100%;
   text-align: center;
 }
-<<<<<<< Updated upstream
-/* line 385, ../sass/screen.sass */
-=======
-/* line 428, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 419, ../sass/screen.sass */
 .logo-huge-container.bottom {
   top: auto;
   bottom: 8%;
 }
-<<<<<<< Updated upstream
-/* line 388, ../sass/screen.sass */
-=======
-/* line 431, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 422, ../sass/screen.sass */
 .logo-huge-container .logo-huge {
   height: 13%;
   margin: 0;
 }
 
-<<<<<<< Updated upstream
-/* line 393, ../sass/screen.sass */
-=======
-/* line 436, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 427, ../sass/screen.sass */
 .gray-outline input {
   border: 1px solid #aaaaaa;
   font-size: 18px;
@@ -1373,32 +947,19 @@ section.gridded input[type="submit"] {
   background-repeat: no-repeat;
 }
 
-<<<<<<< Updated upstream
-/* line 405, ../sass/screen.sass */
-=======
-/* line 447, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 438, ../sass/screen.sass */
 .inset-content {
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
 }
 
-<<<<<<< Updated upstream
-/* line 411, ../sass/screen.sass */
-=======
-/* line 452, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 443, ../sass/screen.sass */
 .hd {
   padding: 16px 13px;
 }
-<<<<<<< Updated upstream
-/* line 413, ../sass/screen.sass */
+/* line 445, ../sass/screen.sass */
 .hd.sticky-css {
-=======
-/* line 454, ../sass/screen.sass */
-.hd.stickyX {
->>>>>>> Stashed changes
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -o-sticky;
@@ -1407,26 +968,18 @@ section.gridded input[type="submit"] {
   top: 32px;
   z-index: 1;
 }
-<<<<<<< Updated upstream
-/* line 421, ../sass/screen.sass */
-=======
-/* line 457, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 453, ../sass/screen.sass */
 .hd.hd-page {
   position: fixed;
   top: 32px;
   left: 0;
   z-index: 5;
 }
-<<<<<<< Updated upstream
-/* line 426, ../sass/screen.sass */
+/* line 458, ../sass/screen.sass */
 .hd.hd-half {
   margin-left: 50%;
 }
-/* line 431, ../sass/screen.sass */
-=======
-/* line 462, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 461, ../sass/screen.sass */
 .hd .sect-header {
   display: block;
   font-size: 30px;
@@ -1439,7 +992,7 @@ section.gridded input[type="submit"] {
   padding-left: 23px;
   text-decoration: none;
 }
-/* line 473, ../sass/screen.sass */
+/* line 472, ../sass/screen.sass */
 .hd .sect-header.monospace {
   font-family: "Menlo";
   font-size: 16px;
@@ -1448,35 +1001,35 @@ section.gridded input[type="submit"] {
   background-position: 0 1px;
   padding-left: 20px;
 }
-/* line 481, ../sass/screen.sass */
+/* line 480, ../sass/screen.sass */
 .hd .sect-header.cursor {
   background-image: url("../img/icon_cursor.gif");
   background-size: 13px 22px;
   background-position: 1px 4px;
 }
-/* line 485, ../sass/screen.sass */
+/* line 484, ../sass/screen.sass */
 .hd .sect-header.cursor.monospace {
   background-position: 2px 2px;
   background-size: 8px 14px;
 }
-/* line 488, ../sass/screen.sass */
+/* line 487, ../sass/screen.sass */
 .hd .sect-header.down {
   background-image: url("../img/icon_arrow6_down3.png");
   background-position: 1px 10px;
 }
-/* line 491, ../sass/screen.sass */
+/* line 490, ../sass/screen.sass */
 .hd .sect-header.down.monospace {
   background-position: 0 3px;
 }
-/* line 493, ../sass/screen.sass */
+/* line 492, ../sass/screen.sass */
 .hd .sect-header.level-2 {
   margin-left: 22px;
 }
-/* line 495, ../sass/screen.sass */
+/* line 494, ../sass/screen.sass */
 .hd .sect-header.level-2.monospace {
   margin-left: 19px;
 }
-/* line 497, ../sass/screen.sass */
+/* line 496, ../sass/screen.sass */
 .hd .sect-header.double {
   font-size: 64px;
   line-height: 1.15em;
@@ -1485,186 +1038,97 @@ section.gridded input[type="submit"] {
   background-size: 50px;
   white-space: nowrap;
 }
-<<<<<<< Updated upstream
-/* line 479, ../sass/screen.sass */
+/* line 504, ../sass/screen.sass */
 .hd .sect-header .additional {
   float: right;
 }
-/* line 483, ../sass/screen.sass */
+/* line 507, ../sass/screen.sass */
 .hd a.sect-header .additional {
   display: none;
 }
-/* line 487, ../sass/screen.sass */
-=======
-/* line 503, ../sass/screen.sass */
-.hd .sect-header .additional {
-  float: right;
-}
-/* line 506, ../sass/screen.sass */
-.hd a.sect-header .additional {
-  display: none;
-}
-/* line 508, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 509, ../sass/screen.sass */
 .hd .sect-header.is-active,
 .hd a.sect-header:hover {
   background-image: url("../img/icon_arrow6_straight2.png");
 }
-<<<<<<< Updated upstream
-/* line 490, ../sass/screen.sass */
-=======
-/* line 511, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 512, ../sass/screen.sass */
 .hd .sect-header.is-active:not(.cursor),
 .hd a.sect-header:hover:not(.cursor) {
   padding-left: 30px;
 }
-<<<<<<< Updated upstream
-/* line 492, ../sass/screen.sass */
-=======
-/* line 513, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 514, ../sass/screen.sass */
 .hd .sect-header.is-active:not(.cursor):not(.down),
 .hd a.sect-header:hover:not(.cursor):not(.down) {
   background-position: 1px 5px;
 }
-<<<<<<< Updated upstream
-/* line 494, ../sass/screen.sass */
-=======
-/* line 515, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 516, ../sass/screen.sass */
 .hd .sect-header.is-active:not(.cursor):not(.down).monospace,
 .hd a.sect-header:hover:not(.cursor):not(.down).monospace {
   background-position: 1 1px;
 }
-<<<<<<< Updated upstream
-/* line 496, ../sass/screen.sass */
-=======
-/* line 517, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 518, ../sass/screen.sass */
 .hd .sect-header.is-active .additional,
 .hd a.sect-header:hover .additional {
   display: inline;
 }
-<<<<<<< Updated upstream
-/* line 498, ../sass/screen.sass */
-=======
-/* line 519, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 520, ../sass/screen.sass */
 .hd .sect-header.is-active.cursor,
 .hd a.sect-header:hover.cursor {
   background-image: url("../img/icon_cursor_blinking.gif");
 }
-<<<<<<< Updated upstream
-/* line 500, ../sass/screen.sass */
-=======
-/* line 521, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 522, ../sass/screen.sass */
 .hd .sect-header.is-active.down,
 .hd a.sect-header:hover.down {
   background-image: url("../img/icon_arrow6_down3_hover.png");
   background-size: 26px 25px;
 }
-<<<<<<< Updated upstream
-/* line 503, ../sass/screen.sass */
-=======
-/* line 524, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 525, ../sass/screen.sass */
 .hd .sect-header.is-active.down.monospace,
 .hd a.sect-header:hover.down.monospace {
   background-size: 20px 19px;
 }
-<<<<<<< Updated upstream
-/* line 510, ../sass/screen.sass */
-=======
-/* line 527, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 528, ../sass/screen.sass */
 .hd.color-white .sect-header {
   color: #fff;
   background-image: url("../img/icon_arrow6_w.png");
 }
-<<<<<<< Updated upstream
-/* line 513, ../sass/screen.sass */
+/* line 531, ../sass/screen.sass */
 .hd.color-white .sect-header.cursor {
   background-image: url("../img/icon_cursor_w.gif?v=2");
 }
-/* line 516, ../sass/screen.sass */
+/* line 534, ../sass/screen.sass */
 .hd.color-white a.sect-header:hover {
   background-image: url("../img/icon_arrow6_straight_w.png");
 }
-/* line 520, ../sass/screen.sass */
+/* line 538, ../sass/screen.sass */
 .hd.hd-ani-states-2 .ani-inner {
   overflow: hidden;
   height: 34px;
 }
-/* line 523, ../sass/screen.sass */
+/* line 541, ../sass/screen.sass */
 .hd.hd-ani-states-2 .ani-inner .ani-layer {
-=======
-/* line 530, ../sass/screen.sass */
-.hd.color-white .sect-header.cursor {
-  background-image: url("../img/icon_cursor_w.gif?v=2");
-}
-/* line 533, ../sass/screen.sass */
-.hd.color-white a.sect-header:hover {
-  background-image: url("../img/icon_arrow6_straight_w.png");
-}
-/* line 535, ../sass/screen.sass */
-.hd.hd-ani-levels-2 {
-  overflow: hidden;
-  height: 34px;
-}
-/* line 538, ../sass/screen.sass */
-.hd.hd-ani-levels-2 .ani-layer {
->>>>>>> Stashed changes
   -webkit-transform: translate3d(0, 34px, 0);
   -webkit-animation: hd_ani_states_2 10s infinite linear forwards;
 }
-<<<<<<< Updated upstream
-/* line 528, ../sass/screen.sass */
+/* line 546, ../sass/screen.sass */
 .hd.hd-ani-states-2-disappear .ani-inner {
   overflow: hidden;
   height: 34px;
 }
-/* line 531, ../sass/screen.sass */
+/* line 549, ../sass/screen.sass */
 .hd.hd-ani-states-2-disappear .ani-inner .ani-layer {
-=======
-/* line 541, ../sass/screen.sass */
-.hd.hd-ani-levels-2-disappear {
-  overflow: hidden;
-  height: 34px;
-}
-/* line 544, ../sass/screen.sass */
-.hd.hd-ani-levels-2-disappear .ani-layer {
->>>>>>> Stashed changes
   -webkit-transform: translate3d(0, 34px, 0);
   -webkit-animation: hd_ani_states_2 10s 1 linear forwards;
 }
-<<<<<<< Updated upstream
-/* line 536, ../sass/screen.sass */
+/* line 554, ../sass/screen.sass */
 .hd.hd-ani-states-2-double-stay .ani-inner {
   overflow: hidden;
   height: 76px;
 }
-/* line 540, ../sass/screen.sass */
+/* line 558, ../sass/screen.sass */
 .hd.hd-ani-states-2-double-stay .ani-inner .ani-layer {
   -webkit-transform: translate3d(0, 73px, 0);
   -webkit-animation: hd_ani_states_2_double_stay 10s 1 linear forwards;
-=======
-/* line 547, ../sass/screen.sass */
-.hd.hd-ani-levels-2-double {
-  overflow: hidden;
-  height: 76px;
-}
-/* line 550, ../sass/screen.sass */
-.hd.hd-ani-levels-2-double .ani-layer {
-  -webkit-transform: translate3d(0, 73px, 0);
-  -webkit-animation: hd_ani_levels_2_double 10s 1 linear forwards;
-}
-
-/* line 556, ../sass/screen.sass */
-body:not(.menu-visible) section.first .hd {
-  margin-top: 48px;
->>>>>>> Stashed changes
 }
 
 @-webkit-keyframes hd_ani_states_2 {
@@ -1736,15 +1200,12 @@ body:not(.menu-visible) section.first .hd {
     -webkit-transform: translate3d(0, -200%, 0);
   }
 }
-<<<<<<< Updated upstream
-/* line 605, ../sass/screen.sass */
-=======
-/* line 607, ../sass/screen.sass */
+/* line 611, ../sass/screen.sass */
 .big-padding {
   padding: 60px;
 }
 
-/* line 609, ../sass/screen.sass */
+/* line 613, ../sass/screen.sass */
 .pdp-details {
   height: 100%;
   right: 0;
@@ -1754,31 +1215,31 @@ body:not(.menu-visible) section.first .hd {
   z-index: 90;
   position: fixed;
 }
-/* line 617, ../sass/screen.sass */
+/* line 621, ../sass/screen.sass */
 .pdp-details .content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 621, ../sass/screen.sass */
+/* line 625, ../sass/screen.sass */
 .pdp-details .content .top {
   margin-bottom: 45px;
 }
-/* line 623, ../sass/screen.sass */
+/* line 627, ../sass/screen.sass */
 .pdp-details .content .top h1, .pdp-details .content .top h2 {
   font-size: 22px;
   padding-right: 5px;
 }
-/* line 626, ../sass/screen.sass */
+/* line 630, ../sass/screen.sass */
 .pdp-details .content .description {
   margin-bottom: 20px;
   margin-right: 5px;
 }
-/* line 629, ../sass/screen.sass */
+/* line 633, ../sass/screen.sass */
 .pdp-details .content .colors {
   margin-bottom: 45px;
 }
-/* line 631, ../sass/screen.sass */
+/* line 635, ../sass/screen.sass */
 .pdp-details .content .colors .color {
   width: 15px;
   height: 15px;
@@ -1786,20 +1247,20 @@ body:not(.menu-visible) section.first .hd {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 637, ../sass/screen.sass */
+/* line 641, ../sass/screen.sass */
 .pdp-details .content .sizes {
   margin-bottom: 20px;
 }
-/* line 639, ../sass/screen.sass */
+/* line 643, ../sass/screen.sass */
 .pdp-details .content .sizes span {
   margin-bottom: 10px;
   margin-right: 5px;
 }
-/* line 642, ../sass/screen.sass */
+/* line 646, ../sass/screen.sass */
 .pdp-details .content .sizes .grey {
   color: #aaaaaa;
 }
-/* line 644, ../sass/screen.sass */
+/* line 648, ../sass/screen.sass */
 .pdp-details .content .sizes .size {
   border-top: 1px solid #000000;
   width: calc(16.666% - 5px);
@@ -1807,7 +1268,7 @@ body:not(.menu-visible) section.first .hd {
   text-align: center;
   padding-top: 20px;
 }
-/* line 650, ../sass/screen.sass */
+/* line 654, ../sass/screen.sass */
 .pdp-details .content button {
   background-color: #000000;
   padding: 15px;
@@ -1818,47 +1279,34 @@ body:not(.menu-visible) section.first .hd {
   text-align: left;
   margin-bottom: 45px;
 }
-/* line 660, ../sass/screen.sass */
+/* line 664, ../sass/screen.sass */
 .pdp-details .content .info span {
   display: block;
 }
-/* line 662, ../sass/screen.sass */
+/* line 666, ../sass/screen.sass */
 .pdp-details .content .info span.underline {
   text-decoration: underline;
 }
 
-/* line 666, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 670, ../sass/screen.sass */
 .sect-title {
   display: block;
   font-size: 24px;
   color: #ffffff;
 }
-<<<<<<< Updated upstream
-/* line 609, ../sass/screen.sass */
-=======
-/* line 670, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 674, ../sass/screen.sass */
 .sect-title.black {
   color: #000;
 }
 
-<<<<<<< Updated upstream
-/* line 613, ../sass/screen.sass */
-=======
-/* line 673, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 677, ../sass/screen.sass */
 .bottom-sect {
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 5;
 }
-<<<<<<< Updated upstream
-/* line 618, ../sass/screen.sass */
-=======
-/* line 678, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 682, ../sass/screen.sass */
 .bottom-sect .sect-body {
   display: block;
   font-size: 12px;
@@ -1869,42 +1317,25 @@ body:not(.menu-visible) section.first .hd {
   bottom: 0;
   left: 0;
 }
-<<<<<<< Updated upstream
-/* line 627, ../sass/screen.sass */
-=======
-/* line 687, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 691, ../sass/screen.sass */
 .bottom-sect .sect-body.white {
   color: #fff;
 }
 
-<<<<<<< Updated upstream
-/* line 632, ../sass/screen.sass */
-=======
-/* line 690, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 694, ../sass/screen.sass */
 .ani-regular {
   z-index: 2;
   -webkit-animation: ani_alternative steps(1) 3s infinite;
 }
 
-<<<<<<< Updated upstream
-/* line 636, ../sass/screen.sass */
-=======
-/* line 694, ../sass/screen.sass */
->>>>>>> Stashed changes
+/* line 698, ../sass/screen.sass */
 .ani-alternative {
   position: absolute !important;
   top: 0;
   left: 0;
 }
-<<<<<<< Updated upstream
-/* line 640, ../sass/screen.sass */
+/* line 702, ../sass/screen.sass */
 .ani-alternative.column-half:nth-child(2n) {
-=======
-/* line 698, ../sass/screen.sass */
-.ani-alternative.right {
->>>>>>> Stashed changes
   left: 50%;
 }
 
@@ -1922,7 +1353,7 @@ body:not(.menu-visible) section.first .hd {
     opacity: 1;
   }
 }
-/* line 655, ../sass/screen.sass */
+/* line 715, ../sass/screen.sass */
 .sticky-test {
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -1933,7 +1364,7 @@ body:not(.menu-visible) section.first .hd {
   z-index: 1;
 }
 
-/* line 664, ../sass/screen.sass */
+/* line 724, ../sass/screen.sass */
 [data-lorem] {
   margin-top: 2em;
   line-height: 1.5;
@@ -1943,7 +1374,7 @@ body:not(.menu-visible) section.first .hd {
   padding: 15px;
 }
 
-/* line 672, ../sass/screen.sass */
+/* line 732, ../sass/screen.sass */
 [data-lorem] .sticky-test {
   background: #3A5E8C;
   padding: 15px 10px;
