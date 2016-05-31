@@ -1,0 +1,44 @@
+// Customization
+$column-margin: 0
+$padding-vertical: 20px
+$padding-horizontal: 20px
+
+
+// Site specific vars
+$general-font: 'AcneStudiosCircle'
+$menu-color: #ffffff
+$menu-color-hover: #eeeeee
+$menu-color-separator: #dddddd
+$menu-color-grayed: #999999
+$menu-font-size: 15px
+$menu-font-small-size: 11px
+$menu-font-foldout-size: 14px
+$menu-font-color: #000
+
+$grid-color: #000
+$grid-color-inverted: #fff
+
+$background-inverted: #000000
+$text-inverted: #ffffff
+
+$form-filler-gray: #999999
+
+// Injected in the loop generation media queries.
+// $n is loop counter, the higher it is, the wider the browser window is.
+// Use it to create your own calculations based on the size of the browser window.
+// Each line injected here significantly increases the compiled CSS file size.
+section,
+footer
+	padding: $padding-vertical $padding-horizontal
+.padding-responsive
+	padding: $padding-vertical $padding-horizontal
+.padding-top-responsive
+	padding-top: $padding-vertical
+.padding-bottom-responsive
+	padding-bottom: $padding-vertical
+.padding-left-responsive
+	padding-left: $padding-horizontal / 2
+.padding-right-responsive
+	padding-right: $padding-horizontal / 2
+.margin-bottom-responsive
+	margin-bottom: $padding-vertical / 2

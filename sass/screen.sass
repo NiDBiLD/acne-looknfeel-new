@@ -1,0 +1,741 @@
+@import elastic
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+@import compass/reset
+
+body
+	background-color: #fff
+	overflow-x: hidden
+	font-family: $general-font
+	font-size: 13px
+	line-height: 1.35	
+*
+	-webkit-font-smoothing: antialiased
+
+.clearfix
+	&::after
+		content: ""
+		display: table
+		height: 0
+		clear: both
+.clear
+	clear: both
+
+.align-right
+	text-align: right
+.align-left
+	text-align: left
+
+.float-left
+	float: left
+.float-right
+	float: right
+
+.block
+	display: block
+
+.stretch-height-full
+	height: 100%
+.stretch-height-half
+	height: 50%
+.stretch-height-fourth
+	height: 25%
+
+.grid
+	&.line-left
+		border-left: 1px solid $grid-color
+	&.line-right
+		border-right: 1px solid $grid-color
+	&.line-bottom
+		border-bottom: 1px solid $grid-color
+	&.line-top
+		border-top: 1px solid $grid-color
+	&.line-bottom-left-corner
+		border-bottom: 1px solid $grid-color
+		border-left: 1px solid $grid-color
+	&.line-bottom-right-corner
+		border-bottom: 1px solid $grid-color
+		border-right: 1px solid $grid-color
+	&.inverted
+		border-color: $grid-color-inverted
+
+
+.bg-field-color-1
+	background-color: #d46984
+.bg-field-color-2
+	background-color: #ff0000
+.bg-field-color-3
+	background-color: #00ff00
+.bg-field-color-4
+	background-color: #000000
+.bg-field-color-5
+	background-color: #ffffff
+.bg-field-color-6
+	background-color: #5a363d
+.bg-field-color-7
+	background-color: #d26126
+.bg-field-color-8
+	background-color: #343e56
+.bg-field-color-9
+	background-color: #3591d2
+.bg-field-color-10
+	background-color: #ffef36
+.bg-field-color-11
+	background-color: #1c1c1c
+.bg-field-color-12
+	background-color: #66343f
+.bg-field-color-13
+	background-color: #fa8b47
+.bg-field-color-14
+	background-color: #35455d
+
+p
+	&.align-arrow
+		margin-left: 23px
+
+.icon
+	padding-left: 24px !important
+	background-repeat: no-repeat
+	background-size: 9px 7px
+	background-position: 12px 13px
+
+nav
+	z-index: 98
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	height: 32px
+	margin: 0
+	color: $menu-font-color
+	&:hover
+		background-color: darken($menu-color, 2%)
+	a
+		position: relative
+		color: #000
+		text-decoration: none
+		&:hover
+			background-color: $menu-color-hover
+			cursor: pointer
+			ul
+				display: block
+
+	ul
+		list-style: none
+		font-size: $menu-font-size
+		line-height: 1.3em
+		padding-right: 10px
+		li
+			float: left
+			position: relative
+			&:hover
+				background-color: $menu-color-hover
+
+			a
+				padding: 7px 15px 0
+				height: 32px
+				display: inline-block
+
+			.sub
+				display: none
+				position: absolute
+				top: 32px
+				left: 0
+				width: 200px
+				padding-top: 1px
+				z-index: 99
+				
+			&:hover
+				.sub
+					display: block
+
+			&.menu-secondary
+				font-size: $menu-font-small-size
+				line-height: 1.3em
+				float: right
+				a
+					padding: 10px 10px
+				.sub
+					left: auto
+					right: 0
+
+			&.menu-logo
+				> a
+					background-image: url('../img/acne_logotype.svg')
+					background-repeat: no-repeat
+					background-size: 92px 12px
+					background-position: 15px 10px
+					display: block
+					width: 123px
+					height: 32px
+					color: transparent
+			&.menu-search
+				> a
+					padding-left: 25px
+					background-size: 10px
+					background-position: 11px 11px
+					background-repeat: no-repeat
+					background-image: url(../img/icon_loupe2.png)
+			&.menu-user
+				> a
+					background-image: url(../img/icon_face_m.png)
+			#menuBag
+				&.active
+					background-color: $menu-color-hover
+
+			&.menu-stores
+				ul
+					padding-top: 0
+				.menu-stores-search
+					input
+						border: none
+						font-family: $general-font
+						font-size: $menu-font-foldout-size
+						padding: 9px 0 8px 20px
+						margin: 0 0 5px
+						width: 100%
+						border-bottom: 1px solid $menu-color-separator
+						&:focus
+							outline: none
+
+			ul 
+				background-color: $menu-color-hover
+				padding: 5px 0
+				font-size: $menu-font-foldout-size
+				line-height: 1.3em
+				li
+					float: none
+					a,
+					&.label
+						padding: 3px 15px 2px 20px !important
+					a
+						display: block !important
+						height: auto !important
+						&:hover
+							background-color: $menu-color-separator
+					&.label
+						color: $menu-color-grayed
+					&.line
+						height: 1px
+						background-color: $menu-color-separator
+						margin: 5px 0
+						padding: 0
+						
+					&.has-sub
+						background-image: url(../img/icon_subsubnav.png)
+						background-position: 95% center
+						background-size: 6px 6px
+						background-repeat: no-repeat
+					span
+						color: $menu-color-grayed
+						display: block
+
+body.menu-backgrounded
+	nav
+		background-color: $menu-color
+
+#foldOut
+	position: fixed
+	width: 25%
+	right: -25%
+	bottom: 0
+	top: 33px
+	padding: 10px
+	background-color: $menu-color-hover
+	font-size: 13px
+	line-height: 1.3em
+	.separator
+		overflow: hidden
+		white-space: nowrap
+	.number-of-items
+		display: block
+		margin-bottom: 15px
+	.total,
+	.checkout
+		font-size: 20px
+		line-height: 1.3
+	img
+		border: 1px solid #000
+		max-width: 100%
+
+section
+	position: relative
+	background-size: cover
+	background-position: center center
+	.section-inner 
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+	&.first
+	&.height-full
+		height: 100vh
+	&.height-half
+		height: 50vh
+	&.height-third
+		height: 33.333vh
+	&.height-two-thirds
+		height: 66.666vh
+	&.height-three-fourths
+		height: 75vh
+	&.height-one-fourths
+		height: 25vh
+	&.height-one-eights
+		height: 12.5vh
+	&.invert
+		background-color: $background-inverted
+		color: $text-inverted
+		.sect-header
+			color: $text-inverted
+	.column-half,
+	.column-third,
+	.column-two-thirds,
+	.column-fourth,
+	.column-three-fourths,
+	.column-eighth
+		position: relative
+		overflow: hidden
+		position: relative
+		height: 100%
+		background-size: cover
+		background-position: center center
+		&.height-half
+			height: 50%
+		&.height-third
+			height: 33.333%
+		&.height-two-thirds
+			height: 66.666%
+		&.height-three-fourths
+			height: 75%
+		&.height-one-fourths
+			height: 25%
+		&.height-one-eights
+			height: 12.5%
+	.background-img,
+	&.background-img
+		background-size: cover
+		background-position: center center
+	&.background-auto
+		.column-half,
+		.column-third,
+		.column-two-thirds,
+		.column-fourth,
+		.column-three-fourths
+			height: auto
+	.fullwidth-img
+		height: auto
+		img
+			width: 100%
+	.multiply-img
+		background-blend-mode: multiply
+	.video
+		width: 100%
+	
+			
+body.menu-backgrounded
+	section
+		&.height-full
+			height: calc(100vh - 32px)
+		&.first
+			margin-top: 32px
+
+
+
+section.gridded
+	.column-half:not(:first-child),
+	.column-third:not(:first-child),
+	.column-two-thirds:not(:first-child),
+	.column-fourth:not(:first-child)
+		border-left: 1px solid $text-inverted
+	.gridline-h
+		display: block
+		height: 1px
+		width: 100%
+		background-color: #fff
+		position: absolute
+		left: 0
+		top: 25%
+		&.gridline-2
+			top: 50%
+		&.gridline-3
+			top: 75%
+	.gridblock
+		font-family: 'Whois'
+		font-size: 18px
+		border-bottom: 1px solid $text-inverted
+	&.black-lines
+		border-top: 1px solid $menu-font-color
+		border-left: 1px solid $menu-font-color
+		.column-half:not(:first-child),
+		.column-third:not(:first-child),
+		.column-two-thirds:not(:first-child),
+		.column-fourth:not(:first-child)
+			border-right: 1px solid $menu-font-color
+		.gridline-h
+			background-color: $menu-font-color
+		.gridblock
+			border-bottom: 1px solid $menu-font-color
+		input
+			border: 1px solid $menu-font-color
+			::placeholder
+				color: $form-filler-gray
+
+	input 
+		font-family: 'Menlo'
+		font-size: 14px
+		border: 1px solid #fff
+		margin: 30px 0 0 23px
+		width: 90%
+		background-color: transparent
+		padding: 8px
+		color: #fff
+		::placeholder
+			color: #fff
+		&[type="submit"]
+			background-color: $text-inverted
+			display: inline-block
+			color: #00f
+			width: auto
+			padding-left: 20px
+			padding-right: 20px
+			margin-left: 40%
+
+
+.logo-huge
+	margin-top: 40px
+	#master-text
+		max-width: 100%
+.logo-huge-container
+	position: absolute
+	top: 8%
+	left: 0
+	width: 100%
+	text-align: center
+	&.bottom
+		top: auto
+		bottom: 8%
+	.logo-huge
+		height: 13%
+		margin: 0
+
+.gray-outline
+	input
+		border: 1px solid #aaaaaa
+		font-size: 18px
+		color: $form-filler-gray
+		padding: 14px
+		width: 100%
+		background-image: url('../img/icon_geolocator.png')
+		background-size: 15px auto
+		background-position: 97% center
+		background-repeat: no-repeat
+
+.inset-content
+	margin-left: 50px
+	margin-right: 50px
+	margin-top: 50px
+
+.hd
+	padding: 16px 13px
+	&.sticky-css	
+		position: -webkit-sticky
+		position: -moz-sticky
+		position: -o-sticky
+		position: -ms-sticky
+		position: sticky
+		top: 32px
+		z-index: 1
+	&.hd-page
+		position: fixed
+		top: 32px
+		left: 0
+		z-index: 5
+	&.hd-half
+		margin-left: 50%
+
+	.sect-header
+		display: block
+		font-size: 30px
+		line-height: 1.15em
+		color: #000
+		background-image: url('../img/icon_arrow6.png')
+		background-size: 25px 25px
+		background-repeat: no-repeat
+		background-position: 0 5px
+		padding-left: 23px
+		text-decoration: none
+		&.monospace
+			font-family: 'Menlo'
+			font-size: 16px
+			line-height: 1.3em
+			background-size: 19px
+			background-position: 0 1px
+			padding-left: 20px
+			
+		&.cursor
+			background-image: url('../img/icon_cursor.gif')
+			background-size: 13px 22px
+			background-position: 1px 4px
+			&.monospace
+				background-position: 2px 2px
+				background-size: 8px 14px
+		&.down
+			background-image: url('../img/icon_arrow6_down3.png')
+			background-position: 1px 10px
+			&.monospace
+				background-position: 0 3px
+		&.level-2
+			margin-left: 22px
+			&.monospace
+				margin-left: 19px
+		&.double
+			font-size: 64px
+			line-height: 1.15em
+			padding-left: 44px
+			background-position: 0 14px
+			background-size: 50px
+			white-space: nowrap 
+			
+		.additional
+			float: right
+	a.sect-header
+		.additional
+			display: none
+	.sect-header.is-active,
+	a.sect-header:hover
+		background-image: url('../img/icon_arrow6_straight2.png')
+		&:not(.cursor)
+			padding-left: 30px
+		&:not(.cursor):not(.down)
+			background-position: 1px 5px
+			&.monospace
+				background-position: 1 1px
+		.additional
+			display: inline
+		&.cursor
+			background-image: url('../img/icon_cursor_blinking.gif')
+		&.down
+			background-image: url('../img/icon_arrow6_down3_hover.png')
+			background-size: 26px 25px
+			&.monospace
+				background-size: 20px 19px
+	&.color-white
+		.sect-header
+			color: #fff
+			background-image: url('../img/icon_arrow6_w.png')
+			&.cursor
+				background-image: url('../img/icon_cursor_w.gif?v=2')
+		a.sect-header
+			&:hover
+				background-image: url('../img/icon_arrow6_straight_w.png')
+		
+	&.hd-ani-states-2
+		.ani-inner
+			overflow: hidden
+			height: 34px
+			.ani-layer
+				-webkit-transform: translate3d(0,34px,0)
+				-webkit-animation: hd_ani_states_2 10s infinite linear forwards
+			
+	&.hd-ani-states-2-disappear
+		.ani-inner
+			overflow: hidden
+			height: 34px
+			.ani-layer
+				-webkit-transform: translate3d(0,34px,0)
+				-webkit-animation: hd_ani_states_2 10s 1 linear forwards
+			
+	&.hd-ani-states-2-double-stay
+		.ani-inner
+			overflow: hidden
+			height: 76px
+			
+			.ani-layer
+				-webkit-transform: translate3d(0,73px,0)
+				-webkit-animation: hd_ani_states_2_double_stay 10s 1 linear forwards
+
+@-webkit-keyframes hd_ani_states_2 
+	0% 
+		-webkit-transform: translate3d(0,34px,0)
+	5% 
+		-webkit-transform: translate3d(0,34px,0)
+	10% 
+		-webkit-transform: translate3d(0,0,0)
+	50% 
+		-webkit-transform: translate3d(0,0,0)
+	55% 
+		-webkit-transform: translate3d(0,-34px,0)
+	95% 
+		-webkit-transform: translate3d(0,-34px,0)
+	100% 
+		-webkit-transform: translate3d(0,-68px,0)
+
+@-webkit-keyframes hd_ani_states_2_double_stay
+	0% 
+		-webkit-transform: translate3d(0,73px,0)
+	5% 
+		-webkit-transform: translate3d(0,73px,0)
+	10% 
+		-webkit-transform: translate3d(0,0,0)
+	50% 
+		-webkit-transform: translate3d(0,0,0)
+	55% 
+		-webkit-transform: translate3d(0,-73px,0)
+	95% 
+		-webkit-transform: translate3d(0,-73px,0)
+	100% 
+		-webkit-transform: translate3d(0,-73px,0)
+
+
+@-webkit-keyframes hd_ani_states_2_original
+	0% 
+		-webkit-transform: translate3d(0,100%,0)
+	5% 
+		-webkit-transform: translate3d(0,100%,0)
+	10% 
+		-webkit-transform: translate3d(0,0,0)
+	50% 
+		-webkit-transform: translate3d(0,0,0)
+	55% 
+		-webkit-transform: translate3d(0,-100%,0)
+	95% 
+		-webkit-transform: translate3d(0,-100%,0)
+	100% 
+		-webkit-transform: translate3d(0,-200%,0)
+
+.big-padding
+	padding: 60px
+.pdp-details
+	height: 100%
+	right: 0
+	height: 100%
+	width: 50%
+	left: 50%
+	z-index: 90
+	position: fixed
+	.content
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		.top
+			margin-bottom: 45px
+			h1,h2
+				font-size: 22px
+				padding-right: 5px
+		.description
+			margin-bottom: 20px
+			margin-right: 5px
+		.colors
+			margin-bottom: 45px
+			.color
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				display: inline-block
+				margin-right: 10px
+		.sizes
+			margin-bottom: 20px
+			span
+				margin-bottom: 10px
+				margin-right: 5px
+			.grey
+				color: #aaaaaa
+			.size
+				border-top: 1px solid #000000
+				width: calc(16.666% - 5px)
+				margin-right: 5px
+				text-align: center
+				padding-top: 20px
+		button
+			background-color: #000000
+			padding: 15px
+			color: #ffffff
+			border: 0
+			width: calc(100% - 5px)
+			font-size: 12px
+			text-align: left
+			margin-bottom: 45px
+		.info
+			span
+				display: block
+				&.underline
+					text-decoration: underline
+
+
+.sect-title
+	display: block
+	font-size: 24px
+	color: $menu-color
+	&.black
+		color: $menu-font-color
+
+.bottom-sect
+	position: absolute
+	height: 100%
+	width: 100%
+	z-index: 5
+	.sect-body
+		display: block
+		font-size: 12px
+		line-height: 1.3em
+		color: #000
+		position: absolute
+		z-index: 15
+		bottom: 0
+		left: 0
+		&.white
+			color: #fff
+
+.ani-regular
+	z-index: 2
+	-webkit-animation: ani_alternative steps(1) 3s infinite
+
+.ani-alternative
+	position: absolute !important
+	top: 0
+	left: 0
+	&.column-half:nth-child(2n)
+		left: 50%
+
+@-webkit-keyframes ani_alternative 
+	0% 
+		opacity: 0
+	50% 
+		opacity: 0
+	50.1% 
+		opacity: 1
+	100% 
+		opacity: 1
+
+.sticky-test
+	position: -webkit-sticky
+	position: -moz-sticky
+	position: -o-sticky
+	position: -ms-sticky
+	position: sticky
+	top: 32px
+	z-index: 1
+
+[data-lorem]
+	margin-top: 2em
+	line-height: 1.5
+	text-align: justify
+	background: #eee
+	border-radius: 5px
+	padding: 15px
+
+[data-lorem] .sticky-test
+	background: #3A5E8C
+	padding: 15px 10px
+	color: white
+	border-radius: 5px
+	display: inline-block
+	width: 100%
+	box-sizing: border-box
+
+
