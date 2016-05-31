@@ -1,0 +1,201 @@
+/* line 30, ../sass/_configuration.sass */
+section,
+footer {
+  padding: 20px 20px;
+}
+
+/* line 33, ../sass/_configuration.sass */
+.padding-responsive {
+  padding: 20px 20px;
+}
+
+/* line 35, ../sass/_configuration.sass */
+.padding-top-responsive {
+  padding-top: 20px;
+}
+
+/* line 37, ../sass/_configuration.sass */
+.padding-bottom-responsive {
+  padding-bottom: 20px;
+}
+
+/* line 39, ../sass/_configuration.sass */
+.padding-left-responsive {
+  padding-left: 10px;
+}
+
+/* line 41, ../sass/_configuration.sass */
+.padding-right-responsive {
+  padding-right: 10px;
+}
+
+/* line 43, ../sass/_configuration.sass */
+.margin-bottom-responsive {
+  margin-bottom: 10px;
+}
+
+/* line 4, ../sass/_grid.sass */
+.column-half,
+.column-third,
+.column-two-thirds,
+.column-fourth,
+.column-three-fourths {
+  float: left;
+}
+/* line 10, ../sass/_grid.sass */
+.column-half.left-spaced,
+.column-third.left-spaced,
+.column-two-thirds.left-spaced,
+.column-fourth.left-spaced,
+.column-three-fourths.left-spaced {
+  float: left;
+}
+/* line 12, ../sass/_grid.sass */
+.column-half.right-spaced,
+.column-third.right-spaced,
+.column-two-thirds.right-spaced,
+.column-fourth.right-spaced,
+.column-three-fourths.right-spaced {
+  float: right;
+}
+@media (max-width: 1000px) {
+  /* line 4, ../sass/_grid.sass */
+  .column-half,
+  .column-third,
+  .column-two-thirds,
+  .column-fourth,
+  .column-three-fourths {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* line 18, ../sass/_grid.sass */
+.column-half {
+  width: 50%;
+}
+/* line 20, ../sass/_grid.sass */
+.column-half.left-spaced {
+  margin-right: 0;
+  width: 50%;
+}
+/* line 23, ../sass/_grid.sass */
+.column-half.right-spaced {
+  margin-left: 0;
+  width: 50%;
+}
+
+/* line 26, ../sass/_grid.sass */
+.column-third {
+  width: 33.33333%;
+}
+/* line 28, ../sass/_grid.sass */
+.column-third.left-spaced {
+  margin-right: 0;
+  width: 33.33333%;
+}
+/* line 31, ../sass/_grid.sass */
+.column-third.right-spaced {
+  margin-left: 0;
+  width: 33.33333%;
+}
+/* line 34, ../sass/_grid.sass */
+.column-third:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+/* line 36, ../sass/_grid.sass */
+.column-two-thirds {
+  width: 66.66667%;
+}
+/* line 38, ../sass/_grid.sass */
+.column-two-thirds.left-spaced {
+  margin-right: 0;
+  width: 66.66667%;
+}
+/* line 41, ../sass/_grid.sass */
+.column-two-thirds.right-spaced {
+  margin-left: 0;
+  width: 66.66667%;
+}
+
+/* line 44, ../sass/_grid.sass */
+.column-fourth {
+  width: 25%;
+}
+/* line 46, ../sass/_grid.sass */
+.column-fourth.left-spaced {
+  margin-right: 0;
+  width: 25%;
+}
+/* line 49, ../sass/_grid.sass */
+.column-fourth.right-spaced {
+  margin-left: 0;
+  width: 25%;
+}
+/* line 52, ../sass/_grid.sass */
+.column-fourth:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+/* line 54, ../sass/_grid.sass */
+.column-three-fourths {
+  width: 75%;
+}
+/* line 56, ../sass/_grid.sass */
+.column-three-fourths.left-spaced {
+  margin-right: 0;
+  width: 75%;
+}
+/* line 59, ../sass/_grid.sass */
+.column-three-fourths.right-spaced {
+  margin-left: 0;
+  width: 75%;
+}
+
+/* line 1, ../sass/_styleguide.sass */
+.styleguide-text {
+  color: #f00;
+  padding: 60px 15px 15px;
+}
+
+/* line 6, ../sass/_styleguide.sass */
+.styleguide-btn {
+  border: 1px solid #f00;
+  padding: 3px 5px;
+  color: #f00;
+  display: inline-block;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+/* line 13, ../sass/_styleguide.sass */
+.styleguide-btn:hover {
+  color: #fff;
+  background-color: #f00;
+}
+
+/* line 20, ../sass/_styleguide.sass */
+section.styleguide-bg-alternate:nth-child(2n) .column-half:nth-child(1) {
+  background-color: #eee;
+}
+
+/* line 24, ../sass/_styleguide.sass */
+section.styleguide-bg-alternate:nth-child(2n+1) .column-half:nth-child(2) {
+  background-color: #eee;
+}
+
+/* line 6, ../sass/elastic.sass */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+/* line 9, ../sass/elastic.sass */
+html img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 11, ../sass/elastic.sass */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
