@@ -9,6 +9,12 @@ $( document ).ready(function() {
 	foldHeight2 = $('#foldIn2');
 	topSpacing = $('#stickyProduct').position().top;
 
+    $('.js-mobile-nav-foldout').on('click', mobile_nav_foldout);
+    $('.js-mobile-nav-toggle').on('click', mobile_nav_toggle);
+    
+    
+    
+	bagFoldedOut = false;
 	$("#menuBag").click(function() {
 		if(bagFoldedOut == false){
 			$openFoldOut = TweenMax.to("#foldOut", 0.3, {right: 0});
@@ -67,5 +73,21 @@ function stickyProductDescription() {
 		} else if (scrollAmount <= $('#stickyProductWrapper').height() - 240) {
 			$('#stickyProduct').css('backgroundColor', 'transparent');
 		}
+	}
+}
+
+
+function mobile_nav_foldout() {
+	var ww = $(window).width();
+	if (ww < 600) {
+		$(this).closest('li').toggleClass('is-open');
+		return false;
+	}
+}
+function mobile_nav_toggle() {
+	var ww = $(window).width();
+	if (ww < 600) {
+		$('body').toggleClass('is-menu-open');
+		return false;
 	}
 }
