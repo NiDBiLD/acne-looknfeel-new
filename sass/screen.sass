@@ -115,8 +115,21 @@ nav
 	height: 32px
 	margin: 0
 	color: $menu-font-color
-	&:hover
-		background-color: darken($menu-color, 2%)
+	@media (min-width: $media-phone)
+		&:hover
+			background-color: darken($menu-color, 2%)
+	
+	@media (max-width: $media-phone)
+		height: 100%
+		background-image: url(../img/patterns/as_2.gif)
+		background-size: 8px
+		overflow: hidden
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		background-color: transparent !important
+		
+		
+	
 	a
 		position: relative
 		color: #000
@@ -132,6 +145,8 @@ nav
 		font-size: $menu-font-size
 		line-height: 1.3em
 		padding-right: 10px
+		@media (max-width: $media-phone)
+			padding-right: 0
 		li
 			float: left
 			position: relative
@@ -165,8 +180,25 @@ nav
 				.sub
 					left: auto
 					right: 0
+					
+			@media (max-width: $media-phone)
+				float: none
+				&.menu-secondary
+					float: none
+			
+			&.menu-menu
+				display: none
 
 			&.menu-logo
+			
+				@media (max-width: $media-phone)
+					width: 100%
+					background-color: #fff
+					position: fixed
+					top: 0
+					left: 0
+					z-index: 100
+					border-bottom: 1px solid #000
 				> a
 					background-image: url('../img/acne_logotype.svg')
 					background-repeat: no-repeat
@@ -176,6 +208,11 @@ nav
 					width: 123px
 					height: 32px
 					color: transparent
+					@media (max-width: $media-phone)
+						background-size: 123px 16px
+						background-position: 15px 14px
+						height: 44px
+						width: 152px
 			&.menu-search
 				> a
 					padding-left: 25px
@@ -186,9 +223,12 @@ nav
 			&.menu-user
 				> a
 					background-image: url(../img/icon_face_m.png)
-			#menuBag
-				&.active
-					background-color: $menu-color-hover
+			&.menu-bag
+				> a
+					.active
+						background-color: $menu-color-hover
+			
+				
 
 			&.menu-stores
 				ul
@@ -204,6 +244,7 @@ nav
 						border-bottom: 1px solid $menu-color-separator
 						&:focus
 							outline: none
+			
 
 			ul 
 				background-color: $menu-color-hover
@@ -229,13 +270,339 @@ nav
 						padding: 0
 						
 					&.has-sub
-						background-image: url(../img/icon_subsubnav.png)
-						background-position: 95% center
-						background-size: 6px 6px
-						background-repeat: no-repeat
+						> a
+							background-image: url(../img/icon_subsubnav.png)
+							background-position: 95% center
+							background-size: 6px 6px
+							background-repeat: no-repeat
 					span
 						color: $menu-color-grayed
 						display: block
+			&.menu-mobile
+				display: none
+			
+			@media (max-width: $media-phone)
+				&.menu-bag,
+				&.menu-search,
+				&.menu-menu
+					> a
+						width: 44px
+						height: 44px
+						position: fixed
+						top: 0
+						right: 0
+						background-image: url(../img/icon_bag_2.png)
+						background-size: 24px
+						background-position: center
+						background-repeat: no-repeat
+						color: transparent
+						z-index: 100
+				&.menu-bag > a
+					right: 44px
+				&.menu-search > a
+					right: 88px
+					background-image: url(../img/icon_loupe_mobile.png)
+				&.menu-menu
+					display: inline-block
+					> a
+						background-image: url(../img/icon_menu_mobile.png)
+					
+				&.menu-women,
+				&.menu-men,
+				&.menu-stores
+					position: absolute
+					top: 44px
+					left: 0px
+					width: 33.333%
+					> a
+						width: 100%
+						border-right: 1px solid #000
+						height: 88px
+						padding: 34px 0 0 !important
+						font-size: 21px
+						background-color: #fff
+						text-align: center
+						border-top: 1px solid #000
+						border-bottom: 1px solid #000
+				&.menu-men
+					left: 33.333%
+				&.menu-stores
+					left: 66.666%
+					> a
+						border-right: none
+						
+						
+				&.menu-user
+					margin-top: 435px
+					border-top: 1px solid #000
+				&.menu-user,
+				&.menu-assistance,
+				&.menu-mobile
+					background-color: #fff
+					border-top: 1px solid #000
+					font-size: 16px
+					> a
+						padding-top: 14px
+						width: 100%
+						height: 44px
+				&.menu-user,
+				&.menu-assistance
+					> a
+						background-image: url(../img/icon_unfold_closed.png)
+						background-size: 16px
+						background-repeat: no-repeat
+						background-position: 10px center
+						padding-left: 30px !important
+				
+				&.menu-mobile
+					display: block
+					.info-links
+						font-size: 13px
+						padding: 5px 0
+						a
+							width: 33.333%
+							display: inline-block
+							padding: 15px 13px 11px !important
+							height: auto !important
+							
+					.footer
+						font-size: 11px
+						border-top: 1px solid #000
+						padding: 10px
+						position: relative
+						.icons
+							position: absolute
+							top: 10px
+							right: 10px
+							width: 116px
+							height: 25px
+							background-image: url(../img/icons-social.png)
+							background-repeat: none
+							background-size: 100%
+						
+				&.menu-user,
+				&.menu-assistance,
+				&.menu-country
+					
+					.sub
+						display: none
+						position: relative
+						top: auto
+						right: auto
+						width: 100%
+						padding: 0
+						ul
+							padding: 0
+							background-color: #fff
+							li
+								font-size: 16px
+								a
+									border-top: 1px solid #ddd
+									padding: 13px 10px 11px 45px !important
+								&.line
+									display: none
+					&.is-open
+						.sub
+							display: block
+				&.menu-country
+					> a
+						display: none
+					.sub
+						display: block
+						ul
+							li
+								a
+									text-align: right
+									background-image: url(../img/icon_select.gif)
+									background-size: 16px
+									background-repeat: no-repeat
+									background-position: 97% center
+									padding-right: 45px !important
+									padding-left: 15px !important
+									border-top: none
+									border-top: 1px solid #000
+									
+									span
+										float: left
+										color: #000
+										
+			@media (max-width: $media-phone)
+				&.menu-women,
+				&.menu-men,
+				&.menu-stores
+					&:hover
+						.sub
+							display: none
+					.sub
+						position: absolute
+						left: 0
+						top: 88px
+						width: 300%
+						height: 88px
+						overflow: hidden
+						overflow-x: auto
+						-webkit-overflow-scrolling: touch
+						padding: 0
+						border-bottom: 1px solid #000
+						
+						ul
+							width: 3000px
+							padding: 0
+							font-size: 13px
+							
+							li
+								display: inline-block
+								&.label
+									display: none
+								&.line
+									height: 65px
+									width: 1px
+									margin: 0 5px
+									background-color: #000
+									padding: 0
+								a
+									display: block
+									height: 88px !important
+									padding: 63px 10px 0 !important
+									min-width: 88px
+									background-image: url(../img/icn_v1_accessories.png)
+									background-size: 50px
+									background-repeat: no-repeat
+									background-position: center 20%
+									text-align: center
+									
+									.amount
+										position: absolute
+										top: 10px
+										left: 50%
+										margin-left: 10px
+										background-color: #000
+										color: $menu-color-hover
+										display: inline-block
+										width: 24px
+										height: 24px
+										padding-top: 3px
+										border-radius: 50%
+										border: 1px solid #000
+										background-color: $menu-color-hover
+										color: #000
+									
+								&.menu-women-new > a,
+								&.menu-men-new > a
+									background-image: url(../img/icn_v1_newarrivals.png)
+								&.menu-women-workstudios > a,
+								&.menu-men-workstudios > a
+									background-image: url(../img/icn_v1_workstudios.png)
+								&.menu-women-fw16 > a,
+								&.menu-women-r17 > a,
+								&.menu-men-ss17 > a
+									background-image: url(../img/icn_v1_cramps.png)
+								&.menu-women-ss17 > a,
+								&.menu-men-r17 > a,
+								&.menu-men-fw16 > a
+									background-image: url(../img/icn_v1_robinkegel.png)
+								&.menu-women-coats > a
+									background-image: url(../img/icn_v1_coats.png)
+								&.menu-women-shoes > a
+									background-image: url(../img/icn_v1_shoes_w.png)
+								&.menu-men-shoes > a
+									background-image: url(../img/icn_v1_shoes_m.png)
+								&.menu-women-jeans > a,
+								&.menu-men-jeans > a
+									background-image: url(../img/icn_v1_jeans.png)
+								&.menu-women-dresses > a
+									background-image: url(../img/icn_v1_dresses.png)
+								&.menu-women-skirts > a
+									background-image: url(../img/icn_v1_skirts.png)
+								&.menu-women-tops > a
+									background-image: url(../img/icn_v1_tops.png)
+								&.menu-women-blouses > a
+									background-image: url(../img/icn_v1_blouses.png)
+								&.menu-women-sweatshirts > a,
+								&.menu-men-sweatshirts > a
+									background-image: url(../img/icn_v1_sweatshirts.png)
+								&.menu-women-suitjackets > a,
+								&.menu-men-suitjackets > a
+									background-image: url(../img/icn_v1_suitjackets.png)
+								&.menu-women-swimwear > a
+									background-image: url(../img/icn_v1_swimwear_w.png)
+								&.menu-men-swimwear > a
+									background-image: url(../img/icn_v1_swimwear_m.png)
+								&.menu-women-trousers > a
+									background-image: url(../img/icn_v1_trousers_w.png)
+								&.menu-men-trousers > a
+									background-image: url(../img/icn_v1_trousers_m.png)
+								&.menu-women-jewellery > a
+									background-image: url(../img/icn_v1_jewellery.png)
+								&.menu-women-eyewear > a,
+								&.menu-men-eyewear > a
+									background-image: url(../img/icn_v1_eyewear.png)
+								&.menu-women-bags > a,
+								&.menu-men-bags > a
+									background-image: url(../img/icn_v1_bags.png)
+								&.menu-women-slg > a,
+								&.menu-men-slg > a
+									background-image: url(../img/icn_v1_slg.png)
+								&.menu-women-underwear > a,
+								&.menu-men-underwear > a
+									background-image: url(../img/icn_v1_underwear.png)
+								&.menu-women-mini > a,
+								&.menu-men-mini > a
+									background-image: url(../img/icn_v1_mini.png)
+									
+								
+@media (max-width: $media-phone)
+	nav
+		height: 44px
+		overflow: visible
+		position: absolute
+		ul
+			li
+				&.menu-women,
+				&.menu-men,
+				&.menu-stores
+					> a
+						display: none
+					.sub
+						top: 0
+				&.menu-user,
+				&.menu-assistance,
+				&.menu-country,
+				&.menu-mobile
+					display: none
+	body.is-menu-open
+		nav
+			height: 100%
+			position: fixed
+			overflow: hidden
+			overflow-y: auto
+			ul
+				li
+					&.menu-women,
+					&.menu-men,
+					&.menu-stores
+						> a
+							display: block
+						.sub
+							top: 88px
+					&.menu-user,
+					&.menu-assistance,
+					&.menu-country,
+					&.menu-mobile
+						display: block
+	
+	section
+		&.height-full
+			height: calc(100vh - 44px)
+		&.first
+			margin-top: 44px
+	body.department-women 
+		nav ul li.menu-women .sub 
+			display: block
+		section
+			&.first
+				margin-top: 132px
+
 
 body.menu-backgrounded
 	nav
@@ -269,6 +636,11 @@ section
 	position: relative
 	background-size: cover
 	background-position: center center
+	&::after
+		content: ""
+		display: block
+		height: 0
+		clear: both
 	.section-inner 
 		position: absolute
 		left: 0
@@ -339,7 +711,7 @@ section
 	.video
 		width: 100%
 	
-			
+
 body.menu-backgrounded
 	section
 		&.height-full
@@ -453,13 +825,17 @@ section.gridded
 		position: sticky
 		top: 32px
 		z-index: 1
+		@media (max-width: $media-phone)
+			top: 44px
 	&.hd-page
 		position: fixed
 		top: 32px
 		left: 0
 		z-index: 5
-	&.hd-half
-		margin-left: 50%
+		
+	@media (min-width: $media-phone)
+		&.hd-half
+			margin-left: 50%
 
 	.sect-header
 		display: block
@@ -472,6 +848,12 @@ section.gridded
 		background-position: 0 5px
 		padding-left: 23px
 		text-decoration: none
+		@media (max-width: $media-phone)
+			font-size: 22px
+			line-height: 1.15em
+			background-size: 20px
+			background-position: 0 2px
+			padding-left: 20px
 		&.monospace
 			font-family: 'Menlo'
 			font-size: 16px
@@ -484,6 +866,9 @@ section.gridded
 			background-image: url('../img/icon_cursor.gif')
 			background-size: 13px 22px
 			background-position: 1px 4px
+			@media (max-width: $media-phone)
+				background-size: 10px 16px
+				background-position: 1px 3px
 			&.monospace
 				background-position: 2px 2px
 				background-size: 8px 14px
@@ -697,6 +1082,9 @@ section.gridded
 .ani-regular
 	z-index: 2
 	-webkit-animation: ani_alternative steps(1) 3s infinite
+	&.column-half:nth-child(2n)
+		@media (max-width: $media-phone)
+			display: none
 
 .ani-alternative
 	position: absolute !important
@@ -704,6 +1092,8 @@ section.gridded
 	left: 0
 	&.column-half:nth-child(2n)
 		left: 50%
+		@media (max-width: $media-phone)
+			display: none
 
 @-webkit-keyframes ani_alternative 
 	0% 

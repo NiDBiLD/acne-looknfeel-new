@@ -1,8 +1,11 @@
 $( document ).ready(function() {
-	resizeLogo();
-	adaptHeights();
-	bagFoldedOut = false;
 
+    $('.js-mobile-nav-foldout').on('click', mobile_nav_foldout);
+    $('.js-mobile-nav-toggle').on('click', mobile_nav_toggle);
+    
+    
+    
+	bagFoldedOut = false;
 	$("#menuBag").click(function() {
 		if(bagFoldedOut == false){
 			$openFoldOut = TweenMax.to("#foldOut", 0.3, {right: 0});
@@ -14,18 +17,16 @@ $( document ).ready(function() {
 			bagFoldedOut = false;
 		}
 	});
+	
+	resizeLogo();
+	adaptHeights();
 	$( window ).resize(function() {
 		resizeLogo();
 		adaptHeights();
 	});
 	
 	
-	/* Sticky elements */
 	
-	/*$('.sticky').fixer({
-        gap: '100px'
-    });*/
-    $(".sticky").stick_in_parent({offset_top: 32});
 	
 });
 
@@ -43,4 +44,20 @@ function adaptHeights() {
 			$('.height-slave-' + $num).css('height', $masterElem.css('height'));
 		}
 	});
+}
+
+
+function mobile_nav_foldout() {
+	var ww = $(window).width();
+	if (ww < 600) {
+		$(this).closest('li').toggleClass('is-open');
+		return false;
+	}
+}
+function mobile_nav_toggle() {
+	var ww = $(window).width();
+	if (ww < 600) {
+		$('body').toggleClass('is-menu-open');
+		return false;
+	}
 }
