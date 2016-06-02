@@ -1,7 +1,13 @@
 $( document ).ready(function() {
 	resizeLogo();
 	adaptHeights();
+	verticalCenterStickyProductDescription();
 	bagFoldedOut = false;
+	foldOriginalHeight1 = $('#foldIn1').height() +20;
+	foldOriginalHeight2 = $('#foldIn2').height();
+	foldHeight1 = $('#foldIn1');
+	foldHeight2 = $('#foldIn2');
+	topSpacing = $('#stickyProduct').position().top;
 
 	$("#menuBag").click(function() {
 		if(bagFoldedOut == false){
@@ -14,19 +20,15 @@ $( document ).ready(function() {
 			bagFoldedOut = false;
 		}
 	});
-	$( window ).resize(function() {
-		resizeLogo();
-		adaptHeights();
-	});
-	
-	
-	/* Sticky elements */
-	
-	/*$('.sticky').fixer({
-        gap: '100px'
-    });*/
-    $(".sticky").stick_in_parent({offset_top: 32});
-	
+});
+$( window ).resize(function() {
+	resizeLogo();
+	adaptHeights();
+	verticalCenterStickyProductDescription();
+});
+
+$( window ).scroll(function(){
+	stickyProductDescription();
 });
 
 function resizeLogo() {
@@ -43,4 +45,27 @@ function adaptHeights() {
 			$('.height-slave-' + $num).css('height', $masterElem.css('height'));
 		}
 	});
+}
+
+function verticalCenterStickyProductDescription() {
+	var container = $('#stickyProductWrapper');
+	var content = $('#stickyProduct');
+	content.css("top", (container.height()-content.height()) / 2 - 60);
+}
+
+function stickyProductDescription() {
+	scrollAmount = $(window).scrollTop();
+	$('#stickyProduct').css('top', (topSpacing - scrollAmount) + 'px');
+	if($('#stickyProduct').position().top <= 0 ) {
+		$('#stickyProduct').css('top', 0 + 'px');
+		foldHeight1.height(foldOriginalHeight1 - (scrollAmount - topSpacing));
+		if(foldHeight1.height() <= 0 ) {
+			foldHeight2.height(foldOriginalHeight2 - (scrollAmount - foldOriginalHeight1 - topSpacing));
+		}
+		if(scrollAmount >= $('#stickyProductWrapper').height() - 240) {
+			$('#stickyProduct').css('backgroundColor', '#ffffff');
+		} else if (scrollAmount <= $('#stickyProductWrapper').height() - 240) {
+			$('#stickyProduct').css('backgroundColor', 'transparent');
+		}
+	}
 }
