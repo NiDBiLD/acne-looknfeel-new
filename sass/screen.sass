@@ -16,6 +16,10 @@ body
 *
 	-webkit-font-smoothing: antialiased
 
+textarea:focus,
+input:focus
+	outline: none
+
 h1,h2,h3,h4
 	margin-bottom: 15px
 	line-height: 1.35
@@ -136,6 +140,46 @@ nav
 	height: 32px
 	margin: 0
 	color: $menu-font-color
+	&#search-menu
+		z-index: 110
+		position: fixed
+		background-color: darken($menu-color, 2%)
+		color: $menu-font-color
+		.search-field
+			background-color: darken($menu-color, 2%)
+			height: 50px
+			padding-left: 200px
+			padding-right: 200px
+			input[type='text']
+				width: 100%
+				font-size: 30px
+				border-width: 0
+				background-color: transparent
+				font-family: $general-font
+				&:active
+					border-width: 0
+		.opt-field
+			background-color: darken($menu-color, 2%)
+			height: 32px
+			border-top: 1px solid $menu-color-separator
+			text-align: center
+			ul
+				display: inline-block
+				li
+					display: inline-block
+					height: 32px
+					padding: 8px 20px 8px 20px
+					border-right: 1px solid $menu-color-separator
+					&:last-of-type
+						border-right-width: 0
+					&#optType
+					&#optSize
+		.product-field
+			position: fixed
+			top: 114px
+			bottom: 0
+			right: 0
+			left: 0
 	@media (min-width: $media-phone)
 		&:hover
 			background-color: darken($menu-color, 2%)
@@ -683,6 +727,20 @@ section
 		height: 25vh
 	&.height-one-eights
 		height: 12.5vh
+	&.height-full-percentages
+		height: 100%
+	&.height-half-percentages
+		height: 50%
+	&.height-third-percentages
+		height: 33.33333333%
+	&.height-two-thirds-percentages
+		height: 66.66666666%
+	&.height-one-fourths-percentages
+		height: 25%
+	&.height-three-fourths-percentages
+		height: 75%
+	&.height-one-eights-percentages
+		height: 12.5%
 	&.invert
 		background-color: $background-inverted
 		color: $text-inverted
@@ -1019,31 +1077,34 @@ section.gridded
 		-webkit-transform: translate3d(0,-200%,0)
 
 .big-padding
-	padding: 60px
-
-#foldIn1,
-#foldIn2
+	padding: 60px 0 0 0
+.bottom-corner-padding
+	padding: 0 0 15px 15px
+.foldIn1,
+.foldIn2
 	overflow: hidden
+	margin-left: 15px
 
 .pdp-background
 	background-color: #ffffff
 .pdp-details
-	right: 0
-	width: 50%
+	right: 25%
+	width: 25%
 	left: 50%
 	z-index: 90
-	position: fixed
+	position: absolute
+	&.fixed
+		position: fixed
 	.content
 		position: relative
+		padding-bottom: 0 !important
 		.top
-			margin-bottom: 35px
+			margin-bottom: 15px
 			h1,h2
 				font-size: 22px
-				padding-right: 5px
-				margin: 0
+				margin: 0 15px 0 15px
 		.description
 			margin-bottom: 20px
-			margin-right: 5px
 		.colors
 			margin-bottom: 45px
 			.color
@@ -1053,7 +1114,7 @@ section.gridded
 				display: inline-block
 				margin-right: 10px
 		.sizes
-			margin-bottom: 20px
+			padding-bottom: 20px
 			span
 				margin-bottom: 10px
 				margin-right: 5px
@@ -1065,14 +1126,49 @@ section.gridded
 				margin-right: 5px
 				text-align: center
 				padding-top: 20px
+			.size:last-of-type
+				margin-right: 0 !important
+			&.foldout
+				display: none
+				position: absolute
+				margin-top: 15px
+				margin-left: -15px
+				z-index: 999
+				.size
+					background-color: #000000
+					color: #ffffff
+					width: 16.6666666%
+					margin: 0
+					padding-bottom: 13px
+					padding-top: 0
+					&:hover
+						background-color: #ffffff
+						color: #000000
+						border-top: 1px solid #000000
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0
+					.top-line
+						margin-left: 2px
+						margin-right: 2px
+						margin-bottom: 13px
+						height: 1px
+						background-color: #ffffff
 		button
 			background-color: #000000
 			padding: 15px
 			color: #ffffff
 			border: 0
-			width: calc(100% - 5px)
+			width: 100%
 			font-size: 12px
 			text-align: left
+			cursor: pointer
+			&:hover
+				.foldout
+					display: block
+				&:hover
+					display: block
 		.info
 			position: relative
 			width: 100%
@@ -1114,6 +1210,8 @@ section.gridded
 		left: 0
 		&.white
 			color: #fff
+		&.label-large
+			font-size: 16px
 
 .ani-regular
 	z-index: 2

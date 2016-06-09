@@ -1,19 +1,15 @@
 $( document ).ready(function() {
-	resizeLogo();
-	adaptHeights();
+	getScrollTop();
+	stickyProductInit();
+	resizeFoldOutSizes();
 	verticalCenterStickyProductDescription();
-	bagFoldedOut = false;
-	foldOriginalHeight1 = $('#foldIn1').height() +20;
-	foldOriginalHeight2 = $('#foldIn2').height();
-	foldHeight1 = $('#foldIn1');
-	foldHeight2 = $('#foldIn2');
-	topSpacing = $('#stickyProduct').position().top;
+	adaptHeights();
 
-    $('.js-mobile-nav-foldout').on('click', mobile_nav_foldout);
-    $('.js-mobile-nav-toggle').on('click', mobile_nav_toggle);
-    
-    
-    
+	bagFoldedOut = false;
+
+	$('.js-mobile-nav-foldout').on('click', mobile_nav_foldout);
+	$('.js-mobile-nav-toggle').on('click', mobile_nav_toggle);
+
 	bagFoldedOut = false;
 	$("#menuBag").click(function() {
 		if(bagFoldedOut == false){
@@ -26,20 +22,30 @@ $( document ).ready(function() {
 			bagFoldedOut = false;
 		}
 	});
+	$('#foldOutButton').hover(function() {
+		toggleFoldoutSizes();
+	});
 });
+
+function getScrollTop() {
+	window.scrollAmount = $(window).scrollTop();
+}
+
 $( window ).resize(function() {
-	resizeLogo();
+	getScrollTop();
 	adaptHeights();
+	resizeFoldOutSizes();
 	verticalCenterStickyProductDescription();
 });
 
 $( window ).scroll(function(){
+	getScrollTop();
 	stickyProductDescription();
 });
 
-function resizeLogo() {
-	$logoHeight = $('#master-text').height();
-	$('#slave-text').css('height', $logoHeight);
+function resizeFoldOutSizes() {
+	$foldOutButtonWidth = $('#foldOutButton').outerWidth();
+	$('#foldOutSizes').css('width', $foldOutButtonWidth);
 }
 
 function adaptHeights() {
@@ -53,29 +59,114 @@ function adaptHeights() {
 	});
 }
 
-function verticalCenterStickyProductDescription() {
-	var container = $('#stickyProductWrapper');
-	var content = $('#stickyProduct');
-	content.css("top", (container.height()-content.height()) / 2 - 60);
-}
-
+/*
 function stickyProductDescription() {
 	scrollAmount = $(window).scrollTop();
-	$('#stickyProduct').css('top', (topSpacing - scrollAmount) + 'px');
-	if($('#stickyProduct').position().top <= 0 ) {
-		$('#stickyProduct').css('top', 0 + 'px');
+	$('#stickyProduct-0').css('top', (topSpacing - scrollAmount) + 'px');
+	if($('#stickyProduct-0').position().top <= 0 ) {
+		$('#stickyProduct-0').css('top', 0 + 'px');
 		foldHeight1.height(foldOriginalHeight1 - (scrollAmount - topSpacing));
 		if(foldHeight1.height() <= 0 ) {
 			foldHeight2.height(foldOriginalHeight2 - (scrollAmount - foldOriginalHeight1 - topSpacing));
 		}
-		if(scrollAmount >= $('#stickyProductWrapper').height() - 240) {
-			$('#stickyProduct').css('backgroundColor', '#ffffff');
-		} else if (scrollAmount <= $('#stickyProductWrapper').height() - 240) {
-			$('#stickyProduct').css('backgroundColor', 'transparent');
+		if(scrollAmount >= $('#stickyProductWrapper-0').height() - 240) {
+			$('#stickyProduct-0').css('backgroundColor', '#ffffff');
+		} else if (scrollAmount <= $('#stickyProductWrapper-0').height() - 240) {
+			$('#stickyProduct-0').css('backgroundColor', 'transparent');
+		}
+	}
+}*/
+
+function stickyProductInit() {
+	var n = 1;
+	var i = 0;
+	stickyInfos = new Array();
+
+	while(i <= n) {
+		stickyInfo = {};
+		stickyInfo.stickyProduct = $('#stickyProduct-' + i);
+		stickyInfo.stickyProductWrapper = $('#stickyProductWrapper-' + i);
+		stickyInfo.bottomSect = $('#bottomSect-' + i);
+		stickyInfo.topSect = $('#topSect-' + i);
+		stickyInfo.foldIn1 = {};
+		stickyInfo.foldIn1.object = $('#stickyProduct-' + i + ' .foldIn1');
+		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height() + 20;
+		stickyInfo.foldIn2 = {};
+		stickyInfo.foldIn2.object = $('#stickyProduct-' + i + ' .foldIn2');
+		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').height();
+		stickyInfos.push(stickyInfo);
+		console.log(stickyInfos);
+		i++;
+	}
+}
+
+function stickyProductDescription() {
+	for (var i = 0, len = stickyInfos.length; i < len; i++) {
+		stickyProductBehaviour(stickyInfos[i], scrollAmount);
+	}
+}
+
+
+function stickyProductBehaviour(stickyBlock, scrollAmount) {
+	if(scrollAmount >= stickyBlock.topSect.offset().top && scrollAmount <= stickyBlock.bottomSect.offset().top) {
+
+		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - scrollAmount - stickyInfo.stickyProductWrapper.scrollTop());
+
+		distanceTop = stickyBlock.stickyProduct.css('marginTop');
+		console.log('distance = ' + distance);
+		console.log('scrollAmount = ' + scrollAmount);
+		if(distance >= 0) {
+			stickyBlock.stickyProduct.css('top', -scrollAmount);
+			stickyBlock.stickyProductWrapper.css('position', 'fixed');
+			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
+		} else {
+			stickyBlock.stickyProduct.css('top', - parseFloat(stickyBlock.stickyProduct.css('marginTop')));
+			stickyBlock.stickyProduct.css('position', 'absolute');
+			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (scrollAmount - parseFloat(distanceTop)));
+			stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height);
+			if(stickyBlock.foldIn1.object.height() <= 0) {
+				stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height - (scrollAmount - stickyBlock.foldIn1.height - parseFloat(distanceTop)));
+			}
+			if(scrollAmount >= stickyBlock.stickyProductWrapper.height() - 240) {
+				stickyBlock.stickyProduct.css('backgroundColor', '#ffffff');
+			} else if (scrollAmount <= stickyBlock.stickyProductWrapper.height() - 240) {
+				stickyBlock.stickyProduct.css('backgroundColor', 'transparent');
+			}
 		}
 	}
 }
 
+function verticalCenterStickyProductDescription() {
+	for (var i = 0, len = stickyInfos.length; i < len; i++) {
+		var container = stickyInfos[i].stickyProductWrapper;
+		var content = stickyInfos[i].stickyProduct;
+		var newTop = stickyInfos[i].stickyProductWrapper.height() - stickyInfos[i].stickyProduct.height() / 2 - 60;
+		stickyInfos[i].stickyProduct.css('marginTop', newTop);
+	}
+}
+
+// get scrollAmount
+// for each section
+	//X if scrollAmount >= topSect.top && scrollAmount <= bottomSect.top
+		// stickyProduct.top == add class with top: 0 position: fixed;
+	// else if scrollAmount <= topSect.top
+		// stickyProduct.top == topSect.top
+	// else if scrollAmount >= bottomSect.top
+		// stickyProduct.top == bottomSect.top
+
+// collect all stickyProducts by ID
+// collect all stickyProductWrappers by ID
+// collect all bottomSects by ID
+// collect all topSects by ID
+
+// create new arrays for each stickyProduct ID
+// for each by ID number
+	// create data object containing every required element
+	// apply these 
+
+function toggleFoldoutSizes() {
+	$('#foldOutSizes').toggleClass('open');
+}
 
 function mobile_nav_foldout() {
 	var ww = $(window).width();
