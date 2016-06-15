@@ -25,6 +25,12 @@ $( document ).ready(function() {
 	$('#foldOutButton').hover(function() {
 		toggleFoldoutSizes();
 	});
+	$('#menuSearch').click(function() {
+		$('#searchWrapper').css('display', 'block');
+	});
+	$('#closeSearch').click(function() {
+		$('#searchWrapper').css('display', 'none');
+	});
 });
 
 function getScrollTop() {
@@ -90,7 +96,7 @@ function stickyProductInit() {
 		stickyInfo.topSect = $('#topSect-' + i);
 		stickyInfo.foldIn1 = {};
 		stickyInfo.foldIn1.object = $('#stickyProduct-' + i + ' .foldIn1');
-		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height() + 20;
+		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height();
 		stickyInfo.foldIn2 = {};
 		stickyInfo.foldIn2.object = $('#stickyProduct-' + i + ' .foldIn2');
 		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').height();
@@ -108,17 +114,20 @@ function stickyProductDescription() {
 
 
 function stickyProductBehaviour(stickyBlock, scrollAmount) {
-	if(scrollAmount >= stickyBlock.topSect.offset().top && scrollAmount <= stickyBlock.bottomSect.offset().top) {
+	if(scrollAmount >= stickyBlock.topSect.offset().top && scrollAmount <= (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height() )) {
 
 		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - scrollAmount - stickyInfo.stickyProductWrapper.scrollTop());
-
+		blockScroll = scrollAmount - stickyBlock.topSect.offset().top;
 		distanceTop = stickyBlock.stickyProduct.css('marginTop');
-		console.log('distance = ' + distance);
-		console.log('scrollAmount = ' + scrollAmount);
-		if(distance >= 0) {
-			stickyBlock.stickyProduct.css('top', -scrollAmount);
+			console.log(blockScroll);
+			console.log((stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.topSect.offset().top * 2));
+		if(distance >= 0 && (blockScroll < ((stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.topSect.offset().top + stickyBlock.bottomSect.height())))) {
+			stickyBlock.stickyProduct.css('top', -blockScroll);
 			stickyBlock.stickyProductWrapper.css('position', 'fixed');
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
+		} else if(blockScroll >= (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.topSect.offset().top * 2) {
+			stickyBlock.stickyProduct.css('top', (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.stickyProduct.height() * 4));
+			stickyBlock.stickyProductWrapper.css('position', 'fixed');
 		} else {
 			stickyBlock.stickyProduct.css('top', - parseFloat(stickyBlock.stickyProduct.css('marginTop')));
 			stickyBlock.stickyProduct.css('position', 'absolute');
