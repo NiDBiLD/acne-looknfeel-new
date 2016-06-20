@@ -22,7 +22,7 @@ $( document ).ready(function() {
 			bagFoldedOut = false;
 		}
 	});
-	$('#foldOutButton').hover(function() {
+	$('.foldout-button').hover(function() {
 		toggleFoldoutSizes();
 	});
 	$('#menuSearch').click(function() {
@@ -50,8 +50,8 @@ $( window ).scroll(function(){
 });
 
 function resizeFoldOutSizes() {
-	$foldOutButtonWidth = $('#foldOutButton').outerWidth();
-	$('#foldOutSizes').css('width', $foldOutButtonWidth);
+	$foldOutButtonWidth = $('.foldout-button').outerWidth();
+	$('.foldout').css('width', $foldOutButtonWidth);
 }
 
 function adaptHeights() {
@@ -65,24 +65,6 @@ function adaptHeights() {
 	});
 }
 
-/*
-function stickyProductDescription() {
-	scrollAmount = $(window).scrollTop();
-	$('#stickyProduct-0').css('top', (topSpacing - scrollAmount) + 'px');
-	if($('#stickyProduct-0').position().top <= 0 ) {
-		$('#stickyProduct-0').css('top', 0 + 'px');
-		foldHeight1.height(foldOriginalHeight1 - (scrollAmount - topSpacing));
-		if(foldHeight1.height() <= 0 ) {
-			foldHeight2.height(foldOriginalHeight2 - (scrollAmount - foldOriginalHeight1 - topSpacing));
-		}
-		if(scrollAmount >= $('#stickyProductWrapper-0').height() - 240) {
-			$('#stickyProduct-0').css('backgroundColor', '#ffffff');
-		} else if (scrollAmount <= $('#stickyProductWrapper-0').height() - 240) {
-			$('#stickyProduct-0').css('backgroundColor', 'transparent');
-		}
-	}
-}*/
-
 function stickyProductInit() {
 	var n = 1;
 	var i = 0;
@@ -94,6 +76,7 @@ function stickyProductInit() {
 		stickyInfo.stickyProductWrapper = $('#stickyProductWrapper-' + i);
 		stickyInfo.bottomSect = $('#bottomSect-' + i);
 		stickyInfo.topSect = $('#topSect-' + i);
+		stickyInfo.separator = $('#sectionSeparator-' + i);
 		stickyInfo.foldIn1 = {};
 		stickyInfo.foldIn1.object = $('#stickyProduct-' + i + ' .foldIn1');
 		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height();
@@ -101,7 +84,6 @@ function stickyProductInit() {
 		stickyInfo.foldIn2.object = $('#stickyProduct-' + i + ' .foldIn2');
 		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').height();
 		stickyInfos.push(stickyInfo);
-		console.log(stickyInfos);
 		i++;
 	}
 }
@@ -112,35 +94,40 @@ function stickyProductDescription() {
 	}
 }
 
-
 function stickyProductBehaviour(stickyBlock, scrollAmount) {
-	if(scrollAmount >= stickyBlock.topSect.offset().top && scrollAmount <= (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height() )) {
-
-		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - scrollAmount - stickyInfo.stickyProductWrapper.scrollTop());
+	if (scrollAmount >= stickyBlock.separator.offset().top && scrollAmount <= (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height() )) {
 		blockScroll = scrollAmount - stickyBlock.topSect.offset().top;
+		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - blockScroll - stickyInfo.stickyProductWrapper.scrollTop());
+		blockRange = (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.separator.offset().top;
 		distanceTop = stickyBlock.stickyProduct.css('marginTop');
-			console.log(blockScroll);
-			console.log((stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.topSect.offset().top * 2));
-		if(distance >= 0 && (blockScroll < ((stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.topSect.offset().top + stickyBlock.bottomSect.height())))) {
+		if (blockScroll <= 0) {
+			stickyBlock.stickyProductWrapper.css('position', 'absolute');
+			stickyBlock.stickyProductWrapper.css('top', stickyBlock.topSect.offset().top);
+		} else if (distance >= 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
 			stickyBlock.stickyProduct.css('top', -blockScroll);
 			stickyBlock.stickyProductWrapper.css('position', 'fixed');
+			stickyBlock.stickyProductWrapper.css('top', 0);
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
-		} else if(blockScroll >= (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.topSect.offset().top * 2) {
-			stickyBlock.stickyProduct.css('top', (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - (stickyBlock.stickyProduct.height() * 4));
+		} else if (distance < 0 && blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight())) {
 			stickyBlock.stickyProductWrapper.css('position', 'fixed');
-		} else {
+			stickyBlock.stickyProductWrapper.css('top', 0);
 			stickyBlock.stickyProduct.css('top', - parseFloat(stickyBlock.stickyProduct.css('marginTop')));
 			stickyBlock.stickyProduct.css('position', 'absolute');
-			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (scrollAmount - parseFloat(distanceTop)));
+			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (blockScroll - parseFloat(distanceTop)));
 			stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height);
-			if(stickyBlock.foldIn1.object.height() <= 0) {
-				stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height - (scrollAmount - stickyBlock.foldIn1.height - parseFloat(distanceTop)));
+			if (stickyBlock.foldIn1.object.height() <= 0) {
+				stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height - (blockScroll - stickyBlock.foldIn1.height - parseFloat(distanceTop)));
 			}
-			if(scrollAmount >= stickyBlock.stickyProductWrapper.height() - 240) {
+			if (blockScroll >= stickyBlock.stickyProductWrapper.height() - 240) {
 				stickyBlock.stickyProduct.css('backgroundColor', '#ffffff');
-			} else if (scrollAmount <= stickyBlock.stickyProductWrapper.height() - 240) {
+			} else if (blockScroll <= stickyBlock.stickyProductWrapper.height() - 240) {
 				stickyBlock.stickyProduct.css('backgroundColor', 'transparent');
 			}
+		} else if (distance < 0 && blockScroll >= (blockRange - stickyBlock.stickyProduct.outerHeight())) {
+			stickyBlock.stickyProductWrapper.css('position', 'absolute');
+			stickyBlock.stickyProductWrapper.css('top', (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.stickyProduct.outerHeight());
+			distance = 0;
+			blockScroll = 0;
 		}
 	}
 }
@@ -154,27 +141,8 @@ function verticalCenterStickyProductDescription() {
 	}
 }
 
-// get scrollAmount
-// for each section
-	//X if scrollAmount >= topSect.top && scrollAmount <= bottomSect.top
-		// stickyProduct.top == add class with top: 0 position: fixed;
-	// else if scrollAmount <= topSect.top
-		// stickyProduct.top == topSect.top
-	// else if scrollAmount >= bottomSect.top
-		// stickyProduct.top == bottomSect.top
-
-// collect all stickyProducts by ID
-// collect all stickyProductWrappers by ID
-// collect all bottomSects by ID
-// collect all topSects by ID
-
-// create new arrays for each stickyProduct ID
-// for each by ID number
-	// create data object containing every required element
-	// apply these 
-
 function toggleFoldoutSizes() {
-	$('#foldOutSizes').toggleClass('open');
+	$('.foldout-button').toggleClass('open');
 }
 
 function mobile_nav_foldout() {
