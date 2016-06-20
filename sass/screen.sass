@@ -27,9 +27,6 @@ h3
 	font-size: 22px
 h4
 	font-size: 18px
-p, span, li, a
-	font-size: 13px
-	line-height: 1.5
 p
 	margin-bottom: 10px
 ul.lined-list
@@ -155,6 +152,8 @@ nav
 		position: relative
 		color: #000
 		text-decoration: none
+		xfont-size: 15px
+		xline-height: 1.3em
 		&:hover
 			background-color: $menu-color-hover
 			cursor: pointer
@@ -178,6 +177,10 @@ nav
 				padding: 7px 15px 0
 				height: 32px
 				display: inline-block
+				
+				.amount 
+					display: none
+				
 
 			.sub
 				display: none
@@ -198,6 +201,8 @@ nav
 				float: right
 				a
 					padding: 10px 10px
+					xfont-size: $menu-font-small-size
+					xline-height: 1.3em
 				.sub
 					left: auto
 					right: 0
