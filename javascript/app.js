@@ -31,6 +31,14 @@ $( document ).ready(function() {
 	$('#closeSearch').click(function() {
 		$('#searchWrapper').css('display', 'none');
 	});
+	$('.size').click(function() {
+		$('.size').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.color').click(function() {
+		$('.color').removeClass('active');
+		$(this).addClass('active');
+	});
 });
 
 function getScrollTop() {
