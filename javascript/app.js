@@ -9,6 +9,7 @@ $( document ).ready(function() {
 
 	$('.js-mobile-nav-foldout').on('click', mobile_nav_foldout);
 	$('.js-mobile-nav-toggle').on('click', mobile_nav_toggle);
+	$('.js-wishlist-save-toggle').on('click', wishlist_save_toggle);
 
 	bagFoldedOut = false;
 	$("#menuBag").click(function() {
@@ -167,3 +168,10 @@ function mobile_nav_toggle() {
 		return false;
 	}
 }
+function wishlist_save_toggle(e) {
+	alert('SAVING AS FAVORITE');
+	e.preventDefault();
+}
+
+
+

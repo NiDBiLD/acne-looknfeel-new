@@ -12,7 +12,7 @@ body
 	overflow-x: hidden
 	font-family: $general-font
 	font-size: 13px
-	line-height: 1.35	
+	line-height: 1.35
 *
 	-webkit-font-smoothing: antialiased
 
@@ -123,6 +123,9 @@ p
 	&.align-arrow
 		margin-left: 23px
 
+
+
+
 .icon
 	padding-left: 24px !important
 	background-repeat: no-repeat
@@ -227,7 +230,7 @@ p
 		padding-bottom: 11px
 		padding-left: 12px
 		&:last-of-type
-			border-right: 0 px solid transparent
+			border-right: none
 			color: #fff
 			background-color: #000
 			padding-right: 12px
@@ -370,8 +373,6 @@ nav
 		position: relative
 		color: #000
 		text-decoration: none
-		xfont-size: 15px
-		xline-height: 1.3em
 		&:hover
 			background-color: $menu-color-hover
 			cursor: pointer
@@ -1409,6 +1410,9 @@ section.gridded
 			color: #fff
 		&.label-large
 			font-size: 13px
+		&.label-small
+			font-size: 12px
+			line-height: 1.3em
 	&.sect-body
 		display: block
 		line-height: 1.3em
@@ -1423,6 +1427,46 @@ section.gridded
 			color: #fff
 		&.label-large
 			font-size: 13px
+			
+			
+.product-caption 
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	font-size: 12px
+	line-height: 1.3em
+	color: #000
+	padding: 14px 15px
+	xwidth: 40%
+	.caption-regular
+		
+	.caption-alt
+		display: none
+		
+	.icn-wishlist
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 44px
+		height: 44px
+		display: block
+		color: transparent
+		background-image: url(../img/icon_star.png)
+		background-size: 44px
+		background-repeat: no-repeat
+		background-position: -5px -6px
+		&:hover
+			background-image: url(../img/icon_star_on.png)
+		.is-active
+			
+
+a:hover
+	.product-caption
+		.caption-regular
+			display: none
+		.caption-alt
+			display: block
 
 .ani-regular
 	z-index: 2
