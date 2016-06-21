@@ -139,6 +139,9 @@ p
 .monospace *
 	font-family: 'Menlo'
 
+.overflow-visible
+	overflow: visible !important
+
 .grid-form
 	input
 		font-family: 'Menlo'
@@ -167,8 +170,8 @@ p
 	display: block
 	border: 1px solid #000
 	width: 100%
-	height: 50px
-	margin-bottom: 10px
+	height: 45px
+	margin-bottom: 15px
 
 .date-slider
 	.container
@@ -184,12 +187,12 @@ p
 				height: 100%
 				width: calc(100% / 7)
 				border-right: 1px solid #000
-				padding-top: 16px
+				padding-top: 14px
 				padding-bottom: 11px
 				padding-left: 12px
 				float: left
 				&:hover
-					background-color: #eeeeee
+					background-color: #dddddd
 	.icon
 		height: 100%
 		width: 40px
@@ -226,7 +229,7 @@ p
 		width: calc(100% / 4)
 		border-right: 1px solid #000
 		float: left
-		padding-top: 16px
+		padding-top: 14px
 		padding-bottom: 11px
 		padding-left: 12px
 		&:last-of-type
@@ -235,15 +238,19 @@ p
 			background-color: #000
 			padding-right: 12px
 			text-align: center
+			&:hover
+				background-color: #000000
+		&:hover
+			background-color: #dddddd
 
 .dropdown-content
 	display: none
 	position: absolute
 	background-color: #ffffff
-	top: 48px
+	top: 43px
 	left: -1px
 	width: calc(100% - 38px)
-	z-index: 1
+	z-index: 99999
 	border: 1px solid #000
 	p
 		display: block
@@ -256,7 +263,7 @@ p
 		&:last-child
 			padding-bottom: 11px
 		&:hover
-			background-color: #eeeeee
+			background-color: #dddddd
 
 .dropdown:hover
 	.dropdown-content
@@ -280,9 +287,10 @@ nav
 			position: absolute
 			bottom: 0
 			left: 0
+			right: 0
 			p
 				margin-bottom: 0
-				font-size: 16px
+				font-size: 13px
 		.search-field
 			background-color: darken($menu-color, 2%)
 			height: 50px
@@ -383,7 +391,6 @@ nav
 		list-style: none
 		font-size: $menu-font-size
 		line-height: 1.3em
-		padding-right: 10px
 		@media (max-width: $media-phone)
 			padding-right: 0
 		li
@@ -393,7 +400,7 @@ nav
 				background-color: $menu-color-hover
 
 			a
-				padding: 8px 15px 0
+				padding: 7px 15px 0
 				height: 32px
 				display: inline-block
 				
@@ -418,7 +425,7 @@ nav
 				line-height: 1.3em
 				float: right
 				a
-					padding: 8px 15px 0
+					padding: 7px 15px 0
 				.sub
 					left: auto
 					right: 0
@@ -924,11 +931,29 @@ section
 		height: 75%
 	&.height-one-eights-percentages
 		height: 12.5%
+	&.gray
+		background-color: $bg-gray
 	&.invert
 		background-color: $background-inverted
 		color: $text-inverted
 		.sect-header
 			color: $text-inverted
+	&.height-full,
+	&.height-half,
+	&.height-third,
+	&.height-two-thirds,
+	&.height-three-fourths,
+	&.height-one-fourths,
+	&.height-one-eights,
+	&.height-full-percentages,
+	&.height-half-percentages,
+	&.height-third-percentages,
+	&.height-two-thirds-percentages,
+	&.height-one-fourths-percentages,
+	&.height-three-fourths-percentages,
+	&.height-one-eights-percentages
+		overflow: hidden
+
 	.column-half,
 	.column-third,
 	.column-two-thirds,
@@ -1046,10 +1071,11 @@ section.gridded
 
 .gray-outline
 	input
+		font-family: 'AcneStudiosCircle'
 		border: 1px solid #aaaaaa
 		font-size: 18px
 		color: $form-filler-gray
-		padding: 14px
+		padding: 10px
 		width: 100%
 		background-image: url('../img/icon_geolocator.png')
 		background-size: 15px auto
@@ -1063,7 +1089,28 @@ section.gridded
 
 .hd
 	padding: 16px 13px
-	&.sticky-css	
+	&.cover
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: block
+		text-decoration: none
+		&:hover
+			.sect-header
+				background-image: url('../img/icon_arrow6_straight2.png')
+				padding-left: 30px
+				background-position: 1px 5px
+				text-decoration: none
+		&.color-white
+			&:hover
+				.sect-header
+					background-image: url('../img/icon_arrow6_straight_w.png')
+					padding-left: 30px
+					background-position: 1px 5px
+					text-decoration: none
+	&.sticky-css
 		position: -webkit-sticky
 		position: -moz-sticky
 		position: -o-sticky
@@ -1078,11 +1125,9 @@ section.gridded
 		top: 32px
 		left: 0
 		z-index: 5
-		
 	@media (min-width: $media-phone)
 		&.hd-half
 			margin-left: 50%
-
 	.sect-header
 		display: block
 		font-size: 30px
@@ -1107,7 +1152,6 @@ section.gridded
 			background-size: 19px
 			background-position: 0 1px
 			padding-left: 20px
-			
 		&.cursor
 			background-image: url('../img/icon_cursor.gif')
 			background-size: 13px 22px
@@ -1134,7 +1178,9 @@ section.gridded
 			background-position: 0 14px
 			background-size: 50px
 			white-space: nowrap 
-			
+		&.small
+			font-size: 24px
+			line-height: 1.25
 		.additional
 			float: right
 	a.sect-header
@@ -1421,6 +1467,7 @@ section.gridded
 		z-index: 15
 		bottom: 0
 		left: 0
+		right: 0
 		height: auto
 		width: auto
 		&.white

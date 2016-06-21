@@ -14,6 +14,7 @@ $menu-font-size: 15px
 $menu-font-small-size: 11px
 $menu-font-foldout-size: 14px
 $menu-font-color: #000
+$bg-gray: #eeeeee
 
 $grid-color: #000
 $grid-color-inverted: #fff
@@ -31,16 +32,25 @@ $media-phone: 600px
 // Each line injected here significantly increases the compiled CSS file size.
 section,
 footer
-	padding: $padding-vertical $padding-horizontal
+	padding: $padding-vertical / 2 $padding-horizontal / 2
 .padding-responsive
-	padding: $padding-vertical $padding-horizontal
+	padding: ($padding-vertical / 2) ($padding-horizontal / 2)
 .padding-top-responsive
-	padding-top: $padding-vertical
+	padding-top: $padding-vertical / 2
 .padding-bottom-responsive
-	padding-bottom: $padding-vertical
+	padding-bottom: $padding-vertical / 2
 .padding-left-responsive
 	padding-left: $padding-horizontal / 2
 .padding-right-responsive
 	padding-right: $padding-horizontal / 2
 .margin-bottom-responsive
 	margin-bottom: $padding-vertical / 2
+
+.margin-top-small
+	margin-top: $padding-vertical / 4
+.margin-bottom-small
+	margin-bottom: $padding-vertical / 4
+.margin-left-small
+	margin-left: $padding-vertical / 4
+.margin-right-small
+	margin-right: $padding-vertical / 4
