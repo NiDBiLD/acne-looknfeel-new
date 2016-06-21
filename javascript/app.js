@@ -109,18 +109,14 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 		blockRange = (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.separator.offset().top;
 		distanceTop = stickyBlock.stickyProduct.css('marginTop');
 		if (blockScroll <= 0) {
-			stickyBlock.stickyProductWrapper.css('position', 'absolute');
-			stickyBlock.stickyProductWrapper.css('top', stickyBlock.topSect.offset().top);
+			stickyBlock.stickyProductWrapper.css({top: stickyBlock.topSect.offset().top, position: 'absolute'});
 		} else if (distance >= 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
 			stickyBlock.stickyProduct.css('top', -blockScroll);
-			stickyBlock.stickyProductWrapper.css('position', 'fixed');
-			stickyBlock.stickyProductWrapper.css('top', 0);
+			stickyBlock.stickyProductWrapper.css({position: 'fixed', top: 0});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
 		} else if (distance < 0 && blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight())) {
-			stickyBlock.stickyProductWrapper.css('position', 'fixed');
-			stickyBlock.stickyProductWrapper.css('top', 0);
-			stickyBlock.stickyProduct.css('top', - parseFloat(stickyBlock.stickyProduct.css('marginTop')));
-			stickyBlock.stickyProduct.css('position', 'absolute');
+			stickyBlock.stickyProductWrapper.css({position: 'fixed', top: 0});
+			stickyBlock.stickyProduct.css({top: - parseFloat(stickyBlock.stickyProduct.css('marginTop')), position: 'absolute'});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (blockScroll - parseFloat(distanceTop)));
 			stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height);
 			if (stickyBlock.foldIn1.object.height() <= 0) {
@@ -132,8 +128,7 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 				stickyBlock.stickyProduct.css('backgroundColor', 'transparent');
 			}
 		} else if (distance < 0 && blockScroll >= (blockRange - stickyBlock.stickyProduct.outerHeight())) {
-			stickyBlock.stickyProductWrapper.css('position', 'absolute');
-			stickyBlock.stickyProductWrapper.css('top', (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.stickyProduct.outerHeight());
+			stickyBlock.stickyProductWrapper.css({position: 'absolute', top: (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.stickyProduct.outerHeight()});
 			distance = 0;
 			blockScroll = 0;
 		}
