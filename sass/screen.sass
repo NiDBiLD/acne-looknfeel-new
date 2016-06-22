@@ -17,7 +17,8 @@ body
 	-webkit-font-smoothing: antialiased
 
 textarea:focus,
-input:focus
+input:focus,
+select:focus
 	outline: none
 
 h1,h2,h3,h4
@@ -132,6 +133,15 @@ p
 #searchWrapper
 	display: none
 
+.store-block
+	display: none !important
+	height: 100px
+.store-block-filter
+	height: 200px
+
+.visible-block
+	display: block !important
+
 .monospace,
 .monospace *
 	font-family: 'Menlo'
@@ -159,6 +169,37 @@ p
 			padding-left: 20px
 			padding-right: 20px
 			margin-left: 40%
+
+.dropdown-styled
+	margin-bottom: 15px
+	height: 45px
+	border: 1px solid #000000
+	position: relative
+	select
+		background: transparent
+		width: 100%
+		-webkit-appearance: none
+		height: 45px
+		font-size: 14px
+		padding: 14px 14px 14px 14px
+		border: 0
+		border-radius: 0
+		z-index: 99999
+		font-family: 'AcneStudiosCircle'
+		&.monospace
+			font-family: 'Menlo'
+	.icon
+		height: 100%
+		width: 40px
+		border-left: 1px solid #000
+		background-image: url('../img/icon_unfold_open.png')
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 24px 24px
+		position: absolute
+		right: 0
+		top: 0
+		z-index: 1
 
 .dropdown,
 .date-slider,
@@ -1096,6 +1137,7 @@ section.gridded
 		bottom: 0
 		display: block
 		text-decoration: none
+		cursor: pointer
 		&:hover
 			.sect-header
 				background-image: url('../img/icon_arrow6_straight2.png')
@@ -1128,7 +1170,7 @@ section.gridded
 		&.hd-half
 			margin-left: 50%
 	.sect-header
-		display: block
+		display: inline
 		font-size: 30px
 		line-height: 1.15em
 		color: #000
@@ -1138,6 +1180,11 @@ section.gridded
 		background-position: 0 5px
 		padding-left: 23px
 		text-decoration: none
+		white-space: pre
+		&:after
+			content: '\A'
+			display: block
+			line-height: 0
 		@media (max-width: $media-phone)
 			font-size: 22px
 			line-height: 1.15em

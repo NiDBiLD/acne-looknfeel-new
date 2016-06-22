@@ -4,6 +4,7 @@ $( document ).ready(function() {
 	resizeFoldOutSizes();
 	verticalCenterStickyProductDescription();
 	adaptHeights();
+	displayStores();
 
 	bagFoldedOut = false;
 
@@ -38,6 +39,9 @@ $( document ).ready(function() {
 	$('.color').click(function() {
 		$('.color').removeClass('active');
 		$(this).addClass('active');
+	});
+	$('#storeSelector').change(function() {
+		displayStores();
 	});
 });
 
@@ -141,6 +145,45 @@ function verticalCenterStickyProductDescription() {
 		var content = stickyInfos[i].stickyProduct;
 		var newTop = stickyInfos[i].stickyProductWrapper.height() - stickyInfos[i].stickyProduct.height() / 2 - 60;
 		stickyInfos[i].stickyProduct.css('marginTop', newTop);
+	}
+}
+
+function displayStores() {
+	$("#storeSelector").removeClass('visible-block');
+	selectedStores = $("#storeSelector").children('option').filter(':selected').text().toUpperCase();
+	var index = 1
+	if(selectedStores == 'SELECT COUNTRY') {
+		$('.store-block').each(function(i, elem) {
+			$(elem).removeClass('line-top line-right visible-block');
+			$(elem).addClass('visible-block');
+				$(elem).addClass('line-bottom');
+			if(index == 1) {
+				$(elem).addClass('line-top line-right');
+			} else if(index == 2) {
+				$(elem).addClass('line-top');
+			} else if(index % 4 != 0) {
+				$(elem).addClass('line-right');
+			}
+			index++;
+		});
+		$('#numberOfStores').text('TOTAL: 42 STORES');
+	} else {
+		$('.store-block').each(function(i, elem) {
+			$(elem).removeClass('line-top line-right visible-block');
+			if($(elem).html().indexOf(selectedStores) > -1) {
+				$(elem).addClass('visible-block');
+					$(elem).addClass('line-bottom');
+				if(index == 1) {
+					$(elem).addClass('line-top line-right');
+				} else if(index == 2) {
+					$(elem).addClass('line-top');
+				} else if(index % 4 != 0) {
+					$(elem).addClass('line-right');
+				}
+				index++;
+			}
+		});
+		$('#numberOfStores').text(index + ' OF 42 STORES');
 	}
 }
 
