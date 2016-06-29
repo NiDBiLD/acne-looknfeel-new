@@ -1336,10 +1336,11 @@ section.gridded
 		-webkit-transform: translate3d(0,-200%,0)
 
 .big-padding
-	padding: 47px 0 0 0
+	padding: 40px 0 0 0
 .bottom-corner-padding
 	padding: 0 0 15px 15px
 	margin: 0
+
 .foldIn1,
 .foldIn2
 	overflow: hidden
@@ -1351,7 +1352,7 @@ section.gridded
 	background-color: #ffffff
 .pdp-details
 	right: 25%
-	width: 25%
+	width: 50%
 	left: 50%
 	z-index: 90
 	position: absolute
@@ -1360,38 +1361,46 @@ section.gridded
 	.content
 		position: relative
 		padding-bottom: 0 !important
+		width: 100%
+		.prod-desc
+			margin-left: 16px
 		.top
 			margin-bottom: 15px
 			h1,h2
 				font-size: 22px
-				margin: 0 15px 0 15px
+				margin: 0 0 0 15px
 		.description
 			margin-bottom: 20px
 		.colors
 			margin-left: 15px
-			margin-bottom: 45px
 			.color
 				display: inline-block
-				margin-right: 10px
 				padding-bottom: 6px
 				cursor: pointer
+				padding: 0 20px 20px 0
 				&:hover
-					padding-bottom: 5px
-					border-bottom: 1px solid #000000
+					.underline
+						padding-bottom: 5px
+						border-bottom: 1px solid #000000
 				&.active
-					padding-bottom: 5px
-					border-bottom: 1px solid #000000
+					.underline
+						padding-bottom: 5px
+						border-bottom: 1px solid #000000
 				span
 					border-radius: 50%
+					display: block
 					width: 15px
 					height: 15px
+					margin-top: 10px
 					display: block
+				.underline
+					padding-bottom: 6px
 		.sizes
-			padding-bottom: 20px
-			span
-				margin-bottom: 10px
-				&:first-of-type
-					margin-left: 15px
+			.size-guide
+				padding-top: 10px
+				padding-bottom: 10px
+				padding-left: 15px
+				text-decoration: none
 			.grey
 				color: #aaaaaa
 			.size
@@ -1400,7 +1409,8 @@ section.gridded
 				width: 16.66666666666666%
 				border-left: 5px solid transparent
 				text-align: center
-				padding-top: 20px
+				padding-top: 15px
+				padding-bottom: 15px
 				span
 					margin: 0
 				&.first
@@ -1417,7 +1427,7 @@ section.gridded
 			&.foldout
 				display: none
 				position: absolute
-				margin-top: 15px
+				margin-top: 13px
 				margin-left: -15px
 				z-index: 999
 				.size
@@ -1448,24 +1458,50 @@ section.gridded
 						background-color: #ffffff
 		button
 			background-color: #000000
-			padding: 15px
+			padding: 13px 15px 13px 15px
 			margin: 0 !important
 			color: #ffffff
 			border: 0
 			width: 100%
-			font-size: 12px
+			font-size: 13px
 			text-align: left
 			cursor: pointer
-			&:hover
-				.foldout
-					display: block
+			font-family: 'AcneStudiosCircle'
+			&.attached
 				&:hover
-					display: block
+					.foldout
+						display: block
+					&:hover
+						display: block
+			.star
+				background-image: url('../img/icon_star_w.png')
+				width: 18px
+				height: 17px
+				float: right
+				background-size: 100%
+				&:hover
+					background-image: url('../img/icon_star_on_w.png')
+			.star-hover-text
+				color: transparent
+				float: right
+				margin-right: 10px
+				&.visible
+					color: #ffffff
+			.button-text
+				color: #ffffff
+				&.invisible
+					color: transparent
 		.info
 			position: relative
 			width: 100%
 			overflow: hidden
 			height: 90px
+			.store_icon
+				width: 24px
+				height: 13px
+				background-size: 100%
+				display: inline-block
+				margin-right: 5px
 			.padder
 				display: block
 				width: 100%
@@ -1475,10 +1511,30 @@ section.gridded
 			.top-spacing
 				height: 20px
 			span
-				display: block
+				display: inline-block
 				&.underline
-					text-decoration: underline
+					border-bottom: 1px solid #000
+				&:after
+					content: '\A'
+					display: table
+					height: 0
+					clear: both
 
+
+.attach-icon
+	width: 15px
+	height: 15px
+	background-repeat: no-repeat
+	background-position: left center
+	background-size: 15px 15px
+	padding-left: 18px
+	padding-right: 10px
+	&.phone
+		background-image: url('../img/icon_phone.png')
+	&.chat
+		background-image: url('../img/icon_chat.png')
+	&.pointer
+		background-image: url('../img/icon_pointer.png')
 .sect-title
 	display: block
 	font-size: 24px

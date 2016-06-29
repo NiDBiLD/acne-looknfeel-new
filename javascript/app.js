@@ -44,6 +44,14 @@ $( document ).ready(function() {
 	$('#storeSelector').change(function() {
 		displayStores();
 	});
+	$('.star').hover(function() {
+		console.log($(this).parent().find('.button-text'));
+		$(this).parent().find('.button-text').addClass('invisible');
+		$(this).parent().find('.star-hover-text').addClass('visible');
+	}, function() {
+		$(this).parent().find('.button-text').removeClass('invisible');
+		$(this).parent().find('.star-hover-text').removeClass('visible');
+	});
 });
 
 function getScrollTop() {
@@ -90,15 +98,17 @@ function stickyProductInit() {
 		stickyInfo.bottomSect = $('#bottomSect-' + i);
 		stickyInfo.topSect = $('#topSect-' + i);
 		stickyInfo.separator = $('#sectionSeparator-' + i);
+		stickyInfo.button = $('#stickyProductButton-' + i);
 		stickyInfo.foldIn1 = {};
 		stickyInfo.foldIn1.object = $('#stickyProduct-' + i + ' .foldIn1');
-		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height();
+		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').outerHeight();
 		stickyInfo.foldIn2 = {};
 		stickyInfo.foldIn2.object = $('#stickyProduct-' + i + ' .foldIn2');
-		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').height();
+		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').outerHeight();
 		stickyInfos.push(stickyInfo);
 		i++;
 	}
+	console.log(stickyInfos);
 }
 
 function stickyProductDescription() {
@@ -113,10 +123,14 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - blockScroll - stickyInfo.stickyProductWrapper.scrollTop());
 		blockRange = (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.separator.offset().top;
 		distanceTop = stickyBlock.stickyProduct.css('marginTop');
+		//console.log(blockScroll);
 		if (blockScroll <= 0) {
 			stickyBlock.stickyProductWrapper.css({top: stickyBlock.topSect.offset().top, position: 'absolute'});
-		} else if (distance >= 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
+		} else if (distance > 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
+			//console.log('stickyBlock fold1 height = ' + stickyBlock.foldIn1.object.height());
+			//console.log('stickyBlock fold1 original height = ' + stickyBlock.foldIn1.height);
 			stickyBlock.stickyProduct.css('top', -blockScroll);
+			//console.log('stickyProduct Top' + stickyBlock.stickyProduct.css('top'));
 			stickyBlock.stickyProductWrapper.css({position: 'fixed', top: 0});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
 		} else if (distance < 0 && blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight())) {
@@ -124,8 +138,10 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 			stickyBlock.stickyProduct.css({top: - parseFloat(stickyBlock.stickyProduct.css('marginTop')), position: 'absolute'});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (blockScroll - parseFloat(distanceTop)));
 			stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height);
+			stickyBlock.button.removeClass('attached');
 			if (stickyBlock.foldIn1.object.height() <= 0) {
 				stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height - (blockScroll - stickyBlock.foldIn1.height - parseFloat(distanceTop)));
+				stickyBlock.button.addClass('attached');
 			}
 			if (blockScroll >= stickyBlock.stickyProductWrapper.height() - 240) {
 				stickyBlock.stickyProduct.css('backgroundColor', '#ffffff');
