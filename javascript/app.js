@@ -158,10 +158,10 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 
 function verticalCenterStickyProductDescription() {
 	for (var i = 0, len = stickyInfos.length; i < len; i++) {
-		var container = stickyInfos[i].stickyProductWrapper;
-		var content = stickyInfos[i].stickyProduct;
-		var newTop = stickyInfos[i].stickyProductWrapper.height() - stickyInfos[i].stickyProduct.height() / 2 - 60;
-		stickyInfos[i].stickyProduct.css('marginTop', newTop);
+		var container = stickyInfos[0].stickyProductWrapper;
+		var content = stickyInfos[0].stickyProduct;
+		var newTop = stickyInfos[0].stickyProductWrapper.height() - stickyInfos[0].stickyProduct.height() / 2 - 120;
+		stickyInfos[0].stickyProduct.css('marginTop', newTop);
 	}
 }
 
