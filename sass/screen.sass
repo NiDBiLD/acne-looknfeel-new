@@ -148,6 +148,8 @@ p
 .monospace,
 .monospace *
 	font-family: 'Menlo'
+	&.text-small
+		font-size: 11px
 
 .overflow-visible
 	overflow: visible !important
@@ -1477,6 +1479,8 @@ section.gridded
 			cursor: pointer
 			font-family: 'AcneStudiosCircle'
 			padding: 0
+			&:focus
+				outline: 0
 			&:after
 			&.attached
 				&:hover
@@ -1503,7 +1507,7 @@ section.gridded
 			.star-hover-text
 				color: transparent
 				float: right
-				margin-right: 10px
+				margin-right: 15px
 				&.visible
 					color: #ffffff
 			.button-text
