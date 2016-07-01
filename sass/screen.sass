@@ -123,8 +123,20 @@ ul.lined-list
 p
 	&.align-arrow
 		margin-left: 23px
-
-
+.video-section
+	position: relative
+	.video-cover
+		position: absolute
+		bottom: 50%
+		right: 50%
+		-webkit-transform: translateX(50%) translateY(50%)
+		transform: translateX(50%) translateY(50%)
+		min-width: 100vw
+		min-height: 100vh
+		width: auto
+		height: auto
+		z-index: -1000
+		overflow: hidden
 
 
 .icon
@@ -224,11 +236,11 @@ p
 		overflow: hidden
 		.slider
 			height: 100%
-			width: calc(100% + 1px)
+			width: calc(300% + 1px)
 			.slide
 				font-size: 14px
 				height: 100%
-				width: calc(100% / 7)
+				width: calc(100% / 21)
 				border-right: 1px solid #000
 				padding-top: 14px
 				padding-bottom: 11px
@@ -237,7 +249,7 @@ p
 				&:hover
 					background-color: #dddddd
 	.icon
-		height: 100%
+		height: 1021
 		width: 40px
 		float: left
 		border-left: 1px solid #000
@@ -1041,10 +1053,6 @@ section
 			width: 100%
 	.multiply-img
 		background-blend-mode: multiply
-	.video
-		width: 100%
-	
-
 
 body.menu-backgrounded
 	section
@@ -1176,8 +1184,8 @@ section.gridded
 		&.hd-half
 			margin-left: 50%
 	.sect-header
-		display: inline
 		font-size: 30px
+		display: block
 		line-height: 1.15em
 		color: #000
 		background-image: url('../img/icon_arrow6.png')
@@ -1191,10 +1199,6 @@ section.gridded
 			background-image: url('../img/icon_blueprint_1.png') !important
 			background-size: 61px 25px
 			padding-left: 65px
-		&:after
-			content: '\A'
-			display: block
-			line-height: 0
 		@media (max-width: $media-phone)
 			font-size: 22px
 			line-height: 1.15em
@@ -1497,7 +1501,17 @@ section.gridded
 				background-repeat: no-repeat
 				background-position: center center
 				background-size: 18px 17px
+				position: relative
 				&:hover
+					.star_line
+						position: absolute
+						bottom: 0
+						border-top: 1px solid #ffffff
+						width: 14px
+						left: 0
+						margin-left: 17px
+						padding-top: 10px
+				&.activated
 					background-image: url('../img/icon_star_on_w.png')
 			.star-hover-text,
 			.button-text
@@ -1521,8 +1535,8 @@ section.gridded
 			overflow: hidden
 			height: 150px
 			.store_icon
-				width: 23px
-				height: 12px
+				width: 20px
+				height: 10px
 				background-size: 100%
 				display: inline-block
 				margin-right: 5px
@@ -1532,6 +1546,7 @@ section.gridded
 				bottom: 0
 				left: 0
 				span
+					line-height: 1.5
 					display: inline !important
 					&:after
 						content: '\A'

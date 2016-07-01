@@ -44,8 +44,15 @@ $( document ).ready(function() {
 	$('#storeSelector').change(function() {
 		displayStores();
 	});
+	$('.star').click(function() {
+		$(this).toggleClass('activated');
+		if($(this).parent().find('.star-hover-text').text() == 'Save for later'){
+			$(this).parent().find('.star-hover-text').text('Remove from favourites');
+		} else {
+			$(this).parent().find('.star-hover-text').text('Save for later');
+		}
+	});
 	$('.star').hover(function() {
-		console.log($(this).parent().find('.button-text'));
 		$(this).parent().find('.button-text').addClass('invisible');
 		$(this).parent().find('.star-hover-text').addClass('visible');
 	}, function() {
