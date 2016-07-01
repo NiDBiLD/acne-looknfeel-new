@@ -4,6 +4,7 @@ $( document ).ready(function() {
 	resizeFoldOutSizes();
 	verticalCenterStickyProductDescription();
 	adaptHeights();
+	displayStores();
 
 	bagFoldedOut = false;
 
@@ -44,6 +45,17 @@ $( document ).ready(function() {
 	$('.color').click(function() {
 		$('.color').removeClass('active');
 		$(this).addClass('active');
+	});
+	$('#storeSelector').change(function() {
+		displayStores();
+	});
+	$('.star').hover(function() {
+		console.log($(this).parent().find('.button-text'));
+		$(this).parent().find('.button-text').addClass('invisible');
+		$(this).parent().find('.star-hover-text').addClass('visible');
+	}, function() {
+		$(this).parent().find('.button-text').removeClass('invisible');
+		$(this).parent().find('.star-hover-text').removeClass('visible');
 	});
 });
 
@@ -91,15 +103,17 @@ function stickyProductInit() {
 		stickyInfo.bottomSect = $('#bottomSect-' + i);
 		stickyInfo.topSect = $('#topSect-' + i);
 		stickyInfo.separator = $('#sectionSeparator-' + i);
+		stickyInfo.button = $('#stickyProductButton-' + i);
 		stickyInfo.foldIn1 = {};
 		stickyInfo.foldIn1.object = $('#stickyProduct-' + i + ' .foldIn1');
-		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').height();
+		stickyInfo.foldIn1.height = $('#stickyProduct-' + i + ' .foldIn1').outerHeight();
 		stickyInfo.foldIn2 = {};
 		stickyInfo.foldIn2.object = $('#stickyProduct-' + i + ' .foldIn2');
-		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').height();
+		stickyInfo.foldIn2.height = $('#stickyProduct-' + i + ' .foldIn2').outerHeight();
 		stickyInfos.push(stickyInfo);
 		i++;
 	}
+	console.log(stickyInfos);
 }
 
 function stickyProductDescription() {
@@ -114,10 +128,14 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 		distance = (parseFloat(stickyBlock.stickyProduct.css('marginTop')) - blockScroll - stickyInfo.stickyProductWrapper.scrollTop());
 		blockRange = (stickyBlock.bottomSect.offset().top + stickyBlock.bottomSect.height()) - stickyBlock.separator.offset().top;
 		distanceTop = stickyBlock.stickyProduct.css('marginTop');
+		//console.log(blockScroll);
 		if (blockScroll <= 0) {
 			stickyBlock.stickyProductWrapper.css({top: stickyBlock.topSect.offset().top, position: 'absolute'});
-		} else if (distance >= 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
+		} else if (distance > 0 && (blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight()))) {
+			//console.log('stickyBlock fold1 height = ' + stickyBlock.foldIn1.object.height());
+			//console.log('stickyBlock fold1 original height = ' + stickyBlock.foldIn1.height);
 			stickyBlock.stickyProduct.css('top', -blockScroll);
+			//console.log('stickyProduct Top' + stickyBlock.stickyProduct.css('top'));
 			stickyBlock.stickyProductWrapper.css({position: 'fixed', top: 0});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height);
 		} else if (distance < 0 && blockScroll < (blockRange - stickyBlock.stickyProduct.outerHeight())) {
@@ -125,8 +143,10 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 			stickyBlock.stickyProduct.css({top: - parseFloat(stickyBlock.stickyProduct.css('marginTop')), position: 'absolute'});
 			stickyBlock.foldIn1.object.height(stickyBlock.foldIn1.height - (blockScroll - parseFloat(distanceTop)));
 			stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height);
+			stickyBlock.button.removeClass('attached');
 			if (stickyBlock.foldIn1.object.height() <= 0) {
 				stickyBlock.foldIn2.object.height(stickyBlock.foldIn2.height - (blockScroll - stickyBlock.foldIn1.height - parseFloat(distanceTop)));
+				stickyBlock.button.addClass('attached');
 			}
 			if (blockScroll >= stickyBlock.stickyProductWrapper.height() - 240) {
 				stickyBlock.stickyProduct.css('backgroundColor', '#ffffff');
@@ -143,10 +163,49 @@ function stickyProductBehaviour(stickyBlock, scrollAmount) {
 
 function verticalCenterStickyProductDescription() {
 	for (var i = 0, len = stickyInfos.length; i < len; i++) {
-		var container = stickyInfos[i].stickyProductWrapper;
-		var content = stickyInfos[i].stickyProduct;
-		var newTop = stickyInfos[i].stickyProductWrapper.height() - stickyInfos[i].stickyProduct.height() / 2 - 60;
-		stickyInfos[i].stickyProduct.css('marginTop', newTop);
+		var container = stickyInfos[0].stickyProductWrapper;
+		var content = stickyInfos[0].stickyProduct;
+		var newTop = stickyInfos[0].stickyProductWrapper.height() - stickyInfos[0].stickyProduct.height() / 2 - 120;
+		stickyInfos[0].stickyProduct.css('marginTop', newTop);
+	}
+}
+
+function displayStores() {
+	$("#storeSelector").removeClass('visible-block');
+	selectedStores = $("#storeSelector").children('option').filter(':selected').text().toUpperCase();
+	var index = 1
+	if(selectedStores == 'SELECT COUNTRY') {
+		$('.store-block').each(function(i, elem) {
+			$(elem).removeClass('line-top line-right visible-block');
+			$(elem).addClass('visible-block');
+				$(elem).addClass('line-bottom');
+			if(index == 1) {
+				$(elem).addClass('line-top line-right');
+			} else if(index == 2) {
+				$(elem).addClass('line-top');
+			} else if(index % 4 != 0) {
+				$(elem).addClass('line-right');
+			}
+			index++;
+		});
+		$('#numberOfStores').text('TOTAL: 42 STORES');
+	} else {
+		$('.store-block').each(function(i, elem) {
+			$(elem).removeClass('line-top line-right visible-block');
+			if($(elem).html().indexOf(selectedStores) > -1) {
+				$(elem).addClass('visible-block');
+					$(elem).addClass('line-bottom');
+				if(index == 1) {
+					$(elem).addClass('line-top line-right');
+				} else if(index == 2) {
+					$(elem).addClass('line-top');
+				} else if(index % 4 != 0) {
+					$(elem).addClass('line-right');
+				}
+				index++;
+			}
+		});
+		$('#numberOfStores').text(index + ' OF 42 STORES');
 	}
 }
 

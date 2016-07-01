@@ -239,8 +239,8 @@
 			<div class='hd color-white sticky-css hd-ani-states-2-double-stay'>
 				<div class="ani-inner">
 					<div class="ani-layer">
-						<span class='sect-header'>New Store</span>
-						<span class='sect-header level-2'>Maximilianplatz, Munich</span>
+						<span class='sect-header double'>New Store</span>
+						<span class='sect-header blueprint level-2'>Maximilianplatz, Munich</span>
 					</div>
 				</div>
 			</div>
@@ -296,7 +296,17 @@
 			<div class='column-half left'>
 				<div class='padding-responsive'>
 					<p class='margin-bottom-small'>Make appointment</p>
-					<div class="dropdown">
+					<div class="dropdown-styled">
+						<select>
+							<option>Test</option>
+							<option>Test 2</option>
+							<option>Test 3</option>
+							<option>Test 4</option>
+							<option>Test 5</option>
+							<option>Test 6</option>
+						</select>
+						<div class='icon'></div>
+					<!--
 						<span>Store</span>
 						<div class='icon'></div>
 						<div class="dropdown-content">
@@ -304,6 +314,7 @@
 							<p>Store 2</p>
 							<p>Store 3</p>
 						</div>
+					-->
 					</div>
 					<p class='margin-bottom-small'>August</p>
 					<div class='date-slider'>
@@ -335,34 +346,34 @@
 		<section class='height-half'>
 			<div class='column-half left height-full background-img' style='background-image: url("./uploads/store/2_1.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Horatio Street, New York</span>
+					<span class='sect-header small blueprint'>Horatio Street, New York</span>
 				</a>
 			</div>
 			<div class='column-half left height-full background-img' style='background-image: url("./uploads/store/1_3.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Potsdamer Straße, Berlin</span>
+					<span class='sect-header small blueprint'>Potsdamer Straße, Berlin</span>
 				</a>
 			</div>
 		</section>
 		<section class='height-half'>
 			<div class='column-fourth left height-full background-img' style='background-image: url("./uploads/store/2_0.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Cheongdam, Seoul</span>
+					<span class='sect-header small blueprint'>Cheongdam, Seoul</span>
 				</a>
 			</div>
 			<div class='column-fourth left height-full background-img' style='background-image: url("./uploads/store/1_2.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Illum, Copenhagen</span>
+					<span class='sect-header small blueprint'>Illum, Copenhagen</span>
 				</a>
 			</div>
 			<div class='column-fourth left height-full background-img' style='background-image: url("./uploads/store/3_0.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Potsdamer Straße, Berlin</span>
+					<span class='sect-header small blueprint'>Potsdamer Straße, Berlin</span>
 				</a>
 			</div>
 			<div class='column-fourth left height-full background-img' style='background-image: url("./uploads/store/1_1.jpg");'>
 				<a href='/' class='hd color-white cover'>
-					<span class='sect-header small'>Horatio Street, New York</span>
+					<span class='sect-header small blueprint'>Horatio Street, New York</span>
 				</a>
 			</div>
 		</section>
@@ -416,194 +427,195 @@
 				</div>
 		</section>
 		<section class='monospace'>
-			<div class='column-half overflow-visible line-bottom-right-corner line-top grid height-one-fourths padding-responsive'>
+			<div class='column-half overflow-visible line-top line-right line-bottom grid store-block-filter padding-responsive'>
 				<a class='sect-header'>ALL STORES<br>
-					TOTAL: 42 of 42 STORES
+					<span id='numberOfStores'>TOTAL: 42 STORES</span>
 				</a>
 				<form class='grid-form padding-top-responsive'>
-					<div class="dropdown">
-						<span>Store</span>
+					<div class="dropdown-styled">
+						<select class='monospace' id='storeSelector'>
+							<option>Select country</option>
+							<option>Australia</option>
+							<option>Belgium</option>
+							<option>China</option>
+							<option>France</option>
+							<option>Germany</option>
+							<option>Hong Kong</option>
+							<option>Japan</option>
+							<option>Norway</option>
+							<option>South Korea</option>
+							<option>Sweden</option>
+							<option>United Kingdom</option>
+							<option>United States</option>
+						</select>
 						<div class='icon'></div>
-						<div class="dropdown-content">
-							<p>Store 1</p>
-							<p>Store 2</p>
-							<p>Store 3</p>
-						</div>
 					</div>
 				</form>
 			</div>
-			<div class='column-fourth line-bottom-right-corner line-top grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Oslo, NORWAY<br>
 				Gronnegata
 			</div>
-			<div class='column-fourth line-bottom-right-corner line-top grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Stockholm, SWEDEN<br>
 				Barkarby
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Oslo, NORWAY<br>
 				Underhaugsveien
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Stockholm, SWEDEN<br>
 				PK-huset
 			</div>
-		</section>
-		<section class='monospace'>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Melbourne, AUSTRALIA<br>
 				Little Bourke Stree
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Paris, FRANCE<br>
 				Rue Froissart
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Melbourne, AUSTRALIA<br>
 				High Street
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Paris, FRANCE<br>
 				Quai Voltaire
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Oslo, NORWAY<br>
 				Markveien
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				LONDON, UNITED KINGDOM<br>
 				Dover Street
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Sydney, AUSTRALIA<br>
 				Glenmore Road
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Berlin, GERMANY<br>
 				Potsdamer Strasse
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Seoul, SOUTH KOREA<br>
 				Cheongdam
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				LONDON, UNITED KINGDOM<br>
 				Pelham Street
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Antwerp, BELGIUM<br>
 				Lombardenvest
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Berlin, GERMANY<br>
 				Weinmeisterstrasse
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Seoul, SOUTH KOREA<br>
 				Shinsegae Main
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				LONDON, UNITED KINGDOM<br>
 				Brompton Road
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Shanghai, CHINA<br>
 				Reel Department Store
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Hamburg, GERMANY<br>
 				Bleichenbrücke
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Seoul, SOUTH KOREA<br>
 				Shinsegae Gangnam
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				L.A, UNITED STATES<br>
 				Eastern Columbia Building
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Copenhagen, DANMARK<br>
 				Elmegade
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Munich, GERMANY<br>
 				Maximiliansplatz
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Gothenburg, SWEDEN<br>
 				Magasinsgatan
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				New York, UNITED STATES<br>
 				Greene Street
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Copenhagen, DANMARK<br>
 				Gammel Mønt
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Hong Kong, HONG KONG<br>
 				Ice House Street
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Gothenburg, SWEDEN<br>
 				Freeport
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				New York, UNITED STATES<br>
 				Horatio Street
 			</div>
 
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Copenhagen, DANMARK<br>
 				Illum
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Osaka, JAPAN<br>
 				Midosuji
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Stockholm, SWEDEN<br>
 				Norrmalmstorg
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
-			</div>
-
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Paris, FRANCE<br>
 				Galeries Lafayette
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Tokyo, JAPAN<br>
 				Aoyama
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Stockholm, SWEDEN<br>
 				Nytorgsgatan
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
-			</div>
-
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Paris, FRANCE<br>
 				Palais Royal
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Amsterdam, NETHERLANDS<br>
 				Oude Spiegelstraat
 			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
+
+			<div class='column-fourth padding-responsive store-block visible-block grid'>
 				Stockholm, SWEDEN<br>
 				Torsgatan
-			</div>
-			<div class='column-fourth line-bottom-right-corner grid height-one-eights padding-responsive'>
 			</div>
 		</section>
 	</body>

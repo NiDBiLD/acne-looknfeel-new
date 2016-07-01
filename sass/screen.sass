@@ -17,7 +17,8 @@ body
 	-webkit-font-smoothing: antialiased
 
 textarea:focus,
-input:focus
+input:focus,
+select:focus
 	outline: none
 
 h1,h2,h3,h4
@@ -135,9 +136,20 @@ p
 #searchWrapper
 	display: none
 
+.store-block
+	display: none !important
+	height: 100px
+.store-block-filter
+	height: 200px
+
+.visible-block
+	display: block !important
+
 .monospace,
 .monospace *
 	font-family: 'Menlo'
+	&.text-small
+		font-size: 11px
 
 .overflow-visible
 	overflow: visible !important
@@ -162,6 +174,37 @@ p
 			padding-left: 20px
 			padding-right: 20px
 			margin-left: 40%
+
+.dropdown-styled
+	margin-bottom: 15px
+	height: 45px
+	border: 1px solid #000000
+	position: relative
+	select
+		background: transparent
+		width: 100%
+		-webkit-appearance: none
+		height: 45px
+		font-size: 14px
+		padding: 14px 14px 14px 14px
+		border: 0
+		border-radius: 0
+		z-index: 99999
+		font-family: 'AcneStudiosCircle'
+		&.monospace
+			font-family: 'Menlo'
+	.icon
+		height: 100%
+		width: 40px
+		border-left: 1px solid #000
+		background-image: url('../img/icon_unfold_open.png')
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 24px 24px
+		position: absolute
+		right: 0
+		top: 0
+		z-index: 1
 
 .dropdown,
 .date-slider,
@@ -1131,6 +1174,7 @@ section.gridded
 		bottom: 0
 		display: block
 		text-decoration: none
+		cursor: pointer
 		&:hover
 			.sect-header
 				background-image: url('../img/icon_arrow6_straight2.png')
@@ -1144,6 +1188,9 @@ section.gridded
 					padding-left: 30px
 					background-position: 1px 5px
 					text-decoration: none
+					&.blueprint
+						padding-left: 56px
+						background-position: 0px 5px
 	&.sticky-css
 		position: -webkit-sticky
 		position: -moz-sticky
@@ -1163,7 +1210,7 @@ section.gridded
 		&.hd-half
 			margin-left: 50%
 	.sect-header
-		display: block
+		display: inline
 		font-size: 30px
 		line-height: 1.15em
 		color: #000
@@ -1173,6 +1220,15 @@ section.gridded
 		background-position: 0 5px
 		padding-left: 23px
 		text-decoration: none
+		white-space: pre
+		&.blueprint
+			background-image: url('../img/icon_blueprint_1.png') !important
+			background-size: 61px 25px
+			padding-left: 65px
+		&:after
+			content: '\A'
+			display: block
+			line-height: 0
 		@media (max-width: $media-phone)
 			font-size: 22px
 			line-height: 1.15em
@@ -1215,6 +1271,15 @@ section.gridded
 		&.small
 			font-size: 24px
 			line-height: 1.25
+			&.blueprint
+				background-size: 41px 17px
+				padding-left: 46px
+				&.color-white
+					&:hover
+						padding-left: 56px !important
+				&:hover
+					padding-left: 56px !important
+
 		.additional
 			float: right
 	a.sect-header
@@ -1323,10 +1388,11 @@ section.gridded
 		-webkit-transform: translate3d(0,-200%,0)
 
 .big-padding
-	padding: 47px 0 0 0
+	padding: 40px 0 0 0
 .bottom-corner-padding
 	padding: 0 0 15px 15px
 	margin: 0
+
 .foldIn1,
 .foldIn2
 	overflow: hidden
@@ -1338,7 +1404,7 @@ section.gridded
 	background-color: #ffffff
 .pdp-details
 	right: 25%
-	width: 25%
+	width: 50%
 	left: 50%
 	z-index: 90
 	position: absolute
@@ -1347,38 +1413,41 @@ section.gridded
 	.content
 		position: relative
 		padding-bottom: 0 !important
+		width: 100%
+		.prod-desc
+			margin-left: 16px
 		.top
 			margin-bottom: 15px
 			h1,h2
 				font-size: 22px
-				margin: 0 15px 0 15px
+				margin: 0 0 0 15px
 		.description
 			margin-bottom: 20px
 		.colors
 			margin-left: 15px
-			margin-bottom: 45px
 			.color
 				display: inline-block
-				margin-right: 10px
 				padding-bottom: 6px
 				cursor: pointer
+				padding: 0 15px 20px 0
 				&:hover
-					padding-bottom: 5px
-					border-bottom: 1px solid #000000
+					.underline
+						padding-bottom: 5px
+						border-bottom: 1px solid #000000
 				&.active
-					padding-bottom: 5px
-					border-bottom: 1px solid #000000
+					.underline
+						padding-bottom: 5px
+						border-bottom: 1px solid #000000
 				span
 					border-radius: 50%
+					display: block
 					width: 15px
 					height: 15px
+					margin-top: 10px
 					display: block
+				.underline
+					padding-bottom: 6px
 		.sizes
-			padding-bottom: 20px
-			span
-				margin-bottom: 10px
-				&:first-of-type
-					margin-left: 15px
 			.grey
 				color: #aaaaaa
 			.size
@@ -1387,7 +1456,8 @@ section.gridded
 				width: 16.66666666666666%
 				border-left: 5px solid transparent
 				text-align: center
-				padding-top: 20px
+				padding-top: 15px
+				padding-bottom: 15px
 				span
 					margin: 0
 				&.first
@@ -1404,8 +1474,7 @@ section.gridded
 			&.foldout
 				display: none
 				position: absolute
-				margin-top: 15px
-				margin-left: -15px
+				margin-top: 49px
 				z-index: 999
 				.size
 					background-color: #000000
@@ -1435,36 +1504,116 @@ section.gridded
 						background-color: #ffffff
 		button
 			background-color: #000000
-			padding: 15px
 			margin: 0 !important
 			color: #ffffff
 			border: 0
 			width: 100%
-			font-size: 12px
+			font-size: 15px
 			text-align: left
 			cursor: pointer
-			&:hover
-				.foldout
-					display: block
+			font-family: 'AcneStudiosCircle'
+			padding: 0
+			&:focus
+				outline: 0
+			&:after
+			&.attached
 				&:hover
-					display: block
+					.foldout
+						display: block
+					&:hover
+						display: block
+			.star
+				background-image: url('../img/icon_star_w.png')
+				float: right
+				padding: 24px
+				border-left: 1px solid #ffffff
+				background-size: 100%
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: 18px 17px
+				&:hover
+					background-image: url('../img/icon_star_on_w.png')
+			.star-hover-text,
+			.button-text
+				padding-top: 15px
+				padding-bottom: 15px
+				padding-left: 15px
+			.star-hover-text
+				color: transparent
+				float: right
+				margin-right: 15px
+				&.visible
+					color: #ffffff
+			.button-text
+				float: left
+				color: #ffffff
+				&.invisible
+					color: transparent
 		.info
 			position: relative
 			width: 100%
 			overflow: hidden
-			height: 90px
+			height: 150px
+			.store_icon
+				width: 23px
+				height: 12px
+				background-size: 100%
+				display: inline-block
+				margin-right: 5px
 			.padder
-				display: block
 				width: 100%
 				position: absolute
 				bottom: 0
 				left: 0
+				span
+					display: inline !important
+					&:after
+						content: '\A'
+						display: table
+						height: 0
+						clear: both
 			.top-spacing
 				height: 20px
 			span
-				display: block
+				display: inline
 				&.underline
-					text-decoration: underline
+					border-bottom: 1px solid #000
+				&:after
+					content: '\A'
+					display: table
+					height: 0
+					clear: both
+.attach-icon
+	width: 15px
+	height: 15px
+	background-repeat: no-repeat
+	background-position: left top
+	background-size: 15px 15px
+	padding-left: 18px
+	padding-right: 15px
+	&.phone
+		background-image: url('../img/icon_phone.png')
+	&.chat
+		background-image: url('../img/icon_chat.png')
+	&.pointer
+		background-image: url('../img/icon_pointer.png')
+	&.measure
+		background-image: url('../img/icon_size.png')
+		background-size: 30px 10px
+		background-position: left 2px
+		padding-right: 0
+		padding-bottom: 25px
+		text-align: right
+		width: 100px
+		height: 15px
+		text-decoration: none
+		color: #000
+	&.monospace-arrow
+		background-image: url('../img/icon_arrow_monospace.png')
+		background-size: 9px 12px
+		width: 9px
+		height: 12px
+		background-position: left 1px
 
 .sect-title
 	display: block
