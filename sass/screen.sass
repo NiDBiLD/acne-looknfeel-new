@@ -391,6 +391,7 @@ nav
 		list-style: none
 		font-size: $menu-font-size
 		line-height: 1.3em
+		padding-right: 10px
 		@media (max-width: $media-phone)
 			padding-right: 0
 		li
@@ -422,10 +423,11 @@ nav
 					display: block
 
 			&.menu-secondary
+				font-size: 11px
 				line-height: 1.3em
 				float: right
 				a
-					padding: 7px 15px 0
+					padding: 10px 10px 0
 				.sub
 					left: auto
 					right: 0
@@ -474,7 +476,7 @@ nav
 					background-image: url(../img/icon_face_m.png)
 			&.menu-bag
 				> a
-					.active
+					&.is-active
 						background-color: $menu-color-hover
 			
 				
@@ -853,21 +855,29 @@ nav
 				margin-top: 132px
 
 
-body.menu-backgrounded
+body.menu-backgrounded,
+body.bag-is-active
 	nav
 		background-color: $menu-color
+
+body.bag-is-active
+	nav
+		.sub
+			ul 
+				background-color: #e6e6e6
 
 #foldOut
 	position: fixed
 	width: 25%
-	right: -25%
+	right: 0
 	bottom: 0
-	top: 33px
+	top: 32px
 	padding: 10px
 	background-color: $menu-color-hover
 	font-size: 13px
 	line-height: 1.3em
-	z-index: 99999
+	z-index: 10
+	transform: translate3d(100%,0,0)
 	.separator
 		overflow: hidden
 		white-space: nowrap
@@ -881,6 +891,30 @@ body.menu-backgrounded
 	img
 		border: 1px solid #000
 		max-width: 100%
+		
+body.bag-is-active
+	#foldOut
+		transform: translate3d(0,0,0)
+		-webkit-animation: bag_show 0.4s steps(4) 1 forwards
+		
+body.bag-is-not-active
+	#foldOut
+		transform: translate3d(100%,0,0)
+		-webkit-animation: bag_hide 0.4s steps(4) 1 forwards
+
+
+@-webkit-keyframes bag_show 
+	0% 
+		-webkit-transform: translate3d(100%,0,0)
+	100% 
+		-webkit-transform: translate3d(0,0,0)
+		
+@-webkit-keyframes bag_hide 
+	0% 
+		-webkit-transform: translate3d(0,0,0)
+	100% 
+		-webkit-transform: translate3d(100%,0,0)
+
 
 section
 	position: relative
@@ -1474,8 +1508,8 @@ section.gridded
 			color: #fff
 		&.label-large
 			font-size: 13px
-			
-			
+
+
 .product-caption 
 	position: absolute
 	left: 0
@@ -1500,12 +1534,25 @@ section.gridded
 		display: block
 		color: transparent
 		background-image: url(../img/icon_star.png)
-		background-size: 44px
+		background-size: 34px
 		background-repeat: no-repeat
-		background-position: -5px -6px
+		background-position: 5px 0
+		&:before
+			content: ""
+			display: none
+			height: 1px
+			width: 14px
+			position: absolute
+			background-color: #000
+			top: 28px
+			left: 15px
+			
 		&:hover
-			background-image: url(../img/icon_star_on.png)
-		.is-active
+			&:before
+				display: block
+			
+		&.is-active
+			background-image: url(../img/icon_star_on_2.png)
 			
 
 a:hover

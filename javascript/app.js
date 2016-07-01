@@ -14,18 +14,23 @@ $( document ).ready(function() {
 	bagFoldedOut = false;
 	$("#menuBag").click(function() {
 		if(bagFoldedOut == false){
-			$openFoldOut = TweenMax.to("#foldOut", 0.3, {right: 0});
-			$menuBag = TweenMax.to("#menuBag", 0.1, {backgroundColor: '#eeeeee'});
+			//$openFoldOut = TweenMax.to("#foldOut", 0.3, {right: 0});
+			//$menuBag = TweenMax.to("#menuBag", 0.1, {backgroundColor: '#eeeeee'});
+			$('body').removeClass('bag-is-not-active').addClass('bag-is-active');
+			$('#menuBag').addClass('is-active');
 			bagFoldedOut = true;
 		} else {
-			$closeFoldOut = TweenMax.to("#foldOut", 0.3, {right: -400});
-			$menuBag = TweenMax.to("#menuBag", 0.1, {backgroundColor: '#ffffff'});
+			//$closeFoldOut = TweenMax.to("#foldOut", 0.3, {right: -400});
+			//$menuBag = TweenMax.to("#menuBag", 0.1, {backgroundColor: '#ffffff'});
+			$('body').removeClass('bag-is-active').addClass('bag-is-not-active');
+			$('#menuBag').removeClass('is-active');
 			bagFoldedOut = false;
 		}
 	});
 	$('.foldout-button').hover(function() {
 		toggleFoldoutSizes();
 	});
+	
 	$('#menuSearch').click(function() {
 		$('#searchWrapper').css('display', 'block');
 	});
@@ -164,7 +169,7 @@ function mobile_nav_toggle() {
 	}
 }
 function wishlist_save_toggle(e) {
-	alert('SAVING AS FAVORITE');
+	$(this).toggleClass('is-active');
 	e.preventDefault();
 }
 
