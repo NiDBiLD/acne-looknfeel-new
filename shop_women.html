@@ -5,6 +5,7 @@
 		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
 		<link href="fonts/stylesheet.css" rel="stylesheet" media="screen">
 		<link href="stylesheets/screen.css" rel="stylesheet" media="screen">
+		<meta charset="UTF-8">
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="javascript/jquery-1.12.3.min.js"></script>
 		<script src="javascript/TimelineLite.min.js"></script>
@@ -15,8 +16,8 @@
 		<script src="javascript/app.js"></script>
 	</head>
 	<body class="department-women">
-		<nav class="clearfix">
-			<ul>
+		<nav class="clearfix" id='topMenu'>
+			<ul class='clearfix'>
 				<li class="menu-logo">
 					<a href="index.html">Acne Studios</a>
 				</li>
@@ -119,7 +120,7 @@
 						</ul>
 					</div>
 				</li>
-				<li class="menu-search">
+				<li class="menu-search" id='menuSearch'>
 					<a>Search</a>
 				</li>
 			
@@ -174,6 +175,29 @@
 							<li class='has-sub'>
 								<a><span>Country:</span>
 								Sweden / SEK</a>
+								<ul>
+									<li class='clearfix'>
+										<span class='float-left'>Europe</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United States</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Sweden</span> <span class='currency float-right'>Sek</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United Kingdom</span> <span class='currency float-right'>£</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Switzerland</span> <span class='currency float-right'>Chf</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Australia</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Canada</span> <span class='currency float-right'>$</span>
+									</li>
+								</ul>
 							</li>
 							<li class="line"></li>
 							<li class='has-sub'>
@@ -199,41 +223,47 @@
 			</ul>
 		</nav>
 		
-		<div id='foldOut'>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<span class='number-of-items'>3 items</span>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+		<div id='foldOut' class='padding-top-responsive'>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Small<br>
-				1 x 4829 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Medium<br>
-				1 x 2350 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Light_2_1434.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Subtotal
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
+				<br>
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced align-right'>
-				<span class='total'>7173 SEK</span>
+			<div class='column-half right-spaced padding-right-responsive'>
+				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<a class='checkout'>Checkout</a>
+			<div class='checkout clearfix'>
+				<div class='padding-responsive clearfix subtotal'>
+					<span class='float-left'>Subtotal</span><span class='float-right'>7173 SEK</span>
+				</div>
+				<div class='button padding-responsive clearfix'>
+					<span class='total float-left'>Checkout</span><span class='view-bag float-right'>View bag</span>
+				</div>
+			</div>
 		</div>
 		
 		
@@ -269,7 +299,7 @@
 			</div>
 		</section>
 		<section class='height-full'>
-			<div class='hd sticky-css'>
+			<div class='hd hd-half-left sticky-css'>
 				<span class='sect-header monospace'>4 0F 17 CATEGORIES<br />
 					TOTAL: 324 ITEMS<br /><br />
 				</span>
@@ -304,7 +334,7 @@
 				<span class="gridline-h gridline-3"></span>
 			</div>
 		</section>
-		<section class='height-full'>
+		<section class='height-full menu-background'>
 			<div class='hd sticky-css color-white'>
 				<span class='sect-header'>Bags</span>
 				<span class='sect-header level-2'>Fall-Winter 2016</span>
@@ -356,10 +386,12 @@
 		<section class='height-half gridded'>
 			<div class='column-half height-full left background-color' style='background-color: #0000ff;'>
 				<div class='hd color-white'>
-					<span class='sect-header monospace cursor'>NEWSLETTER<br /><br /> 
+					<span class='sect-header monospace cursor align-arrow right-only'>NEWSLETTER<br /><br /> 
 						SIGN UP TO RECEIVE NEWS ABOUT ACNE STUDIOS COLLECTIONS, EVENTS AND SALES.</a>
-						<input type="text" placeholder="Email">
-						<input type="submit" value="Sign up">
+						<form class='form-outline padding-top-responsive clearfix'>
+							<input class='monospace white-line margin-bottom-responsive' type="text" placeholder="Email">
+							<input class='monospace white-line right right-aligned' type="submit" value="Sign up">
+						</form>
 						<span class="gridline-h gridline-3"></span>
 				</div>
 			</div>

@@ -5,6 +5,7 @@
 		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
 		<link href="fonts/stylesheet.css" rel="stylesheet" media="screen">
 		<link href="stylesheets/screen.css" rel="stylesheet" media="screen">
+		<meta charset="UTF-8">
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="javascript/jquery-1.12.3.min.js"></script>
 		<script src="javascript/TimelineLite.min.js"></script>
@@ -14,8 +15,8 @@
 		<script src="javascript/app.js"></script>
 	</head>
 	<body class="menu-backgrounded department-women">
-		<nav class="clearfix">
-			<ul>
+		<nav class="clearfix" id='topMenu'>
+			<ul class='clearfix'>
 				<li class="menu-logo">
 					<a href="index.html">Acne Studios</a>
 				</li>
@@ -118,15 +119,19 @@
 						</ul>
 					</div>
 				</li>
-				<li class="menu-search">
+				<li class="menu-search" id='menuSearch'>
 					<a>Search</a>
 				</li>
+			
+				
+				
 				<li class="menu-menu menu-secondary">
 					<a id='menuMenu' class="js-mobile-nav-toggle">Menu</a>
 				</li>
 				<li class="menu-bag menu-secondary">
 					<a id='menuBag'>Bag</a>
 				</li>
+				
 				<li class="menu-user menu-secondary">
 					<a href="#" class="js-mobile-nav-foldout icon user">Account</a>
 					<div class="sub">
@@ -169,6 +174,29 @@
 							<li class='has-sub'>
 								<a><span>Country:</span>
 								Sweden / SEK</a>
+								<ul>
+									<li class='clearfix'>
+										<span class='float-left'>Europe</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United States</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Sweden</span> <span class='currency float-right'>Sek</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United Kingdom</span> <span class='currency float-right'>£</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Switzerland</span> <span class='currency float-right'>Chf</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Australia</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Canada</span> <span class='currency float-right'>$</span>
+									</li>
+								</ul>
 							</li>
 							<li class="line"></li>
 							<li class='has-sub'>
@@ -194,46 +222,48 @@
 			</ul>
 		</nav>
 
-		<div id='foldOut'>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<span class='number-of-items'>3 items</span>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+		<div id='foldOut' class='padding-top-responsive'>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Small<br>
-				1 x 4829 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Medium<br>
-				1 x 2350 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Light_2_1434.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Subtotal
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
+				<br>
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced align-right'>
-				<span class='total'>7173 SEK</span>
+			<div class='column-half right-spaced padding-right-responsive'>
+				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<a class='checkout'>Checkout</a>
+			<div class='checkout clearfix'>
+				<div class='padding-responsive clearfix subtotal'>
+					<span class='float-left'>Subtotal</span><span class='float-right'>7173 SEK</span>
+				</div>
+				<div class='button padding-responsive clearfix'>
+					<span class='total float-left'>Checkout</span><span class='view-bag float-right'>View bag</span>
+				</div>
+			</div>
 		</div>
-		
-		
-		
-		
 		<div class="hd hd-page hd-ani-states-2-disappear">
 			<div class="ani-inner">
 				<div class="ani-layer">

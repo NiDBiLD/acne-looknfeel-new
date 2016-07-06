@@ -4,6 +4,7 @@
 		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
 		<link href="fonts/stylesheet.css" rel="stylesheet" media="screen">
 		<link href="stylesheets/screen.css" rel="stylesheet" media="screen">
+		<meta charset="UTF-8">
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="javascript/jquery-1.12.3.min.js"></script>
 		<script src="javascript/TimelineLite.min.js"></script>
@@ -13,8 +14,8 @@
 		<script src="javascript/app.js"></script>
 	</head>
 	<body class="department-women">
-		<nav class="clearfix">
-			<ul>
+		<nav class="clearfix" id='topMenu'>
+			<ul class='clearfix'>
 				<li class="menu-logo">
 					<a href="index.html">Acne Studios</a>
 				</li>
@@ -117,9 +118,12 @@
 						</ul>
 					</div>
 				</li>
-				<li class="menu-search">
+				<li class="menu-search" id='menuSearch'>
 					<a>Search</a>
 				</li>
+			
+				
+				
 				<li class="menu-menu menu-secondary">
 					<a id='menuMenu' class="js-mobile-nav-toggle">Menu</a>
 				</li>
@@ -169,6 +173,29 @@
 							<li class='has-sub'>
 								<a><span>Country:</span>
 								Sweden / SEK</a>
+								<ul>
+									<li class='clearfix'>
+										<span class='float-left'>Europe</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United States</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Sweden</span> <span class='currency float-right'>Sek</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United Kingdom</span> <span class='currency float-right'>£</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Switzerland</span> <span class='currency float-right'>Chf</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Australia</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Canada</span> <span class='currency float-right'>$</span>
+									</li>
+								</ul>
 							</li>
 							<li class="line"></li>
 							<li class='has-sub'>
@@ -194,185 +221,221 @@
 			</ul>
 		</nav>
 		
-		<div id='foldOut'>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<span class='number-of-items'>3 items</span>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+		<div id='foldOut' class='padding-top-responsive'>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Small<br>
-				1 x 4829 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Medium<br>
-				1 x 2350 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Light_2_1434.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Subtotal
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
+				<br>
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced align-right'>
-				<span class='total'>7173 SEK</span>
+			<div class='column-half right-spaced padding-right-responsive'>
+				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<a class='checkout'>Checkout</a>
+			<div class='checkout clearfix'>
+				<div class='padding-responsive clearfix subtotal'>
+					<span class='float-left'>Subtotal</span><span class='float-right'>7173 SEK</span>
+				</div>
+				<div class='button padding-responsive clearfix'>
+					<span class='total float-left'>Checkout</span><span class='view-bag float-right'>View bag</span>
+				</div>
+			</div>
 		</div>
-		
-		
 		<section class='height-full first'>
 			<div class='hd sticky-css'>
 				<span class='sect-header'>Small leather goods</span>
-				<a class='sect-header level-2'>Kei</a>
-				<a class='sect-header level-2'>Csarite</a>
-				<a class='sect-header level-2'>Maarit</a>
+				<a class='sect-header level-2' id='slideTrigger-0'>Kei</a>
+				<a class='sect-header level-2' id='slideTrigger-1'>Csarite</a>
+				<a class='sect-header level-2' id='slideTrigger-2'>Maarit</a>
 			</div>
 			<div class="section-inner">
 				<div class='column-half height-full background-img bg-field-color-5'></div>
-				<div class='column-half height-full background-img' style='background-image: url("./uploads/plp_slg/1.jpg");'></div>
+				<div class='column-half height-full background-img slideshow initial' id='slideShow-0' style='background-image: url("./uploads/plp_slg/1.jpg");'></div>
+				<div class='column-half height-full background-img slideshow' id='slideShow-1' style='background-image: url("./uploads/plp_slg/2.jpg");'></div>
+				<div class='column-half height-full background-img slideshow' id='slideShow-2' style='background-image: url("./uploads/plp_slg/3.jpg");'></div>
 			</div>
 		</section>
-		<section>
+		<section id='slideTarget-0'>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei white<br>
-							Out of stock
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei white<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_1.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei burgundy<br>
-							1495 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei burgundy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_2.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei orange<br>
-							1495 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_3.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei navy<br>
-							1495 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_4.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei black<br>
-							1495 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_5.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Kei patent black<br>
-							1495 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Kei patent black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_6.jpg">
 				</a>
 			</div>
 		</section>
-		<section>
+		<section id='slideTarget-1'>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Csarite white<br>
-							2695 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Csarite white<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_7.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Csarite burgundy<br>
-							2695 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Csarite burgundy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_8.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Csarite orange<br>
-							2695 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Csarite orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_9.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Csarite navy<br>
-							2695 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Csarite navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_10.jpg">
 				</a>
@@ -381,78 +444,96 @@
 		<section>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit white<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit white<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_11.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit burgundy<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit burgundy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_12.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit orange<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_13.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit navy<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_14.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit black<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_15.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Maarit navy<br>
-							3895 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Maarit navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_14.jpg">
 				</a>
@@ -470,55 +551,67 @@
 			</div>
 		</section>
 		
-		<section>
+		<section id='slideTarget-2'>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Cinn<br>
-							1295 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Cinn white<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_16.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Cinn<br>
-							1295 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Cinn orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_17.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Cinn<br>
-							1295 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Cinn navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_18.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Cinn<br>
-							1295 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Cinn black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_19.jpg">
 				</a>
@@ -537,26 +630,32 @@
 		<section>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Elmas orange<br>
-							745 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Elmas orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_20.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Elmas black<br>
-							Out of stock
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Elmas black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_21.jpg">
 				</a>
@@ -565,52 +664,64 @@
 		<section>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Jorie white<br>
-							1095 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Jorie white<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_22.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Jorie orange<br>
-							1095 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Jorie orange<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_23.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Jorie navy<br>
-							1095 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Jorie navy<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_24.jpg">
 				</a>
 			</div>
 			<div class='column-fourth fullwidth-img'>
 				<a href="pdp.html">
-				<div class='bottom-sect'>
-					<div class='product-info-bottom'>
-						<p class='sect-body bottom-corner-padding label-large'>
-							Jorie black<br>
-							1095 Sek
-						</p>
+				<div class="product-caption">
+					<div class="caption-regular">
+						Jorie black<br>
+						1495 Sek
 					</div>
+					<div class="caption-alt">
+						Short description<br />
+						Available sizes: One size
+					</div>
+					<div class="icn-wishlist js-wishlist-save-toggle">Save for later</div>
 				</div>
 				<img src="./uploads/plp_slg/SLG_25.jpg">
 				</a>

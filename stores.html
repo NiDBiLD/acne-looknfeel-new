@@ -15,8 +15,8 @@
 		<script src="javascript/app.js"></script>
 	</head>
 	<body class="menu-backgrounded department-stores">
-		<nav class="clearfix">
-			<ul>
+		<nav class="clearfix" id='topMenu'>
+			<ul class='clearfix'>
 				<li class="menu-logo">
 					<a href="index.html">Acne Studios</a>
 				</li>
@@ -119,7 +119,7 @@
 						</ul>
 					</div>
 				</li>
-				<li class="menu-search">
+				<li class="menu-search" id='menuSearch'>
 					<a>Search</a>
 				</li>
 			
@@ -174,6 +174,29 @@
 							<li class='has-sub'>
 								<a><span>Country:</span>
 								Sweden / SEK</a>
+								<ul>
+									<li class='clearfix'>
+										<span class='float-left'>Europe</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United States</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Sweden</span> <span class='currency float-right'>Sek</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United Kingdom</span> <span class='currency float-right'>£</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Switzerland</span> <span class='currency float-right'>Chf</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Australia</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Canada</span> <span class='currency float-right'>$</span>
+									</li>
+								</ul>
 							</li>
 							<li class="line"></li>
 							<li class='has-sub'>
@@ -199,41 +222,47 @@
 			</ul>
 		</nav>
 		
-		<div id='foldOut'>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<span class='number-of-items'>3 items</span>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+		<div id='foldOut' class='padding-top-responsive'>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Small<br>
-				1 x 4829 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Medium<br>
-				1 x 2350 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Light_2_1434.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Subtotal
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
+				<br>
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced align-right'>
-				<span class='total'>7173 SEK</span>
+			<div class='column-half right-spaced padding-right-responsive'>
+				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<a class='checkout'>Checkout</a>
+			<div class='checkout clearfix'>
+				<div class='padding-responsive clearfix subtotal'>
+					<span class='float-left'>Subtotal</span><span class='float-right'>7173 SEK</span>
+				</div>
+				<div class='button padding-responsive clearfix'>
+					<span class='total float-left'>Checkout</span><span class='view-bag float-right'>View bag</span>
+				</div>
+			</div>
 		</div>
 		<section class='height-full first background-img' style='background-image: url("./uploads/store/0_1.jpg");'>
 			<div class='hd color-white sticky-css hd-ani-states-2-double-stay'>
@@ -249,9 +278,11 @@
 			<div class='column-half bg-field-color-5'>
 				<div class='padding-responsive hd'>
 					<span class='sect-header black'>Find stores</span>
-					<div class='inset-content'>
-						<form class='gray-outline padding-bottom-responsive'>
-							<input type='text' name='query' placeholder='City, zip, service or collection'/>
+				</div>
+				<div class='padding-responsive hd'>
+					<div class='align-arrow'>
+						<form class='form-outline padding-bottom-responsive clearfix'>
+							<input class='gray-line' style='float: left; width: calc(100% - 58px);' type='text' name='query' placeholder='City, zip, service or collection'/><div class='form-geolocator float-left'></div>
 						</form>
 						<a class='sect-header black'>New York</a>
 						<a class='sect-header black'>Paris</a>
@@ -316,31 +347,63 @@
 						</div>
 					-->
 					</div>
-					<p class='margin-bottom-small'>August</p>
-					<div class='date-slider'>
+
+					<div class='date-slider' id='storeSlider'>
+						<div class='container-header'>
+							<div class='header clearfix' id='dateSwitchHeader'>
+								<p class='month' style='width: 16.666666666666667%;'>August</p>
+								<p class='month' style='width: 9.523809523809524%;'>August</p>
+								<p class='month' style='width: 7.1428571428571429%;'>September</p>
+								<p class='month' style='width: 16.6666666666666667%;'>September</p>
+								<p class='month' style='width: 16.6666666666666667%;'>September</p>
+								<p class='month' style='width: 16.6666666666666667%;'>September</p>
+								<p class='month' style='width: 16.6666666666666667%;'>September</p>
+							</div>
+						</div>
 						<div class='container'>
-							<div class='slider clearfix'>
+							<div class='slider clearfix' id='dateSwitch'>
 								<div class='slide'>21 mon</div>
 								<div class='slide'>22 tue</div>
 								<div class='slide'>23 wed</div>
 								<div class='slide'>24 thu</div>
 								<div class='slide'>25 fri</div>
 								<div class='slide'>26 sat</div>
-								<div class='slide'>26 sun</div>
-								<div class='slide'>27 mon</div>
-								<div class='slide'>28 tue</div>
-								<div class='slide'>29 wed</div>
-								<div class='slide'>30 thu</div>
-								<div class='slide'>31 fri</div>
-								<div class='slide'>1 sat</div>
-								<div class='slide'>2 sun</div>
-								<div class='slide'>3 mon</div>
-								<div class='slide'>4 tue</div>
-								<div class='slide'>5 wed</div>
-								<div class='slide'>6 thu</div>
-								<div class='slide'>7 fri</div>
-								<div class='slide'>8 sat</div>
-								<div class='slide'>9 sun</div>
+								<div class='slide'>27 sun</div>
+								<div class='slide'>28 mon</div>
+								<div class='slide'>29 tue</div>
+								<div class='slide'>30 wed</div>
+								<div class='slide'>31 thu</div>
+								<div class='slide'>1 fri</div>
+								<div class='slide'>2 sat</div>
+								<div class='slide'>3 sun</div>
+								<div class='slide'>4 mon</div>
+								<div class='slide'>5 tue</div>
+								<div class='slide'>6 wed</div>
+								<div class='slide'>7 thu</div>
+								<div class='slide'>8 fri</div>
+								<div class='slide'>9 sat</div>
+								<div class='slide'>10 sun</div>
+								<div class='slide'>11 mon</div>
+								<div class='slide'>12 tue</div>
+								<div class='slide'>13 wed</div>
+								<div class='slide'>14 thu</div>
+								<div class='slide'>15 fri</div>
+								<div class='slide'>16 sat</div>
+								<div class='slide'>17 sun</div>
+								<div class='slide'>18 mon</div>
+								<div class='slide'>19 tue</div>
+								<div class='slide'>20 wed</div>
+								<div class='slide'>21 thu</div>
+								<div class='slide'>22 fri</div>
+								<div class='slide'>23 sat</div>
+								<div class='slide'>24 sun</div>
+								<div class='slide'>25 mon</div>
+								<div class='slide'>26 tue</div>
+								<div class='slide'>27 wed</div>
+								<div class='slide'>28 thu</div>
+								<div class='slide'>29 fri</div>
+								<div class='slide'>30 sat</div>
+								<div class='slide'>31 sun</div>
 							</div>
 						</div>
 						<div class='icon left'></div>
@@ -445,7 +508,7 @@
 				<a class='sect-header'>ALL STORES<br>
 					<span id='numberOfStores'>TOTAL: 42 STORES</span>
 				</a>
-				<form class='grid-form padding-top-responsive'>
+				<form class='grid-form padding-top-responsive' style='margin-right: 50%;'>
 					<div class="dropdown-styled">
 						<select class='monospace' id='storeSelector'>
 							<option>Select country</option>

@@ -16,6 +16,9 @@ body
 *
 	-webkit-font-smoothing: antialiased
 
+input
+	margin: 0
+
 textarea:focus,
 input:focus,
 select:focus
@@ -89,7 +92,11 @@ ul.lined-list
 		border-color: $grid-color-inverted
 
 .line-spacing
-	line-height: 1.8
+	padding-bottom: 7px
+
+.underline
+	border-bottom: 1px solid #000
+	display: inline
 
 .bg-field-color-1
 	background-color: #d46984
@@ -120,9 +127,21 @@ ul.lined-list
 .bg-field-color-14
 	background-color: #35455d
 
-p
-	&.align-arrow
-		margin-left: 23px
+.gray-text
+	color: $menu-color-grayed
+
+.slideshow
+	display: none
+	&.initial
+		display: block
+
+.align-arrow
+	margin-left: 23px
+	margin-right: 23px
+	&.right-only
+		margin-left: 0px
+	&.left-only
+		margin-right: 0px
 .video-section
 	position: relative
 	.video-cover
@@ -159,7 +178,7 @@ p
 
 .monospace,
 .monospace *
-	font-family: 'Menlo'
+	font-family: 'Menlo' !important
 	&.text-small
 		font-size: 11px
 
@@ -188,7 +207,6 @@ p
 			margin-left: 40%
 
 .dropdown-styled
-	margin-bottom: 15px
 	height: 45px
 	border: 1px solid #000000
 	position: relative
@@ -229,6 +247,21 @@ p
 	margin-bottom: 15px
 
 .date-slider
+	margin-top: 40px
+	position: relative
+	border-left: 0px solid #000
+	.container-header
+		width: calc(100% - 80px)
+		position: absolute
+		overflow: hidden
+		top: -25px
+		.header
+			width: 600%
+			position: relative
+			left: 0
+			.month
+				display: block
+				float: left
 	.container
 		width: calc(100% - 80px)
 		height: 100%
@@ -236,22 +269,27 @@ p
 		overflow: hidden
 		.slider
 			height: 100%
-			width: calc(300% + 1px)
+			width: 600%
+			position: relative
+			left: 0
 			.slide
 				font-size: 14px
 				height: 100%
-				width: calc(100% / 21)
-				border-right: 1px solid #000
+				width: calc(100% / 42)
+				border-left: 1px solid #000
 				padding-top: 14px
 				padding-bottom: 11px
 				padding-left: 12px
 				float: left
+				position: relative
 				&:hover
 					background-color: #dddddd
 	.icon
-		height: 1021
+		cursor: pointer
+		height: 43px
 		width: 40px
-		float: left
+		position: absolute
+		right: 0
 		border-left: 1px solid #000
 		background-image: url('../img/icon_unfold_closed.png')
 		background-repeat: no-repeat
@@ -259,6 +297,9 @@ p
 		background-size: 24px 24px
 		&.left
 			background-image: url('../img/icon_unfold_closed_left.png')
+			right: 40px
+		&:hover
+			background-color: #dddddd
 
 .dropdown
 	span
@@ -369,6 +410,7 @@ nav
 			width: 16px
 			height: 16px
 			cursor: pointer
+			opacity: 0.3
 		.opt-field
 			background-color: darken($menu-color, 2%)
 			height: 32px
@@ -378,6 +420,7 @@ nav
 				display: inline-block
 				li
 					display: inline-block
+					font-size: 13px
 					height: 32px
 					padding: 7px 20px 8px 20px
 					border-right: 1px solid $menu-color-separator
@@ -429,9 +472,6 @@ nav
 		overflow-y: auto
 		-webkit-overflow-scrolling: touch
 		background-color: transparent !important
-		
-		
-	
 	a
 		position: relative
 		color: #000
@@ -441,29 +481,27 @@ nav
 			cursor: pointer
 			ul
 				display: block
-
 	ul
 		list-style: none
 		font-size: $menu-font-size
 		line-height: 1.3em
-		padding-right: 10px
 		@media (max-width: $media-phone)
 			padding-right: 0
 		li
 			float: left
 			position: relative
+			&.menu-women,
+			&.menu-men,
+			&.menu-stores,
+			&.menu-search
+				font-size: 15px
 			&:hover
-				background-color: $menu-color-hover
-
 			a
 				padding: 7px 15px 0
 				height: 32px
 				display: inline-block
-				
 				.amount 
 					display: none
-				
-
 			.sub
 				display: none
 				position: absolute
@@ -472,11 +510,10 @@ nav
 				width: 200px
 				padding-top: 1px
 				z-index: 99
-				
 			&:hover
 				.sub
+					opacity: 1
 					display: block
-
 			&.menu-secondary
 				font-size: 11px
 				line-height: 1.3em
@@ -486,17 +523,13 @@ nav
 				.sub
 					left: auto
 					right: 0
-					
 			@media (max-width: $media-phone)
 				float: none
 				&.menu-secondary
 					float: none
-			
 			&.menu-menu
 				display: none
-
 			&.menu-logo
-			
 				@media (max-width: $media-phone)
 					width: 100%
 					background-color: #fff
@@ -504,7 +537,6 @@ nav
 					top: 0
 					left: 0
 					z-index: 100
-					border-bottom: 1px solid #000
 				> a
 					background-image: url('../img/acne_logotype.svg')
 					background-repeat: no-repeat
@@ -533,9 +565,6 @@ nav
 				> a
 					&.is-active
 						background-color: $menu-color-hover
-			
-				
-
 			&.menu-stores
 				ul
 					padding-top: 0
@@ -550,8 +579,6 @@ nav
 						border-bottom: 1px solid $menu-color-separator
 						&:focus
 							outline: none
-			
-
 			ul 
 				background-color: $menu-color-hover
 				padding: 5px 0
@@ -581,6 +608,29 @@ nav
 							background-position: 95% center
 							background-size: 6px 6px
 							background-repeat: no-repeat
+						ul
+							display: none
+						&:hover
+							ul
+								display: block
+								background-color: $menu-color-hover
+								position: absolute
+								left: calc(100% + 1px)
+								top: -5px
+								padding: 5px 0
+								width: 200px
+								&:hover
+									display: block
+								li
+									padding: 3px 15px 2px 20px !important
+									&:hover
+										background-color: $menu-color-separator
+									span
+										text-align: left
+										color: $menu-font-color !important
+										&.currency
+											color: $menu-color-grayed !important
+											padding-right: 10px
 					span
 						color: $menu-color-grayed
 						display: block
@@ -620,32 +670,32 @@ nav
 					top: 44px
 					left: 0px
 					width: 33.333%
+					border-right: 1px solid $menu-color-separator
+					border-top: 1px solid transparent
+					border-bottom: 1px solid $menu-color-separator
 					> a
 						width: 100%
-						border-right: 1px solid #000
 						height: 88px
 						padding: 34px 0 0 !important
 						font-size: 21px
-						background-color: #fff
+						background-color: $menu-color-hover
 						text-align: center
-						border-top: 1px solid #000
-						border-bottom: 1px solid #000
+					&:hover
+						> a
+							background-color: $menu-color-separator
 				&.menu-men
 					left: 33.333%
 				&.menu-stores
 					left: 66.666%
-					> a
-						border-right: none
-						
-						
+					border-right: none
 				&.menu-user
 					margin-top: 435px
-					border-top: 1px solid #000
+					border-top: 1px solid $menu-color-separator
 				&.menu-user,
 				&.menu-assistance,
 				&.menu-mobile
-					background-color: #fff
-					border-top: 1px solid #000
+					background-color: $menu-color-hover
+					border-top: 1px solid $menu-color-separator
 					font-size: 16px
 					> a
 						padding-top: 14px
@@ -699,7 +749,7 @@ nav
 						padding: 0
 						ul
 							padding: 0
-							background-color: #fff
+							background-color: $menu-color-hover
 							li
 								font-size: 16px
 								a
@@ -726,7 +776,7 @@ nav
 									padding-right: 45px !important
 									padding-left: 15px !important
 									border-top: none
-									border-top: 1px solid #000
+									border-top: 1px solid $menu-color-separator
 									
 									span
 										float: left
@@ -923,19 +973,18 @@ body.bag-is-active
 
 #foldOut
 	position: fixed
-	width: 25%
+	width: 400px
 	right: 0
 	bottom: 0
-	top: 32px
-	padding: 10px
+	top: 33px
 	background-color: $menu-color-hover
 	font-size: 13px
 	line-height: 1.3em
 	z-index: 10
 	transform: translate3d(100%,0,0)
-	.separator
-		overflow: hidden
-		white-space: nowrap
+	.divider
+		height: 1px
+		background-color: $menu-color-separator
 	.number-of-items
 		display: block
 		margin-bottom: 15px
@@ -944,9 +993,24 @@ body.bag-is-active
 		font-size: 20px
 		line-height: 1.3
 	img
-		border: 1px solid #000
 		max-width: 100%
-		
+	.checkout
+		position: absolute
+		bottom: 0
+		right: 0
+		left: 0
+		font-size: 16px
+	.subtotal
+		border-top: 1px solid $menu-color-separator
+		background-color: $menu-color-hover
+	.button
+		background-color: $background-inverted
+		color: $menu-color
+		cursor: pointer
+		.view-bag
+			font-size: 14px
+			padding-top: 8px
+
 body.bag-is-active
 	#foldOut
 		transform: translate3d(0,0,0)
@@ -1027,22 +1091,6 @@ section
 		color: $text-inverted
 		.sect-header
 			color: $text-inverted
-	&.height-full,
-	&.height-half,
-	&.height-third,
-	&.height-two-thirds,
-	&.height-three-fourths,
-	&.height-one-fourths,
-	&.height-one-eights,
-	&.height-full-percentages,
-	&.height-half-percentages,
-	&.height-third-percentages,
-	&.height-two-thirds-percentages,
-	&.height-one-fourths-percentages,
-	&.height-three-fourths-percentages,
-	&.height-one-eights-percentages
-		overflow: hidden
-
 	.column-half,
 	.column-third,
 	.column-two-thirds,
@@ -1154,18 +1202,39 @@ section.gridded
 		height: 13%
 		margin: 0
 
-.gray-outline
+.form-outline
 	input
 		font-family: 'AcneStudiosCircle'
-		border: 1px solid #aaaaaa
 		font-size: 18px
-		color: $form-filler-gray
+		color: #000000
 		padding: 10px
 		width: 100%
-		background-image: url('../img/icon_geolocator.png')
-		background-size: 15px auto
-		background-position: 97% center
-		background-repeat: no-repeat
+		border: 1px solid #000000
+		background-color: transparent
+		::placeholder
+			color: #000000 !important
+		&.gray-line
+			color: #aaaaaa
+			border: 1px solid #aaaaaa
+			::placeholder
+				color: #aaaaaa !important
+		&.white-line
+			color: #ffffff
+			border: 1px solid #ffffff
+			::placeholder
+				color: #ffffff !important
+		&[type='submit']
+			&.left-aligned
+				width: 25%
+			&.right-aligned
+				float: right
+				width: 25%
+
+	.form-geolocator
+		margin-left: 15px
+		height: 43px
+		width: 43px
+		border: 1px solid #aaaaaa
 
 .inset-content
 	margin-left: 50px
@@ -1209,6 +1278,8 @@ section.gridded
 		z-index: 1
 		@media (max-width: $media-phone)
 			top: 44px
+	&.hd-half-left
+		margin-right: 50%
 	&.hd-page
 		position: fixed
 		top: 32px
@@ -1228,11 +1299,11 @@ section.gridded
 		background-position: 0 5px
 		padding-left: 23px
 		text-decoration: none
-		white-space: pre
 		&.blueprint
 			background-image: url('../img/icon_blueprint_1.png') !important
 			background-size: 61px 25px
 			padding-left: 65px
+			background-position: left 3px
 		@media (max-width: $media-phone)
 			font-size: 22px
 			line-height: 1.15em
@@ -1244,7 +1315,7 @@ section.gridded
 			font-size: 16px
 			line-height: 1.3em
 			background-size: 19px
-			background-position: 0 1px
+			background-position: 0 3px
 			padding-left: 20px
 		&.cursor
 			background-image: url('../img/icon_cursor.gif')
@@ -1262,7 +1333,7 @@ section.gridded
 			&.monospace
 				background-position: 0 3px
 		&.level-2
-			margin-left: 22px
+			margin-left: 24px
 			&.monospace
 				margin-left: 19px
 		&.double
@@ -1278,6 +1349,7 @@ section.gridded
 			&.blueprint
 				background-size: 41px 17px
 				padding-left: 46px
+				background-position: left 5px !important
 				&.color-white
 					&:hover
 						padding-left: 56px !important
@@ -1287,6 +1359,7 @@ section.gridded
 		.additional
 			float: right
 	a.sect-header
+		cursor: pointer
 		.additional
 			display: none
 	.sect-header.is-active,
@@ -1297,7 +1370,7 @@ section.gridded
 		&:not(.cursor):not(.down)
 			background-position: 1px 5px
 			&.monospace
-				background-position: 1 1px
+				background-position: 1px 3px
 		.additional
 			display: inline
 		&.cursor
@@ -1599,13 +1672,15 @@ section.gridded
 					height: 0
 					clear: both
 .attach-icon
-	width: 15px
-	height: 15px
 	background-repeat: no-repeat
 	background-position: left top
 	background-size: 15px 15px
 	padding-left: 18px
 	padding-right: 15px
+	&.email
+		background-image: url('../img/icon_email.png')
+		background-size: 13px 12px
+		background-position: 1px 2px
 	&.phone
 		background-image: url('../img/icon_phone.png')
 	&.chat

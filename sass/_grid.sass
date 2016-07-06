@@ -55,3 +55,19 @@
 	&.right-spaced
 		margin-left: $column-margin
 		width: 75% - $column-margin
+
+@media (max-width: $media-pad)
+	.column-half,
+	.column-third,
+	.column-two-thirds,
+	.column-fourth,
+	.column-three-fourths
+		width: 50% !important
+
+@media (max-width: $media-phone)
+	.column-half,
+	.column-third,
+	.column-two-thirds,
+	.column-fourth,
+	.column-three-fourths
+		width: 100% !important

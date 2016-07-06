@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="fonts/stylesheet.css" rel="stylesheet" media="screen">
 		<link href="stylesheets/screen.css" rel="stylesheet" media="screen">
+		<meta charset="UTF-8">
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="javascript/jquery-1.12.3.min.js"></script>
 		<script src="javascript/TimelineLite.min.js"></script>
@@ -14,78 +15,78 @@
 		<script src="javascript/app.js"></script>
 	</head>
 	<body class="menu-backgrounded">
-		<nav class="clearfix">
-			<ul>
+		<nav class="clearfix" id='topMenu'>
+			<ul class='clearfix'>
 				<li class="menu-logo">
 					<a href="index.html">Acne Studios</a>
 				</li>
-				<li>
+				<li class="menu-women">
 					<a href="shop_women.html">Womens</a>
 					<div class="sub">
 						<ul>
 							<li class="label">Featured:</li>
-							<li><a href="#">New arrivals</a></li>
-							<li><a href="#">Fall/Winter 2016</a></li>
-							<li><a href="#">Work Studios</a></li>
+							<li class="menu-women-new"><a href="#">New arrivals <span class="amount">23</span></a></li>
+							<li class="menu-women-fw16"><a href="#">Fall/Winter 2016</a></li>
+							<li class="menu-women-workstudios"><a href="#">Work Studios</a></li>
 							<li class="line"></li>
 							<li class="label">Categories:</li>
-							<li><a href="plp_women_coats.html">Coats & jackets</a></li>
-							<li><a href="#">Shoes</a></li>
-							<li><a href="#">Jeans</a></li>
-							<li><a href="#">Dresses</a></li>
-							<li><a href="#">Tops</a></li>
-							<li><a href="#">Blouses</a></li>
-							<li><a href="#">Sweatshirts</a></li>
-							<li><a href="#">Suit jackets</a></li>
-							<li><a href="#">Trousers</a></li>
-							<li><a href="#">Skirts</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Swimwear</a></li>
-							<li><a href="#">Jewellery</a></li>
-							<li><a href="#">Eyewear</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="plp_slg.html">Small leather goods</a></li>
-							<li><a href="#">Underwear</a></li>
-							<li><a href="#">Miniature collection</a></li>
+							<li class="menu-women-coats"><a href="plp_women_coats.html">Coats & jackets</a></li>
+							<li class="menu-women-shoes"><a href="#">Shoes</a></li>
+							<li class="menu-women-jeans"><a href="#">Jeans</a></li>
+							<li class="menu-women-dresses"><a href="#">Dresses</a></li>
+							<li class="menu-women-tops"><a href="#">Tops</a></li>
+							<li class="menu-women-blouses"><a href="#">Blouses</a></li>
+							<li class="menu-women-sweatshirts"><a href="#">Sweatshirts</a></li>
+							<li class="menu-women-suitjackets"><a href="#">Suit jackets</a></li>
+							<li class="menu-women-trousers"><a href="#">Trousers</a></li>
+							<li class="menu-women-skirts"><a href="#">Skirts</a></li>
+							<li class="menu-women-accessories"><a href="#">Accessories</a></li>
+							<li class="menu-women-swimwear"><a href="#">Swimwear</a></li>
+							<li class="menu-women-jewellery"><a href="#">Jewellery</a></li>
+							<li class="menu-women-eyewear"><a href="#">Eyewear</a></li>
+							<li class="menu-women-bags"><a href="#">Bags</a></li>
+							<li class="menu-women-slg"><a href="plp_slg.html">Small leather goods</a></li>
+							<li class="menu-women-underwear"><a href="#">Underwear</a></li>
+							<li class="menu-women-mini"><a href="#">Miniature collection</a></li>
 							<li class="line"></li>
 							<li class="label">Collections:</li>
-							<li><a href="#">Spring/Summer 2017</a></li>
-							<li><a href="#">Resort 2017</a></li>
+							<li class="menu-women-ss17"><a href="#">Spring/Summer 2017</a></li>
+							<li class="menu-women-r17"><a href="#">Resort 2017</a></li>
 						</ul>
 					</div>
 				</li>
 			
-				<li>
+				<li class="menu-men">
 					<a>Mens</a>
 					<div class="sub">
 						<ul>
 							<li class="label">Featured:</li>
-							<li><a href="#">New arrivals</a></li>
-							<li><a href="#">Fall/Winter 2016</a></li>
-							<li><a href="#">Work Studios</a></li>
+							<li class="menu-men-new"><a href="#">New arrivals</a></li>
+							<li class="menu-men-fw16"><a href="#">Fall/Winter 2016</a></li>
+							<li class="menu-men-workstudios"><a href="#">Work Studios</a></li>
 							<li class="line"></li>
 							<li class="label">Categories:</li>
-							<li><a href="#">Outerwear</a></li>
-							<li><a href="#">Jeans</a></li>
-							<li><a href="#">Shirts</a></li>
-							<li><a href="#">T-shirts</a></li>
-							<li><a href="#">Knitwear</a></li>
-							<li><a href="#">Sweatshirts</a></li>
-							<li><a href="#">Suit jackets</a></li>
-							<li><a href="#">Trousers</a></li>
-							<li><a href="#">Shorts</a></li>
-							<li><a href="#">Shoes</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Swimwear</a></li>
-							<li><a href="#">Miniature collection</a></li>
-							<li><a href="#">Eyewear</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="#">Small leather goods</a></li>
-							<li><a href="#">Underwear</a></li>
+							<li class="menu-men-outerwear"><a href="#">Outerwear</a></li>
+							<li class="menu-men-jeans"><a href="#">Jeans</a></li>
+							<li class="menu-men-shirts"><a href="#">Shirts</a></li>
+							<li class="menu-men-tshirts"><a href="#">T-shirts</a></li>
+							<li class="menu-men-knitwear"><a href="#">Knitwear</a></li>
+							<li class="menu-men-sweatshirts"><a href="#">Sweatshirts</a></li>
+							<li class="menu-men-suitjackets"><a href="#">Suit jackets</a></li>
+							<li class="menu-men-trousers"><a href="#">Trousers</a></li>
+							<li class="menu-men-shorts"><a href="#">Shorts</a></li>
+							<li class="menu-men-shoes"><a href="#">Shoes</a></li>
+							<li class="menu-men-accessories"><a href="#">Accessories</a></li>
+							<li class="menu-men-swimwear"><a href="#">Swimwear</a></li>
+							<li class="menu-men-mini"><a href="#">Miniature collection</a></li>
+							<li class="menu-men-eyewear"><a href="#">Eyewear</a></li>
+							<li class="menu-men-bags"><a href="#">Bags</a></li>
+							<li class="menu-men-slg"><a href="#">Small leather goods</a></li>
+							<li class="menu-men-underwear"><a href="#">Underwear</a></li>
 							<li class="line"></li>
 							<li class="label">Collections:</li>
-							<li><a href="#">Spring/Summer 2017</a></li>
-							<li><a href="#">Resort 2017</a></li>
+							<li class="menu-men-ss17"><a href="#">Spring/Summer 2017</a></li>
+							<li class="menu-men-r17"><a href="#">Resort 2017</a></li>
 						</ul>
 					</div>
 				</li>
@@ -118,18 +119,21 @@
 						</ul>
 					</div>
 				</li>
-				<li class="menu-search">
+				<li class="menu-search" id='menuSearch'>
 					<a>Search</a>
 				</li>
 			
 				
 				
+				<li class="menu-menu menu-secondary">
+					<a id='menuMenu' class="js-mobile-nav-toggle">Menu</a>
+				</li>
 				<li class="menu-bag menu-secondary">
 					<a id='menuBag'>Bag</a>
 				</li>
 				
 				<li class="menu-user menu-secondary">
-					<a class="user icon">Denny Backhaus</a>
+					<a href="#" class="js-mobile-nav-foldout icon user">Account</a>
 					<div class="sub">
 						<ul>
 							<li><a>Overview</a></li>
@@ -144,8 +148,8 @@
 					</div>
 				</li>
 				
-				<li class="menu-secondary">
-					<a>Assistance</a>
+				<li class="menu-assistance menu-secondary">
+					<a href="#" class="js-mobile-nav-foldout">Assistance</a>
 					<div class="sub">
 						<ul>
 							<li>
@@ -163,13 +167,36 @@
 					</div>
 				</li>
 				
-				<li class="menu-secondary">
-					<a>Sweden</a>
+				<li class="menu-country menu-secondary">
+					<a href="#">Sweden</a>
 					<div class="sub">
 						<ul>
 							<li class='has-sub'>
 								<a><span>Country:</span>
 								Sweden / SEK</a>
+								<ul>
+									<li class='clearfix'>
+										<span class='float-left'>Europe</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United States</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Sweden</span> <span class='currency float-right'>Sek</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>United Kingdom</span> <span class='currency float-right'>£</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Switzerland</span> <span class='currency float-right'>Chf</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Australia</span> <span class='currency float-right'>$</span>
+									</li>
+									<li class='clearfix'>
+										<span class='float-left'>Canada</span> <span class='currency float-right'>$</span>
+									</li>
+								</ul>
 							</li>
 							<li class="line"></li>
 							<li class='has-sub'>
@@ -179,48 +206,67 @@
 						</ul>
 					</div>
 				</li>
+				
+				<li class="menu-mobile">
+					<div class="info-links">
+						<a href="#">Shipping</a><a href="#">Press</a><a href="#">Contact</a><a href="#">Returns</a><a href="#">Careers</a><a href="#">Terms of use</a><a href="#">About</a><a href="#">CSR</a><a href="#">Privacy policy</a>
+					</div>
+					<div class="footer">
+						<div class="copyright">
+							&copy; 2016 Acne Studios<br />
+							All rights reserved
+						</div>
+						<div class="icons"></div>
+					</div>
+				</li>
 			</ul>
 		</nav>
 
-		<div id='foldOut'>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<span class='number-of-items'>3 items</span>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+		<div id='foldOut' class='padding-top-responsive'>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Small<br>
-				1 x 4829 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Mock Cedar<br>
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
 				<br>
-				Size Medium<br>
-				1 x 2350 Sek
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced'>
+			<div class='column-half right-spaced padding-right-responsive'>
 				<img src='./uploads/_201604/Light_2_1434.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<div class='column-two-thirds left-spaced'>
-				Subtotal
+			<div class='divider margin-top-responsive margin-bottom-responsive'></div>
+			<div class='column-half left-spaced padding-left-responsive'>
+				Barrow cdc acid yellow
+				<br>4895 Sek x 1<br>
+				<br>
+				Size: 38 <span class='gray-text'>[edit]</span>
 			</div>
-			<div class='column-third right-spaced align-right'>
-				<span class='total'>7173 SEK</span>
+			<div class='column-half right-spaced padding-right-responsive'>
+				<img src='./uploads/_201604/Look_9_671.jpg'/>
 			</div>
 			<div class='clear'></div>
-			<div class='separator'>--------------------------------------------------------------------------</div>
-			<a class='checkout'>Checkout</a>
+			<div class='checkout clearfix'>
+				<div class='padding-responsive clearfix subtotal'>
+					<span class='float-left'>Subtotal</span><span class='float-right'>7173 SEK</span>
+				</div>
+				<div class='button padding-responsive clearfix'>
+					<span class='total float-left'>Checkout</span><span class='view-bag float-right'>View bag</span>
+				</div>
+			</div>
 		</div>
 		<section class='height-full first' style='background-image: url("./uploads/store/1_0.jpg");'>
 			<div class='hd color-white sticky-css'>
-				<span class='sect-header'>Cheongdam</span>
+				<span class='sect-header blueprint'>Cheongdam</span>
 			</div>
 		</section>
 		<section class='height-full'>
@@ -230,22 +276,27 @@
 				<div class='hd'>
 					<span class='sect-header'>Cheongdam</span>
 				</div>
-				<div class='padding-left-responsive padding-right-responsive'>
-					<span class='block line-spacing'>27-2 Seolleung-ro 162 Gil, Gangnamgu</span>
-					<span class='block line-spacing'>Phone: +82 2 542 2290</span>
-					<span class='block line-spacing padding-bottom-responsive'>cheongdam@acnestudios.com</span>
-					<span class='block line-spacing'>Monday to Saturday 11am - 8pm</span>
-					<span class='block line-spacing'>Sunday 12am - 8pm</span>
-
-				</div>
-
-				<div class='bottom-sect sect-body bottom-corner-padding'>
-					<span class='block line-spacing'>Womens collection</span>
-					<span class='block line-spacing'>Mens collection</span>
-					<span class='block line-spacing padding-bottom-responsive'>Monograming</span>
-					<span class='block line-spacing'>In store pickup available</span>
-					<span class='block line-spacing'>Online returns available</span>
-					<span class='block line-spacing'>Book appointment</span>
+				<div class='padding-responsive'>
+					<div class='align-arrow'>
+						<span class='block line-spacing'>27-2 Seolleung-ro 162 Gil, Gangnamgu</span>
+						<span class='block line-spacing'>아크네 스튜디오 청담</span>
+						<span class='block line-spacing'>서울시 강남구 선릉로 162길 27-2</span><br><br>
+						<span class='block line-spacing attach-icon phone'>Phone: +82 2 542 2290</span>
+						<span class='block line-spacing padding-bottom-responsive attach-icon email'>cheongdam@acnestudios.com</span>
+						<span class='block line-spacing'>Monday to Saturday 11am - 8pm</span>
+						<span class='block line-spacing padding-bottom-responsive'>Sunday 12am - 8pm</span><br><br>
+						<span class='block line-spacing attach-icon pointer'>Map</span>
+					</div>
+					<div class='bottom-sect sect-body padding-responsive'>
+						<div class='align-arrow padding-bottom-responsive'>
+							<span class='block line-spacing'>Womens collection</span>
+							<span class='block line-spacing'>Mens collection</span>
+							<span class='block line-spacing padding-bottom-responsive'>Monograming</span>
+							<span class='block line-spacing'>In store pickup available</span>
+							<span class='block line-spacing'>Online returns available</span>
+							<span class='block underline'>Book appointment</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -259,7 +310,9 @@
 					<span class='sect-header'>Pick up in store</span>
 				</div>
 				<div class='padding-responsive'>
-					We offer you an exclusive service which lets you shop acne studios in a private setting. You will experience and try our collections in a personal meeting tailored exclusively for you.
+					<div class='align-arrow column-half'>
+						We offer you an exclusive service which lets you shop acne studios in a private setting. You will experience and try our collections in a personal meeting tailored exclusively for you.
+					</div>
 				</div>
 			</div>
 			<div class='column-half height-full background-img left' style='background-image: url("./uploads/store/3_1.jpg"); background-position: center;'>
@@ -272,42 +325,91 @@
 				<div class='hd'>
 					<span class='sect-header'>Make appointment</span>
 				</div>
-				<div class='padding-responsive'>
-					We offer you an exclusive service which lets you shop acne studios in a private setting. You will experience and try our collections in a personal meeting tailored exclusively for you.
-				</div>
-				<div class='padding-responsive'>
-					<p class='margin-bottom-responsive'>Make appointment</p>
-					<div class="dropdown">
-						<span>Store</span>
-						<div class='icon'></div>
-						<div class="dropdown-content">
-							<p>Store 1</p>
-							<p>Store 2</p>
-							<p>Store 3</p>
-						</div>
+				<div class='align-arrow'>
+					<div class='padding-responsive'>
+						We offer you an exclusive service which lets you shop acne studios in a private setting. You will experience and try our collections in a personal meeting tailored exclusively for you.
 					</div>
-					<p class='margin-bottom-responsive'>August</p>
-					<div class='date-slider'>
-						<div class='container'>
-							<div class='slider clearfix'>
-								<div class='slide'>21 mon</div>
-								<div class='slide'>22 tue</div>
-								<div class='slide'>23 wed</div>
-								<div class='slide'>24 thu</div>
-								<div class='slide'>25 fri</div>
-								<div class='slide'>26 sat</div>
-								<div class='slide'>26 sun</div>
+					<div class='padding-responsive'>
+						<p class='margin-bottom-responsive'>Make appointment</p>
+						<div class="dropdown-styled">
+							<select>
+								<option>Test</option>
+								<option>Test 2</option>
+								<option>Test 3</option>
+								<option>Test 4</option>
+								<option>Test 5</option>
+								<option>Test 6</option>
+							</select>
+							<div class='icon'></div>
+						</div>
+						<div class='date-slider' id='storeSlider'>
+							<div class='container-header'>
+								<div class='header clearfix' id='dateSwitchHeader'>
+									<p class='month' style='width: 16.666666666666667%;'>August</p>
+									<p class='month' style='width: 9.523809523809524%;'>August</p>
+									<p class='month' style='width: 7.1428571428571429%;'>September</p>
+									<p class='month' style='width: 16.6666666666666667%;'>September</p>
+									<p class='month' style='width: 16.6666666666666667%;'>September</p>
+									<p class='month' style='width: 16.6666666666666667%;'>September</p>
+									<p class='month' style='width: 16.6666666666666667%;'>September</p>
+								</div>
 							</div>
+							<div class='container'>
+								<div class='slider clearfix' id='dateSwitch'>
+									<div class='slide'>21 mon</div>
+									<div class='slide'>22 tue</div>
+									<div class='slide'>23 wed</div>
+									<div class='slide'>24 thu</div>
+									<div class='slide'>25 fri</div>
+									<div class='slide'>26 sat</div>
+									<div class='slide'>27 sun</div>
+									<div class='slide'>28 mon</div>
+									<div class='slide'>29 tue</div>
+									<div class='slide'>30 wed</div>
+									<div class='slide'>31 thu</div>
+									<div class='slide'>1 fri</div>
+									<div class='slide'>2 sat</div>
+									<div class='slide'>3 sun</div>
+									<div class='slide'>4 mon</div>
+									<div class='slide'>5 tue</div>
+									<div class='slide'>6 wed</div>
+									<div class='slide'>7 thu</div>
+									<div class='slide'>8 fri</div>
+									<div class='slide'>9 sat</div>
+									<div class='slide'>10 sun</div>
+									<div class='slide'>11 mon</div>
+									<div class='slide'>12 tue</div>
+									<div class='slide'>13 wed</div>
+									<div class='slide'>14 thu</div>
+									<div class='slide'>15 fri</div>
+									<div class='slide'>16 sat</div>
+									<div class='slide'>17 sun</div>
+									<div class='slide'>18 mon</div>
+									<div class='slide'>19 tue</div>
+									<div class='slide'>20 wed</div>
+									<div class='slide'>21 thu</div>
+									<div class='slide'>22 fri</div>
+									<div class='slide'>23 sat</div>
+									<div class='slide'>24 sun</div>
+									<div class='slide'>25 mon</div>
+									<div class='slide'>26 tue</div>
+									<div class='slide'>27 wed</div>
+									<div class='slide'>28 thu</div>
+									<div class='slide'>29 fri</div>
+									<div class='slide'>30 sat</div>
+									<div class='slide'>31 sun</div>
+								</div>
+							</div>
+							<div class='icon left'></div>
+							<div class='icon'></div>
 						</div>
-						<div class='icon left'></div>
-						<div class='icon'></div>
-					</div>
-					<div class='time'>
-						<div class='container clearfix'>
-							<div class='option'>Morning</div>
-							<div class='option'>Afternoon</div>
-							<div class='option'>Evening</div>
-							<div class='option'>Book</div>
+						<div class='time'>
+							<div class='container clearfix'>
+								<div class='option'>Morning</div>
+								<div class='option'>Afternoon</div>
+								<div class='option'>Evening</div>
+								<div class='option'>Book</div>
+							</div>
 						</div>
 					</div>
 				</div>
